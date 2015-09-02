@@ -1,14 +1,19 @@
 Proposal:
 
-Group 5 would like to develop a 3D first person shooter tower defense game for Android. 
-The game will consist of a central base which the player is in control of, 
-the player may collect resources by defending their base and killing enemies. 
-Resources may be spent to upgrade and purchase structures for the central base 
-in order to better defend against enemies. Enemy attacks will be available in waves 
-which the player may elect to summon, in addition to this enemy attacks will occur
-randomly throughout the day whether or not the player is participating. 
-The game will utilize OpenGL to render the 3D and artwork/graphics will 
-consist of simple yet clean box shaped characters.
+Zombie Box
+-	Eric Momper
+-	Samuel Davis
+-	Peter Lomason
+-	Tyler Grondahl‬
 
-Web Application:
-We will also feature a website to track user data and events.
+Group 5 would like to develop a 3D first person shooter tower defense game for Android and a helper web application to go with it built with Ruby on Rails and Angular.js. 
+
+The game will consist of a central base, which the player is in control of. The player may collect resources by defending their base and killing enemies. These resources may be spent to upgrade and purchase structures for the central base in order to better defend against enemies. Enemy attacks will be available in waves, similar to other games in which as the level gets higher, the difficulty increases. In addition to this enemy attacks will occur randomly throughout the day whether or not the player is playing.
+
+The game will utilize OpenGL to render the 3D and artwork/graphics will consist of simple, yet clean box shaped characters. We will use LibGDX, which is a physics and modeling game engine, to create the game.
+
+The web application portion of this project will be the bridge between the game and the community. It will not only have articles and instructions about the game but allow users to sign into their account and check their stats and progress. Some sort of messaging system will be implemented to encourage players to chat amongst themselves.
+
+The database will entail of several models and relationships. The models are User, Weapon, Base, Resource, Enemy, Image. We will use Devise to manage user sessions for logging and logging out.
+
+
