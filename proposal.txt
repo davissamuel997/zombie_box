@@ -9,3 +9,6 @@ which the player may elect to summon, in addition to this enemy attacks will occ
 randomly throughout the day whether or not the player is participating. 
 The game will utilize OpenGL to render the 3D and artwork/graphics will 
 consist of simple yet clean box shaped characters.
+
+Web Application:
+We will also feature a website to track user data and events.
