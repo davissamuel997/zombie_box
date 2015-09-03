@@ -22,6 +22,7 @@ import com.badlogic.gdx.math.Vector3;
 import java.util.ArrayList;
 
 import javax.swing.plaf.basic.BasicSplitPaneUI;
+import javax.swing.text.Position;
 
 public class MyGdxGame extends ApplicationAdapter {
 	SpriteBatch batch;
@@ -94,6 +95,7 @@ public class MyGdxGame extends ApplicationAdapter {
 		instance.get(4).transform.translate(500,500,0);
 		instance.get(5).transform.translate(-500,500,0);
 
+
 		environment = new Environment();
 		environment.set(new ColorAttribute(ColorAttribute.AmbientLight, 0.4f, 0.4f, 0.4f, 1f));
 		light = new DirectionalLight();
@@ -109,8 +111,8 @@ public class MyGdxGame extends ApplicationAdapter {
 
 		camController.setVelocity(20);
 		camController.setDegreesPerPixel(1);
-
 		environment.add(light);
+
 	}
 
 	@Override
@@ -122,25 +124,9 @@ public class MyGdxGame extends ApplicationAdapter {
 		modelBatch.begin(cam);
 		modelBatch.render(instance, environment);
 		modelBatch.end();
-
+		cam.position.y= 20;
 		camController.update();
-		if(cam.position.y < height)
-		{
-			cam.position.add(height-cam.position.y);
-		}
-		else
-		{
-			cam.position.sub(cam.position.y - height);
-		}
-		if(Gdx.input.isKeyPressed(Input.Keys.ENTER))
-		{
-			height++;
-		}
-		if(Gdx.input.isKeyPressed(Input.Keys.SHIFT_RIGHT))
-		{
-			if(height>1)
-				height--;
-		}
+
 	}
 
 

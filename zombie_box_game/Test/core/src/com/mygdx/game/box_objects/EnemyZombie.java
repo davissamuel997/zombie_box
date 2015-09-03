@@ -1,0 +1,16 @@
+package com.mygdx.game.box_objects;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/* Created by Eric on 9/3/2015.
+*
+* Class: EnemyZombie extends Enemy
+*
+* NOTES: This is an enemy that paths to the Player or Base and does mele attacks
+*
+* Should have specific stats and texture
+*
+*
+*//////////////////////////////////////////////////////////////////////////////////////////////////
+public class EnemyZombie extends Enemy
+{
+}
