@@ -1,0 +1,54 @@
+newmtl char_ger_headz4_lod01_mtl_char_ger_headz1_4
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd char_ger_zombie_head3_c.png
+Ni 1.00
+Ks 0.30 0.30 0.30
+Ns 1.00
+newmtl char_ger_headz4_lod01_mtl_char_ger_nazizombie_eyes
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd zombie_eye.png
+Ni 1.00
+Ks 0.30 0.30 0.30
+Ns 1.00
+newmtl char_ger_honorguard_body2_lod01_mtl_char_ger_headz1_3
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd char_ger_zombie_head3_c.png
+Ni 1.00
+Ks 0.30 0.30 0.30
+Ns 1.00
+newmtl char_ger_honorguard_body2_lod01_mtl_char_ger_honorguard_linen1_1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd char_ger_honorguard_body1_c.png
+Ni 1.00
+Ks 0.30 0.30 0.30
+Ns 1.00
+newmtl char_ger_honorguard_body2_lod01_mtl_char_ger_honorguard_lthr1_1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd char_ger_honorguard_body1_c.png
+Ni 1.00
+Ks 0.30 0.30 0.30
+Ns 1.00
+newmtl char_ger_honorguard_body2_lod01_mtl_char_ger_honorguard_metal1_1
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.40 0.40 0.40
+Tf 1.00 1.00 1.00
+map_Kd char_ger_honorguard_body1_c.png
+Ni 1.00
+Ks 0.30 0.30 0.30
+Ns 1.00
