@@ -1,0 +1,18 @@
+Some notes of interest on the scene setup:
+
+The "Character_Selector" object is what contains the script for detecting
+colliders in the scene and any attached rigidbody. This rigidbody is not on the assets by default, it's added along with a Spring Joint at runtime. This is what gives our scene the "swipe" or wipe along functionality.
+
+This object also has our "CharacterSelect.js" script attached. This is the
+script that detects mouse clicks on the character colliders. It also 
+disables/and or enables the glow effect or any other effect you would want to instantiate (i.e. particle effect, sparkles, rainbows, etc).
+
+The "CharacterSelectionArea" object is a gameObject with several nested objects. At the root of this object we have a "ConstantForce" attribute applied which just applies a rotational force to our entire character selection area.
+Within the heirarchy of this object we have contained: All of the glow objects, the shadow projectors for each character, the boxes (that stand in for each character at this moment), and a generic base platform for each of our characters to stand on.
+
+The scene contains a generic standard Directional Light. Nothing fancy. Can be removed if you decide to use unlit mobile shaders (cheapest expense), but probably an unecessary optimization for a front end menu.
+
+Scene contains and object called "FadeObject". This is a simple script that allows you to plug in a VERY tiny 2d texture (16x16 pixels). It can be any color, I chose black because I think most fades look cool coming in from black. This script simply stretches that small texture across the entire screen and fades it's material alpha over a duration of time you specify in the Inspector.
+The "Draw Depth" attribute on this object just ensures that the small texture draws OVER any and all objects in the scene by setting it's depth to -1000.
+
+Scene has a standard Main Camera. Nothing special done with this camera. I set the FOV to 30 (from the standard 60) to get a more closeup look, vs. the far away distorted perspective look of a FOV of 60. I've set the background to a black color as well (totally changeable).
