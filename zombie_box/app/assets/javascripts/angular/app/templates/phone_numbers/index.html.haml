@@ -1,0 +1,47 @@
+.page-title-breadcrumb
+  .page-header.pull-left
+    .page-title Phone Numbers
+  .page-header.pull-right
+    .page-title
+      %a.btn.btn-sm.btn-info{:href => '/phone_numbers/new'} Add New Number
+
+%br
+
+.box-content
+  .content
+    .col-md-12
+      .panel
+        .panel-body
+          .viewcode-example
+            .table-responsive
+              %div{'ng-if' => 'requestControl.organizationPhoneNumbers.length > 0 && loaderControl.isLoading === false'}
+                %table.table.table-striped.table-bordered.table-hover
+                  %thead
+                    %tr
+                      %th.text-center Phone Number
+                      %th.text-center Redirect Number
+                      %th Campaign Name
+                      %th
+                      %th
+
+                  %tbody
+                    %tr{'ng-repeat' => 'phoneNumber in requestControl.organizationPhoneNumbers'}
+                      %td.text-center {{phoneNumber.phone_number}}
+                      %td.text-center {{phoneNumber.redirect_number}}
+                      %td {{phoneNumber.campaign_name}}
+                      %td.text-center
+                        %a.btn.btn-sm.btn-info{'ng-href' => '/phone_numbers/{{phoneNumber.phone_number_id}}/edit'} Edit
+                      %td.text-center
+                        %a.btn.btn-sm.btn-danger{'ng-click' => 'requestControl.disablePhoneNumber(phoneNumber.phone_number_id)'} Disable
+
+              %div{'ng-if' => 'requestControl.organizationPhoneNumbers.length === 0 && loaderControl.isLoading === false'}
+                %h4 Currently, there are no phone numbers associated with this organization.
+              %div{'ng-if' => 'loaderControl.isLoading === true'}
+                .loader-css
+                  .load-container.load8
+                    .loader
+                      Loading...
+                  %h5 Fetching Phone Numbers...
+
+            %a.btn-view-code{:href => "javascript:;", :style => "display: none;"}
+              %i.fa.fa-code
