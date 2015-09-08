@@ -1,9 +1,434 @@
 !!!
-%html
+%html.no-ie{:lang => "en", 'ng-app' => 'TrackMyTrends'}
   %head
-    %title ZombieBox
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
-    = csrf_meta_tags
+    / Meta
+    %base{:href => "/"}/
+    %meta{:charset => "utf-8"}
+      %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0", :name => "viewport"}
+        %meta{:content => "", :name => "description"}
+          %meta{:content => "", :name => "keywords"}
+            %meta{:content => "", :name => "author"}
+              %title BeAdmin - Bootstrap Admin Theme
+              = stylesheet_link_tag "jquery-ui-1.11.2.custom.css"
+              = stylesheet_link_tag 'gritter/jquery.gritter.css'
+              = stylesheet_link_tag "theme/theme.css"
+              = stylesheet_link_tag "chosen.css"
   %body
-    = yield
+    / START Main wrapper
+    .wrapper
+      / START Top Navbar
+      %nav.navbar.navbar-default.navbar-top.navbar-fixed-top{:role => "navigation"}
+        / START navbar header
+        .navbar-header
+          %a.navbar-brand{:href => "index.html"}
+            .brand-logo
+            .brand-logo-collapsed
+        / END navbar header
+        / START Nav wrapper
+        .nav-wrapper
+          / START Left navbar
+          %ul.nav.navbar-nav
+            %li
+              / Button used to collapse the left sidebar. Only visible on tablet and desktops
+              %a.hidden-xs{"data-toggle-state" => "aside-collapsed", :href => "#"}
+                %em.fa.fa-navicon
+              / Button to show/hide the sidebar on mobile. Visible on mobile only.
+              %a.visible-xs{"data-toggle-state" => "aside-toggled", :href => "#"}
+                %em.fa.fa-navicon
+            / START Messages menu (dropdown-list)
+            %li.dropdown.dropdown-list
+              %a.dropdown-toggle{"data-play" => "flipInX", "data-toggle" => "dropdown", :href => "#"}
+                %em.fa.fa-envelope
+              / START Dropdown menu
+              %ul.dropdown-menu
+                %li.dropdown-menu-header Unread messages
+                %li.p-sm
+                  %input.form-control{:onfocus => "javascript:void(0);", :placeholder => "Find contacts..", :type => "text"}
+                %li
+                  .scroll-viewport
+                    / START list group
+                    .list-group.scroll-content
+                      / START list group item
+                      %a.list-group-item{:href => "#"}
+                        .media
+                          .pull-left
+                          .media-body.clearfix
+                            %small.pull-right 5m
+                            %strong.media-heading.text-primary
+                              %span.circle.circle-success.circle-md>
+                              Greg Lewis
+                            %p.mb-sm
+                              %small Nunc vel dui et leo sagittis fringilla.
+                      / END list group item
+                      / START list group item
+                      %a.list-group-item{:href => "#"}
+                        .media
+                          .pull-left
+                          .media-body.clearfix
+                            %small.pull-right 3h
+                            %strong.media-heading.text-primary
+                              %span.circle.circle-success.circle-md>
+                              Constance Cook
+                            %p.mb-sm
+                              %small Nunc vel dui et leo sagittis fringilla.
+                      / END list group item
+                      / START list group item
+                      %a.list-group-item{:href => "#"}
+                        .media
+                          .pull-left
+                          .media-body.clearfix
+                            %small.pull-right 3h
+                            %strong.media-heading.text-primary
+                              %span.circle.circle-danger.circle-md>
+                              Cody Barnes
+                            %p.mb-sm
+                              %small Nunc vel dui et leo sagittis fringilla.
+                      / END list group item
+                      / START list group item
+                      %a.list-group-item{:href => "#"}
+                        .media
+                          .pull-left
+                          .media-body.clearfix
+                            %small.pull-right 4h
+                            %strong.media-heading.text-primary
+                              %span.circle.circle-danger.circle-md>
+                              Gina Robinson
+                            %p.mb-sm
+                              %small Nunc vel dui et leo sagittis fringilla.
+                      / END list group item
+                      / START list group item
+                      %a.list-group-item{:href => "#"}
+                        .media
+                          .pull-left
+                          .media-body.clearfix
+                            %small.pull-right yesterday
+                            %strong.media-heading.text-primary
+                              %span.circle.circle-danger.circle-md>
+                              Violet Olson
+                            %p.mb-sm
+                              %small Nunc vel dui et leo sagittis fringilla.
+                      / END list group item
+                    / END list group
+                / START dropdown footer
+                %li.p
+                  %a.text-center{:href => "#"}
+                    %small.text-primary More messages
+                / END dropdown footer
+              / END Dropdown menu
+            / END Messages menu (dropdown-list)
+            / START User avatar toggle
+            %li
+              / Button used to collapse the left sidebar. Only visible on tablet and desktops
+              %a{"data-toggle-state" => "aside-user", :href => "#"}
+                %em.fa.fa-user
+            %li
+              %a{'ng-controller' => 'SessionsController', :href => '', 'ng-click' => 'requestControl.sign_out()'}
+                Sign Out
+            / END User avatar toggle
+          / END Left navbar
+          / START Right Navbar
+          %ul.nav.navbar-nav.navbar-right
+            / Search icon
+            %li
+              %a{"data-toggle" => "navbar-search", :href => "#"}
+                %em.fa.fa-search
+            / Fullscreen
+            %li
+              %a{"data-toggle" => "fullscreen", :href => "#"}
+                %em.fa.fa-expand
+            / START Alert menu
+            %li.dropdown.dropdown-list
+              %a.dropdown-toggle{"data-play" => "flipInX", "data-toggle" => "dropdown", :href => "#"}
+                %em.fa.fa-bell
+                .label.label-danger 11
+              / START Dropdown menu
+              %ul.dropdown-menu
+                %li
+                  / START list group
+                  .list-group
+                    / list item
+                    %a.list-group-item{:href => "#"}
+                      .media
+                        .pull-left
+                          %em.fa.fa-twitter.fa-2x.text-info
+                        .media-body.clearfix
+                          %p.m0 New followers
+                          %p.m0.text-muted
+                            %small 1 new follower
+                    / list item
+                    %a.list-group-item{:href => "#"}
+                      .media
+                        .pull-left
+                          %em.fa.fa-envelope.fa-2x.text-warning
+                        .media-body.clearfix
+                          %p.m0 New e-mails
+                          %p.m0.text-muted
+                            %small You have 10 new emails
+                    / list item
+                    %a.list-group-item{:href => "#"}
+                      .media
+                        .pull-left
+                          %em.fa.fa-tasks.fa-2x.text-success
+                        .media-body.clearfix
+                          %p.m0 Pending Tasks
+                          %p.m0.text-muted
+                            %small 11 pending task
+                    / last list item
+                    %a.list-group-item{:href => "#"}
+                      %small More notifications
+                      %span.label.label-danger.pull-right 14
+                  / END list group
+              / END Dropdown menu
+            / END Alert menu
+            / START Contacts button
+            %li
+              %a{"data-toggle-state" => "offsidebar-open", :href => "#"}
+                %em.fa.fa-group
+            / END Contacts menu
+          / END Right Navbar
+        / END Nav wrapper
+        / START Search form
+        %form.navbar-form{:action => "search.html", :role => "search"}
+          .form-group.has-feedback
+            %input.form-control{:placeholder => "Type and hit Enter..", :type => "text"}
+              .fa.fa-times.form-control-feedback{"data-toggle" => "navbar-search-dismiss"}
+          %button.hidden.btn.btn-default{:type => "submit"} Submit
+        / END Search form
+      / END Top Navbar
+      / START aside
+      %aside.aside
+        / START Sidebar (left)
+        %nav.sidebar
+          / START user info
+          .item.user-block
+            / User picture
+            .user-block-picture
+              .user-block-status
+                %img.img-thumbnail.img-circle{:alt => "Avatar"}
+                  .circle.circle-success.circle-lg
+              / Status when collapsed
+            / Name and Role
+            .user-block-info
+              %span.user-block-name.item-text Welcome User
+              %span.user-block-role UX-Dev
+          / END user info
+          %ul.nav
+            / START Menu
+            %li.nav-heading Main navigation
+            %li.active
+              %a.no-submenu{"data-toggle" => "", :href => "index.html", :title => "Dashboard"}
+                %em.fa.fa-dot-circle-o
+                .label.label-primary.pull-right 10
+                %span.item-text Dashboard
+            %li
+              %a.no-submenu{"data-toggle" => "", :href => "widgets.html", :title => "Widgets"}
+                %em.fa.fa-cube
+                %span.item-text Widgets
+            %li
+              %a.has-submenu{"data-toggle" => "collapse-next", :href => "#", :title => "Elements"}
+                %em.fa.fa-flask
+                %span.item-text Elements
+              / START SubMenu item
+              %ul.nav.collapse
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "button.html", :title => "Buttons"}
+                    %span.item-text Buttons
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "notifications.html", :title => "Notifications"}
+                    %span.item-text Notifications
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "spinners.html", :title => "Spinners"}
+                    %span.item-text Spinners
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "animations.html", :title => "Animations"}
+                    %span.item-text Animations
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "dropdown-animations.html", :title => "Dropdown"}
+                    %span.item-text Dropdown
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "panels.html", :title => "Panels"}
+                    %span.item-text Panels
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "portlets.html", :title => "Portlets"}
+                    %span.item-text Portlets
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "maps.html", :title => "Maps"}
+                    %span.item-text Maps
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "grid.html", :title => "Grid"}
+                    %span.item-text Grid
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "grid-masonry.html", :title => "Grid Masonry"}
+                    %span.item-text Grid Masonry
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "typo.html", :title => "Typography"}
+                    %span.item-text Typography
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "icons.html", :title => "Icons"}
+                    .label.label-primary.pull-right +400
+                    %span.item-text Icons
+              / END SubMenu item
+            %li
+              %a.has-submenu{"data-toggle" => "collapse-next", :href => "#", :title => "Forms"}
+                %em.fa.fa-edit
+                %span.item-text Forms
+              / START SubMenu item
+              %ul.nav.collapse
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "form-standard.html", :title => "Standard"}
+                    %span.item-text Standard
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "form-extended.html", :title => "Extended"}
+                    %span.item-text Extended
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "form-validation.html", :title => "Validation"}
+                    %span.item-text Validation
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "form-wizard.html", :title => "Wizard"}
+                    %span.item-text Wizard
+              / END SubMenu item
+            %li
+              %a.has-submenu{"data-toggle" => "collapse-next", :href => "#", :title => "Charts"}
+                %em.fa.fa-bar-chart-o
+                %span.item-text Charts
+              / START SubMenu item
+              %ul.nav.collapse
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "chart-flot.html", :title => "Flot"}
+                    %span.item-text Flot
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "chart-radial.html", :title => "Radial"}
+                    %span.item-text Radial
+              / END SubMenu item
+            %li
+              %a.has-submenu{"data-toggle" => "collapse-next", :href => "#", :title => "Tables"}
+                %em.fa.fa-table
+                %span.item-text Tables
+              / START SubMenu item
+              %ul.nav.collapse
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "table-standard.html", :title => "Standard"}
+                    %span.item-text Standard
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "table-extended.html", :title => "Extended"}
+                    %span.item-text Extended
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "table-datatable.html", :title => "DataTables"}
+                    %span.item-text DataTables
+              / END SubMenu item
+            %li.nav-heading More elements
+            %li
+              %a.has-submenu{"data-toggle" => "collapse-next", :href => "#", :title => "Pages"}
+                %em.fa.fa-file-text-o
+                %span.item-text Pages
+              / START SubMenu item
+              %ul.nav.collapse
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "pages/login.html", :title => "Login"}
+                    %span.item-text Login
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "pages/signup.html", :title => "Sign up"}
+                    %span.item-text Sign up
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "pages/recover.html", :title => "Recover Password"}
+                    %span.item-text Recover Password
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "pages/lock.html", :title => "Lock"}
+                    %span.item-text Lock
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "template.html", :title => "Starter Template"}
+                    %span.item-text Starter Template
+              / END SubMenu item
+            %li
+              %a.has-submenu{"data-toggle" => "collapse-next", :href => "#", :title => "Extras"}
+                %em.fa.fa-plus
+                %span.item-text Extras
+              / START SubMenu item
+              %ul.nav.collapse
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "mailbox.html", :title => "Mailbox"}
+                    %span.item-text Mailbox
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "timeline.html", :title => "Timeline"}
+                    %span.item-text Timeline
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "calendar.html", :title => "Calendar"}
+                    %span.item-text Calendar
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "invoice.html", :title => "Invoice"}
+                    %span.item-text Invoice
+                %li
+                  %a.no-submenu{"data-toggle" => "", :href => "search.html", :title => "Search"}
+                    %span.item-text Search
+              / END SubMenu item
+            / START Theme color options
+            %li
+              %a.has-submenu{"data-toggle" => "collapse-next", :href => "#", :title => "Color options"}
+                .label.label-purple.pull-right 4
+                %em.fa.fa-tint
+                %span.item-text Colors
+              / START SubMenu item
+              %ul.nav.collapse
+                %li
+                  %a.no-submenu{"data-toggle" => "load-css", "data-uri" => "app/css/beadmin-theme-a.css", :href => "#", :title => "Option 1"}
+                    %span.item-text Alternative 1
+                %li
+                  %a.no-submenu{"data-toggle" => "load-css", "data-uri" => "app/css/beadmin-theme-b.css", :href => "#", :title => "Option 2"}
+                    %span.item-text Alternative 2
+                %li
+                  %a.no-submenu{"data-toggle" => "load-css", "data-uri" => "app/css/beadmin-theme-c.css", :href => "#", :title => "Option 3"}
+                    %span.item-text Alternative 3
+                %li
+                  %a.no-submenu{"data-toggle" => "load-css", "data-uri" => "app/css/beadmin-theme-d.css", :href => "#", :title => "Option 4"}
+                    %span.item-text Alternative 4
+              / END SubMenu item
+            / END Theme color options
+            %li
+              %ul.nav-labels
+                %li.nav-heading Categories
+                %li.nav-labels-item
+                  %span.circle.circle-lg.circle-success
+                  %a{:href => "#"} Green
+                %li.nav-labels-item
+                  %span.circle.circle-lg.circle-danger
+                  %a{:href => "#"} Red
+                %li.nav-labels-item
+                  %span.circle.circle-lg.circle-info
+                  %a{:href => "#"} Skyblue
+                %li.nav-labels-item
+                  %span.circle.circle-lg.circle-warning
+                  %a{:href => "#"} Yellow
+            / END Menu
+        / END Sidebar (left)
+
+      / End aside
+      / START aside
+      %aside.offsidebar
+        / START Off Sidebar (right)
+
+      / START Main section
+      %section
+        = yield
+
+    = javascript_include_tag "modernizr-2.5.3.min"
+    
+    / jquery and friends
+    = javascript_include_tag "jquery/jquery-2.1.1.js"
+    = javascript_include_tag "jquery/jquery-ui-1.11.2.custom.js"
+    = javascript_include_tag "jquery/jquery.gritter.min.js"
+    = javascript_include_tag "jquery/jquery.icheck.js"
+    = javascript_include_tag "jquery/jquery.sparkline.js"
+    = javascript_include_tag "jquery/jquery.slimscroll.js"
+    = javascript_include_tag "jquery/jquery.dataTables.min.js"
+    = javascript_include_tag "jquery/jquery.metisMenu.js"
+
+    / backbone and friends
+    = javascript_include_tag "backbone/underscore-min.js"
+    = javascript_include_tag "backbone/backbone-min.js"
+    = javascript_include_tag "backbone/backbone.localStorage-min.js"
+
+    = javascript_include_tag "theme/theme.js"
+    = javascript_include_tag "angular/app/angular_import.js"
+    = javascript_include_tag "application"
+
+
