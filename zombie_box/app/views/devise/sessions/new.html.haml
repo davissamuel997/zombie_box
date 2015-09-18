@@ -1,0 +1,27 @@
+.row.row-table.page-wrapper
+  .col-lg-3.col-md-6.col-sm-8.col-xs-12.align-middle
+    .panel.panel-dark.panel-flat{"data-offset" => "0", "data-play" => "fadeIn", "data-toggle" => "play-animation"}
+      .panel-heading.text-center
+        %h3
+          TrackMyTrends.solutions
+        %p.text-center.mt-lg
+          %strong SIGN IN TO CONTINUE
+      .panel-body
+        = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {:role => 'form', :class => 'mb-lg'}) do |f|
+          .text-right.mb-sm
+            %a.btn-link.text-muted{:href => ''} Need to Signup
+          .form-group.has-feedback
+            = f.input_field :email, :required => false, :class => 'form-control', :placeholder => 'Email'
+            %span.fa.fa-envelope.form-control-feedback.text-muted
+          .form-group.has-feedback
+            = f.input_field :password, :require => false, :class => 'form-control', :placeholder => 'Password'
+            %span.fa.fa-lock.form-control-feedback.text-muted
+          .clearfix
+            .checkbox.c-checkbox.pull-left.mt0
+              %label
+                %input{:type => "checkbox", :value => ""}
+                  %span.fa.fa-check>
+                  Remember Me
+            .pull-right
+              %a.btn-link.text-muted{:href => ''} Forgot your password?
+          %button.loginBtn.btn.btn-block.btn-primary{:type => "submit", :name => 'commit'} Login

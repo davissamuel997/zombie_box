@@ -1,0 +1,72 @@
+/*
+*= require theme/bootstrap.css
+*= require theme/common.css
+*= require theme/fontawesome/css/font-awesome.css
+*= require theme/csspinner.css
+*= require theme/app.css
+*/
+
+.chosen-container {
+  /* This is the only width setting you'll need to change. */
+  width: 100% !important;
+}
+.chosen-container .chosen-single {
+  width: 100% !important;
+}
+.chosen-container .chosen-drop {
+  width: 100% !important;
+}
+.chosen-container .chosen-drop .chosen-search {
+  width: 99% !important;
+}
+.chosen-container .chosen-drop .chosen-results {
+  width: 99% !important;
+}
+
+.centered-no-panel
+{
+	top: 150;
+	left: 335;
+  margin: 0 auto;
+}
+
+.make-red {
+	color: #FF0000;
+}
+
+.make-table-stripe {
+  background-color: #f9f9f9;
+}
+
+.make-black {
+  color: #000000;
+}
+
+.make-white {
+  color: #FFFFFF;
+}
+
+.make-green {
+  color: #00FF00;
+}
+
+.make-warning {
+  color: #8a6d3b;
+}
+
+.make-success {
+  color: #1b601c;
+}
+
+.make-danger {
+  color: #a94442;
+}
+
+.make-badge-success {
+  color: #9ad268;
+}
+
+.make-badge-danger {
+  color: #fe402b;
+}
+
