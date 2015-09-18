@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-
+//using Npgsql;
 public class CharSelect : MonoBehaviour {
 
 	public static GameObject selected;
 	public CanvasGroup canvasGroup;
 
-	void Update () {
+
+
+	void Update () 
+	{
 
 		if (Input.GetMouseButtonUp (0)) {
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
