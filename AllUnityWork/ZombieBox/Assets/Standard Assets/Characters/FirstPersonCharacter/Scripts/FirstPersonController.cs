@@ -42,6 +42,27 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+		private GameObject mainCameraGO;
+		private GameObject weaponCameraGO;
+		public GameObject playerWeapons;
+
+		private CapsuleCollider coll;
+
+		void Awake()
+		{
+			GetComponent<Rigidbody>().freezeRotation = true;
+			GetComponent<Rigidbody>().useGravity = false;
+			//myTransform = transform;
+			mainCameraGO = GameObject.FindWithTag("MainCamera");
+			weaponCameraGO = GameObject.FindWithTag("WeaponCamera");
+			coll = GetComponent<CapsuleCollider>();
+			//rayDistance = coll.height * .5f + coll.radius;
+			playerWeapons.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+
+			//Screen.lockCursor = true;
+		}
+
+
         // Use this for initialization
         private void Start()
         {
@@ -62,6 +83,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private void Update()
         {
             RotateView();
+
+			weaponCameraGO.transform.localPosition = mainCameraGO.transform.localPosition;
+
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
