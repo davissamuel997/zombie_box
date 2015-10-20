@@ -1,0 +1,2651 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Npgsql.2.2.5.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:Global.Fakes.ShimNpgsqlRowUpdatedEventArgs">
+            <summary>Shim type of NpgsqlRowUpdatedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimNpgsqlRowUpdatedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimNpgsqlRowUpdatedEventArgs.#ctor(NpgsqlRowUpdatedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimNpgsqlRowUpdatedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimNpgsqlRowUpdatedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimNpgsqlRowUpdatedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimNpgsqlRowUpdatedEventArgs.ConstructorDataRowIDbCommandStatementTypeDataTableMapping">
+            <summary>Sets the shim of NpgsqlRowUpdatedEventArgs.NpgsqlRowUpdatedEventArgs(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimNpgsqlRowUpdatedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimNpgsqlRowUpdatingEventArgs">
+            <summary>Shim type of NpgsqlRowUpdatingEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimNpgsqlRowUpdatingEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimNpgsqlRowUpdatingEventArgs.#ctor(NpgsqlRowUpdatingEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimNpgsqlRowUpdatingEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Global.Fakes.ShimNpgsqlRowUpdatingEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimNpgsqlRowUpdatingEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Global.Fakes.ShimNpgsqlRowUpdatingEventArgs.ConstructorDataRowIDbCommandStatementTypeDataTableMapping">
+            <summary>Sets the shim of NpgsqlRowUpdatingEventArgs.NpgsqlRowUpdatingEventArgs(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</summary>
+        </member>
+        <member name="T:Global.Fakes.ShimNpgsqlRowUpdatingEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Global.Fakes.StubNpgsqlRowUpdatedEventArgs">
+            <summary>Stub type of NpgsqlRowUpdatedEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.StubNpgsqlRowUpdatedEventArgs.#ctor(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Global.Fakes.StubNpgsqlRowUpdatedEventArgs.InitializeStub">
+            <summary>Initializes a new instance of type StubNpgsqlRowUpdatedEventArgs</summary>
+        </member>
+        <member name="P:Global.Fakes.StubNpgsqlRowUpdatedEventArgs.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Global.Fakes.StubNpgsqlRowUpdatedEventArgs.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Global.Fakes.StubNpgsqlRowUpdatedEventArgs.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Global.Fakes.StubNpgsqlRowUpdatingEventArgs">
+            <summary>Stub type of NpgsqlRowUpdatingEventArgs</summary>
+        </member>
+        <member name="M:Global.Fakes.StubNpgsqlRowUpdatingEventArgs.#ctor(System.Data.DataRow,System.Data.IDbCommand,System.Data.StatementType,System.Data.Common.DataTableMapping)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:Global.Fakes.StubNpgsqlRowUpdatingEventArgs.AttachBackingFieldToBaseCommand">
+            <summary>Attaches delegates to emulate StubNpgsqlRowUpdatingEventArgs.BaseCommand as a property with a backing field.</summary>
+        </member>
+        <member name="F:Global.Fakes.StubNpgsqlRowUpdatingEventArgs.BaseCommandGet">
+            <summary>Sets the stub of RowUpdatingEventArgs.get_BaseCommand()</summary>
+        </member>
+        <member name="F:Global.Fakes.StubNpgsqlRowUpdatingEventArgs.BaseCommandSetIDbCommand">
+            <summary>Sets the stub of RowUpdatingEventArgs.set_BaseCommand(IDbCommand value)</summary>
+        </member>
+        <member name="M:Global.Fakes.StubNpgsqlRowUpdatingEventArgs.InitializeStub">
+            <summary>Initializes a new instance of type StubNpgsqlRowUpdatingEventArgs</summary>
+        </member>
+        <member name="P:Global.Fakes.StubNpgsqlRowUpdatingEventArgs.BaseCommand">
+            <summary>Sets the stub of RowUpdatingEventArgs.get_BaseCommand()</summary>
+        </member>
+        <member name="P:Global.Fakes.StubNpgsqlRowUpdatingEventArgs.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:Global.Fakes.StubNpgsqlRowUpdatingEventArgs.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:Global.Fakes.StubNpgsqlRowUpdatingEventArgs.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlCommand">
+            <summary>Shim type of Npgsql.NpgsqlCommand</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommand.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommand.#ctor(Npgsql.NpgsqlCommand)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommand.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommand.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommand.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommand.Bind(System.Data.IDbCommand)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommand.Bind(System.ICloneable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommand.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AddFunctionReturnsRecordSupportString">
+            <summary>Sets the shim of NpgsqlCommand.AddFunctionReturnsRecordSupport(String OriginalResult)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AddSchemaOnlyBehaviorSupportString">
+            <summary>Sets the shim of NpgsqlCommand.AddSchemaOnlyBehaviorSupport(String ResultCommandText)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AddSingleRowBehaviorSupportString">
+            <summary>Sets the shim of NpgsqlCommand.AddSingleRowBehaviorSupport(String ResultCommandText)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.BindParameters">
+            <summary>Sets the shim of NpgsqlCommand.BindParameters()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.Cancel">
+            <summary>Sets the shim of NpgsqlCommand.Cancel()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.CheckConnectionState">
+            <summary>Sets the shim of NpgsqlCommand.CheckConnectionState()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.CheckFunctionReturnString">
+            <summary>Sets the shim of NpgsqlCommand.CheckFunctionReturn(String ReturnType)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ClearPoolAndThrowExceptionException">
+            <summary>Sets the shim of NpgsqlCommand.ClearPoolAndThrowException(Exception e)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.Clone">
+            <summary>Sets the shim of NpgsqlCommand.Clone()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.CommandTextGet">
+            <summary>Sets the shim of NpgsqlCommand.get_CommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.CommandTextSetString">
+            <summary>Sets the shim of NpgsqlCommand.set_CommandText(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.CommandTimeoutGet">
+            <summary>Sets the shim of NpgsqlCommand.get_CommandTimeout()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.CommandTimeoutSetInt32">
+            <summary>Sets the shim of NpgsqlCommand.set_CommandTimeout(Int32 value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.CommandTypeGet">
+            <summary>Sets the shim of NpgsqlCommand.get_CommandType()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.CommandTypeSetCommandType">
+            <summary>Sets the shim of NpgsqlCommand.set_CommandType(CommandType value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ConnectionGet">
+            <summary>Sets the shim of NpgsqlCommand.get_Connection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ConnectionSetNpgsqlConnection">
+            <summary>Sets the shim of NpgsqlCommand.set_Connection(NpgsqlConnection value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ConnectionSystemDataIDbCommandget">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.get_Connection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ConnectionSystemDataIDbCommandsetIDbConnection">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.set_Connection(IDbConnection value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.Constructor">
+            <summary>Sets the shim of NpgsqlCommand.NpgsqlCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ConstructorString">
+            <summary>Sets the shim of NpgsqlCommand.NpgsqlCommand(String cmdText)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ConstructorStringNpgsqlConnection">
+            <summary>Sets the shim of NpgsqlCommand.NpgsqlCommand(String cmdText, NpgsqlConnection connection)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ConstructorStringNpgsqlConnectionNpgsqlTransaction">
+            <summary>Sets the shim of NpgsqlCommand.NpgsqlCommand(String cmdText, NpgsqlConnection connection, NpgsqlTransaction transaction)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.CreateParameter">
+            <summary>Sets the shim of NpgsqlCommand.CreateParameter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ExecuteCommand">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ExecuteNonQuery">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteNonQuery()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ExecuteReader">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteReader()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ExecuteReaderCommandBehavior">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteReader(CommandBehavior cb)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ExecuteScalar">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteScalar()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.GetClearCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetClearCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.GetCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.GetParseCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetParseCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.GetPrepareCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetPrepareCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.GetPreparedCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetPreparedCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.LastInsertedOIDGet">
+            <summary>Sets the shim of NpgsqlCommand.get_LastInsertedOID()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ParametersGet">
+            <summary>Sets the shim of NpgsqlCommand.get_Parameters()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ParametersSystemDataIDbCommandget">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.get_Parameters()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.Prepare">
+            <summary>Sets the shim of NpgsqlCommand.Prepare()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ProcessRefcursorFunctionReturnString">
+            <summary>Sets the shim of NpgsqlCommand.ProcessRefcursorFunctionReturn(String FunctionCall)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.ReplaceParameterValueStringStringString">
+            <summary>Sets the shim of NpgsqlCommand.ReplaceParameterValue(String result, String parameterName, String paramVal)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.SetCommandTimeout">
+            <summary>Sets the shim of NpgsqlCommand.SetCommandTimeout()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.StaticConstructor">
+            <summary>Sets the shim of NpgsqlCommand.NpgsqlCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.SystemDataIDbCommandCreateParameter">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.CreateParameter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.SystemDataIDbCommandExecuteReader">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.ExecuteReader()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.SystemDataIDbCommandExecuteReaderCommandBehavior">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior cb)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.SystemICloneableClone">
+            <summary>Sets the shim of NpgsqlCommand.System.ICloneable.Clone()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.TransactionGet">
+            <summary>Sets the shim of NpgsqlCommand.get_Transaction()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.TransactionSetNpgsqlTransaction">
+            <summary>Sets the shim of NpgsqlCommand.set_Transaction(NpgsqlTransaction value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.TransactionSystemDataIDbCommandget">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.get_Transaction()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.TransactionSystemDataIDbCommandsetIDbTransaction">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.set_Transaction(IDbTransaction value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.UpdateOutputParameters">
+            <summary>Sets the shim of NpgsqlCommand.UpdateOutputParameters()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.UpdatedRowSourceGet">
+            <summary>Sets the shim of NpgsqlCommand.get_UpdatedRowSource()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.UpdatedRowSourceSetUpdateRowSource">
+            <summary>Sets the shim of NpgsqlCommand.set_UpdatedRowSource(UpdateRowSource value)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.AddFunctionReturnsRecordSupportString">
+            <summary>Sets the shim of NpgsqlCommand.AddFunctionReturnsRecordSupport(String OriginalResult)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.AddSchemaOnlyBehaviorSupportString">
+            <summary>Sets the shim of NpgsqlCommand.AddSchemaOnlyBehaviorSupport(String ResultCommandText)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.AddSingleRowBehaviorSupportString">
+            <summary>Sets the shim of NpgsqlCommand.AddSingleRowBehaviorSupport(String ResultCommandText)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.BindParameters">
+            <summary>Sets the shim of NpgsqlCommand.BindParameters()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.Cancel">
+            <summary>Sets the shim of NpgsqlCommand.Cancel()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.CheckConnectionState">
+            <summary>Sets the shim of NpgsqlCommand.CheckConnectionState()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.CheckFunctionReturnString">
+            <summary>Sets the shim of NpgsqlCommand.CheckFunctionReturn(String ReturnType)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ClearPoolAndThrowExceptionException">
+            <summary>Sets the shim of NpgsqlCommand.ClearPoolAndThrowException(Exception e)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.Clone">
+            <summary>Sets the shim of NpgsqlCommand.Clone()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.CommandTextGet">
+            <summary>Sets the shim of NpgsqlCommand.get_CommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.CommandTextSetString">
+            <summary>Sets the shim of NpgsqlCommand.set_CommandText(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.CommandTimeoutGet">
+            <summary>Sets the shim of NpgsqlCommand.get_CommandTimeout()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.CommandTimeoutSetInt32">
+            <summary>Sets the shim of NpgsqlCommand.set_CommandTimeout(Int32 value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.CommandTypeGet">
+            <summary>Sets the shim of NpgsqlCommand.get_CommandType()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.CommandTypeSetCommandType">
+            <summary>Sets the shim of NpgsqlCommand.set_CommandType(CommandType value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ConnectionGet">
+            <summary>Sets the shim of NpgsqlCommand.get_Connection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ConnectionSetNpgsqlConnection">
+            <summary>Sets the shim of NpgsqlCommand.set_Connection(NpgsqlConnection value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ConnectionSystemDataIDbCommandget">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.get_Connection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ConnectionSystemDataIDbCommandsetIDbConnection">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.set_Connection(IDbConnection value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.CreateParameter">
+            <summary>Sets the shim of NpgsqlCommand.CreateParameter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ExecuteCommand">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ExecuteNonQuery">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteNonQuery()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ExecuteReader">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteReader()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ExecuteReaderCommandBehavior">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteReader(CommandBehavior cb)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ExecuteScalar">
+            <summary>Sets the shim of NpgsqlCommand.ExecuteScalar()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.GetClearCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetClearCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.GetCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.GetParseCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetParseCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.GetPrepareCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetPrepareCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.GetPreparedCommandText">
+            <summary>Sets the shim of NpgsqlCommand.GetPreparedCommandText()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.LastInsertedOIDGet">
+            <summary>Sets the shim of NpgsqlCommand.get_LastInsertedOID()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ParametersGet">
+            <summary>Sets the shim of NpgsqlCommand.get_Parameters()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ParametersSystemDataIDbCommandget">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.get_Parameters()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.Prepare">
+            <summary>Sets the shim of NpgsqlCommand.Prepare()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.ProcessRefcursorFunctionReturnString">
+            <summary>Sets the shim of NpgsqlCommand.ProcessRefcursorFunctionReturn(String FunctionCall)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.SetCommandTimeout">
+            <summary>Sets the shim of NpgsqlCommand.SetCommandTimeout()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.SystemDataIDbCommandCreateParameter">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.CreateParameter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.SystemDataIDbCommandExecuteReader">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.ExecuteReader()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.SystemDataIDbCommandExecuteReaderCommandBehavior">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior cb)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.SystemICloneableClone">
+            <summary>Sets the shim of NpgsqlCommand.System.ICloneable.Clone()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.TransactionGet">
+            <summary>Sets the shim of NpgsqlCommand.get_Transaction()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.TransactionSetNpgsqlTransaction">
+            <summary>Sets the shim of NpgsqlCommand.set_Transaction(NpgsqlTransaction value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.TransactionSystemDataIDbCommandget">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.get_Transaction()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.TransactionSystemDataIDbCommandsetIDbTransaction">
+            <summary>Sets the shim of NpgsqlCommand.System.Data.IDbCommand.set_Transaction(IDbTransaction value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.UpdateOutputParameters">
+            <summary>Sets the shim of NpgsqlCommand.UpdateOutputParameters()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.UpdatedRowSourceGet">
+            <summary>Sets the shim of NpgsqlCommand.get_UpdatedRowSource()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommand.AllInstances.UpdatedRowSourceSetUpdateRowSource">
+            <summary>Sets the shim of NpgsqlCommand.set_UpdatedRowSource(UpdateRowSource value)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlCommandBuilder">
+            <summary>Shim type of Npgsql.NpgsqlCommandBuilder</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommandBuilder.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommandBuilder.#ctor(Npgsql.NpgsqlCommandBuilder)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommandBuilder.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommandBuilder.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommandBuilder.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlCommandBuilder.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.BuildSchema">
+            <summary>Sets the shim of NpgsqlCommandBuilder.BuildSchema()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.Constructor">
+            <summary>Sets the shim of NpgsqlCommandBuilder.NpgsqlCommandBuilder()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.ConstructorNpgsqlDataAdapter">
+            <summary>Sets the shim of NpgsqlCommandBuilder.NpgsqlCommandBuilder(NpgsqlDataAdapter adapter)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.DataAdapterGet">
+            <summary>Sets the shim of NpgsqlCommandBuilder.get_DataAdapter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.DataAdapterSetNpgsqlDataAdapter">
+            <summary>Sets the shim of NpgsqlCommandBuilder.set_DataAdapter(NpgsqlDataAdapter value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.DeriveParametersNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlCommandBuilder.DeriveParameters(NpgsqlCommand command)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.DisposeBoolean">
+            <summary>Sets the shim of NpgsqlCommandBuilder.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.GetDeleteCommandDataRow">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetDeleteCommand(DataRow row)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.GetDeleteCommandDataRowBoolean">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetDeleteCommand(DataRow row, Boolean setParameterValues)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.GetInsertCommandDataRow">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetInsertCommand(DataRow row)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.GetInsertCommandDataRowBoolean">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetInsertCommand(DataRow row, Boolean setParameterValues)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.GetQuotedNameString">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetQuotedName(String str)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.GetUpdateCommandDataRow">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetUpdateCommand(DataRow row)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.GetUpdateCommandDataRowBoolean">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetUpdateCommand(DataRow row, Boolean setParameterValues)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.OnRowUpdatingObjectNpgsqlRowUpdatingEventArgs">
+            <summary>Sets the shim of NpgsqlCommandBuilder.OnRowUpdating(Object sender, NpgsqlRowUpdatingEventArgs value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.QualifiedTableNameStringString">
+            <summary>Sets the shim of NpgsqlCommandBuilder.QualifiedTableName(String schema, String tableName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.QuotePrefixGet">
+            <summary>Sets the shim of NpgsqlCommandBuilder.get_QuotePrefix()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.QuotePrefixSetString">
+            <summary>Sets the shim of NpgsqlCommandBuilder.set_QuotePrefix(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.QuoteSuffixGet">
+            <summary>Sets the shim of NpgsqlCommandBuilder.get_QuoteSuffix()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.QuoteSuffixSetString">
+            <summary>Sets the shim of NpgsqlCommandBuilder.set_QuoteSuffix(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.RefreshSchema">
+            <summary>Sets the shim of NpgsqlCommandBuilder.RefreshSchema()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.SetParameterValuesFromRowNpgsqlCommandDataRow">
+            <summary>Sets the shim of NpgsqlCommandBuilder.SetParameterValuesFromRow(NpgsqlCommand command, DataRow row)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.StaticConstructor">
+            <summary>Sets the shim of NpgsqlCommandBuilder.NpgsqlCommandBuilder()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.BuildSchema">
+            <summary>Sets the shim of NpgsqlCommandBuilder.BuildSchema()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.DataAdapterGet">
+            <summary>Sets the shim of NpgsqlCommandBuilder.get_DataAdapter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.DataAdapterSetNpgsqlDataAdapter">
+            <summary>Sets the shim of NpgsqlCommandBuilder.set_DataAdapter(NpgsqlDataAdapter value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of NpgsqlCommandBuilder.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.GetDeleteCommandDataRow">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetDeleteCommand(DataRow row)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.GetDeleteCommandDataRowBoolean">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetDeleteCommand(DataRow row, Boolean setParameterValues)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.GetInsertCommandDataRow">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetInsertCommand(DataRow row)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.GetInsertCommandDataRowBoolean">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetInsertCommand(DataRow row, Boolean setParameterValues)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.GetQuotedNameString">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetQuotedName(String str)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.GetUpdateCommandDataRow">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetUpdateCommand(DataRow row)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.GetUpdateCommandDataRowBoolean">
+            <summary>Sets the shim of NpgsqlCommandBuilder.GetUpdateCommand(DataRow row, Boolean setParameterValues)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.OnRowUpdatingObjectNpgsqlRowUpdatingEventArgs">
+            <summary>Sets the shim of NpgsqlCommandBuilder.OnRowUpdating(Object sender, NpgsqlRowUpdatingEventArgs value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.QualifiedTableNameStringString">
+            <summary>Sets the shim of NpgsqlCommandBuilder.QualifiedTableName(String schema, String tableName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.QuotePrefixGet">
+            <summary>Sets the shim of NpgsqlCommandBuilder.get_QuotePrefix()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.QuotePrefixSetString">
+            <summary>Sets the shim of NpgsqlCommandBuilder.set_QuotePrefix(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.QuoteSuffixGet">
+            <summary>Sets the shim of NpgsqlCommandBuilder.get_QuoteSuffix()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.QuoteSuffixSetString">
+            <summary>Sets the shim of NpgsqlCommandBuilder.set_QuoteSuffix(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlCommandBuilder.AllInstances.RefreshSchema">
+            <summary>Sets the shim of NpgsqlCommandBuilder.RefreshSchema()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlDataAdapter">
+            <summary>Shim type of Npgsql.NpgsqlDataAdapter</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataAdapter.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataAdapter.#ctor(Npgsql.NpgsqlDataAdapter)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataAdapter.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataAdapter.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataAdapter.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataAdapter.Bind(System.Data.IDataAdapter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataAdapter.Bind(System.Data.IDbDataAdapter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataAdapter.Bind(System.ICloneable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataAdapter.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.Constructor">
+            <summary>Sets the shim of NpgsqlDataAdapter.NpgsqlDataAdapter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.ConstructorNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.NpgsqlDataAdapter(NpgsqlCommand selectCommand)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.ConstructorStringNpgsqlConnection">
+            <summary>Sets the shim of NpgsqlDataAdapter.NpgsqlDataAdapter(String selectCommandText, NpgsqlConnection selectConnection)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.ConstructorStringString">
+            <summary>Sets the shim of NpgsqlDataAdapter.NpgsqlDataAdapter(String selectCommandText, String selectConnectionString)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.CreateRowUpdatedEventDataRowIDbCommandStatementTypeDataTableMapping">
+            <summary>Sets the shim of NpgsqlDataAdapter.CreateRowUpdatedEvent(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.CreateRowUpdatingEventDataRowIDbCommandStatementTypeDataTableMapping">
+            <summary>Sets the shim of NpgsqlDataAdapter.CreateRowUpdatingEvent(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.DeleteCommandGet">
+            <summary>Sets the shim of NpgsqlDataAdapter.get_DeleteCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.DeleteCommandSetNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.set_DeleteCommand(NpgsqlCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.DeleteCommandSystemDataIDbDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.get_DeleteCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.DeleteCommandSystemDataIDbDataAdaptersetIDbCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.set_DeleteCommand(IDbCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.InsertCommandGet">
+            <summary>Sets the shim of NpgsqlDataAdapter.get_InsertCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.InsertCommandSetNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.set_InsertCommand(NpgsqlCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.InsertCommandSystemDataIDbDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.get_InsertCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.InsertCommandSystemDataIDbDataAdaptersetIDbCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.set_InsertCommand(IDbCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.OnRowUpdatedRowUpdatedEventArgs">
+            <summary>Sets the shim of NpgsqlDataAdapter.OnRowUpdated(RowUpdatedEventArgs value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.OnRowUpdatingRowUpdatingEventArgs">
+            <summary>Sets the shim of NpgsqlDataAdapter.OnRowUpdating(RowUpdatingEventArgs value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.RowUpdatedAddNpgsqlRowUpdatedEventHandler">
+            <summary>Sets the shim of NpgsqlDataAdapter.add_RowUpdated(NpgsqlRowUpdatedEventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.RowUpdatedRemoveNpgsqlRowUpdatedEventHandler">
+            <summary>Sets the shim of NpgsqlDataAdapter.remove_RowUpdated(NpgsqlRowUpdatedEventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.RowUpdatingAddNpgsqlRowUpdatingEventHandler">
+            <summary>Sets the shim of NpgsqlDataAdapter.add_RowUpdating(NpgsqlRowUpdatingEventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.RowUpdatingRemoveNpgsqlRowUpdatingEventHandler">
+            <summary>Sets the shim of NpgsqlDataAdapter.remove_RowUpdating(NpgsqlRowUpdatingEventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.SelectCommandGet">
+            <summary>Sets the shim of NpgsqlDataAdapter.get_SelectCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.SelectCommandSetNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.set_SelectCommand(NpgsqlCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.SelectCommandSystemDataIDbDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.get_SelectCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.SelectCommandSystemDataIDbDataAdaptersetIDbCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.set_SelectCommand(IDbCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.StaticConstructor">
+            <summary>Sets the shim of NpgsqlDataAdapter.NpgsqlDataAdapter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.TableMappingsSystemDataIDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDataAdapter.get_TableMappings()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.UpdateCommandGet">
+            <summary>Sets the shim of NpgsqlDataAdapter.get_UpdateCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.UpdateCommandSetNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.set_UpdateCommand(NpgsqlCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.UpdateCommandSystemDataIDbDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.get_UpdateCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.UpdateCommandSystemDataIDbDataAdaptersetIDbCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.set_UpdateCommand(IDbCommand value)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.CreateRowUpdatedEventDataRowIDbCommandStatementTypeDataTableMapping">
+            <summary>Sets the shim of NpgsqlDataAdapter.CreateRowUpdatedEvent(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.CreateRowUpdatingEventDataRowIDbCommandStatementTypeDataTableMapping">
+            <summary>Sets the shim of NpgsqlDataAdapter.CreateRowUpdatingEvent(DataRow dataRow, IDbCommand command, StatementType statementType, DataTableMapping tableMapping)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.DeleteCommandGet">
+            <summary>Sets the shim of NpgsqlDataAdapter.get_DeleteCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.DeleteCommandSetNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.set_DeleteCommand(NpgsqlCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.DeleteCommandSystemDataIDbDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.get_DeleteCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.DeleteCommandSystemDataIDbDataAdaptersetIDbCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.set_DeleteCommand(IDbCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.InsertCommandGet">
+            <summary>Sets the shim of NpgsqlDataAdapter.get_InsertCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.InsertCommandSetNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.set_InsertCommand(NpgsqlCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.InsertCommandSystemDataIDbDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.get_InsertCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.InsertCommandSystemDataIDbDataAdaptersetIDbCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.set_InsertCommand(IDbCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.OnRowUpdatedRowUpdatedEventArgs">
+            <summary>Sets the shim of NpgsqlDataAdapter.OnRowUpdated(RowUpdatedEventArgs value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.OnRowUpdatingRowUpdatingEventArgs">
+            <summary>Sets the shim of NpgsqlDataAdapter.OnRowUpdating(RowUpdatingEventArgs value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.RowUpdatedAddNpgsqlRowUpdatedEventHandler">
+            <summary>Sets the shim of NpgsqlDataAdapter.add_RowUpdated(NpgsqlRowUpdatedEventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.RowUpdatedRemoveNpgsqlRowUpdatedEventHandler">
+            <summary>Sets the shim of NpgsqlDataAdapter.remove_RowUpdated(NpgsqlRowUpdatedEventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.RowUpdatingAddNpgsqlRowUpdatingEventHandler">
+            <summary>Sets the shim of NpgsqlDataAdapter.add_RowUpdating(NpgsqlRowUpdatingEventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.RowUpdatingRemoveNpgsqlRowUpdatingEventHandler">
+            <summary>Sets the shim of NpgsqlDataAdapter.remove_RowUpdating(NpgsqlRowUpdatingEventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.SelectCommandGet">
+            <summary>Sets the shim of NpgsqlDataAdapter.get_SelectCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.SelectCommandSetNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.set_SelectCommand(NpgsqlCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.SelectCommandSystemDataIDbDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.get_SelectCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.SelectCommandSystemDataIDbDataAdaptersetIDbCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.set_SelectCommand(IDbCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.TableMappingsSystemDataIDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDataAdapter.get_TableMappings()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.UpdateCommandGet">
+            <summary>Sets the shim of NpgsqlDataAdapter.get_UpdateCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.UpdateCommandSetNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.set_UpdateCommand(NpgsqlCommand value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.UpdateCommandSystemDataIDbDataAdapterget">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.get_UpdateCommand()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataAdapter.AllInstances.UpdateCommandSystemDataIDbDataAdaptersetIDbCommand">
+            <summary>Sets the shim of NpgsqlDataAdapter.System.Data.IDbDataAdapter.set_UpdateCommand(IDbCommand value)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlDataReader">
+            <summary>Shim type of Npgsql.NpgsqlDataReader</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataReader.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataReader.#ctor(Npgsql.NpgsqlDataReader)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataReader.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataReader.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataReader.Bind(System.Data.IDataReader)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataReader.Bind(System.Data.IDataRecord)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataReader.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlDataReader.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.CheckHaveResultSet">
+            <summary>Sets the shim of NpgsqlDataReader.CheckHaveResultSet()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.CheckHaveRow">
+            <summary>Sets the shim of NpgsqlDataReader.CheckHaveRow()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.Close">
+            <summary>Sets the shim of NpgsqlDataReader.Close()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.ConstructorArrayListArrayListCommandBehaviorNpgsqlCommand">
+            <summary>Sets the shim of NpgsqlDataReader.NpgsqlDataReader(ArrayList resultsets, ArrayList responses, CommandBehavior behavior, NpgsqlCommand command)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.DepthGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_Depth()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.Dispose">
+            <summary>Sets the shim of NpgsqlDataReader.Dispose()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.DisposeBoolean">
+            <summary>Sets the shim of NpgsqlDataReader.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.FieldCountGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_FieldCount()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.FillSchemaTable_v2DataTable">
+            <summary>Sets the shim of NpgsqlDataReader.FillSchemaTable_v2(DataTable schema)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.FillSchemaTable_v3DataTable">
+            <summary>Sets the shim of NpgsqlDataReader.FillSchemaTable_v3(DataTable schema)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetBaseColumnNameHashtableInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetBaseColumnName(Hashtable columnLookup, Int32 FieldIndex)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetBooleanInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetBoolean(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetByteInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetByte(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetBytesInt32Int64ByteArrayInt32Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetBytes(Int32 i, Int64 fieldOffset, Byte[] buffer, Int32 bufferoffset, Int32 length)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetCharInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetChar(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetCharsInt32Int64CharArrayInt32Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetChars(Int32 i, Int64 fieldoffset, Char[] buffer, Int32 bufferoffset, Int32 length)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetColumns">
+            <summary>Sets the shim of NpgsqlDataReader.GetColumns()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetDataInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetData(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetDataTypeNameInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDataTypeName(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetDataTypeOIDInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDataTypeOID(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetDateTimeInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDateTime(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetDecimalInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDecimal(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetDoubleInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDouble(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetFieldDbTypeInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetFieldDbType(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetFieldNpgsqlDbTypeInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetFieldNpgsqlDbType(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetFieldTypeInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetFieldType(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetFloatInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetFloat(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetGuidInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetGuid(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetInt16Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetInt16(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetInt32Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetInt32(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetInt64Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetInt64(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetNameInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetName(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetOrdinalString">
+            <summary>Sets the shim of NpgsqlDataReader.GetOrdinal(String Name)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetPrimaryKeysString">
+            <summary>Sets the shim of NpgsqlDataReader.GetPrimaryKeys(String tablename)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetResultsetSchema">
+            <summary>Sets the shim of NpgsqlDataReader.GetResultsetSchema()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetSchemaTable">
+            <summary>Sets the shim of NpgsqlDataReader.GetSchemaTable()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetStringInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetString(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetTableNameFromQuery">
+            <summary>Sets the shim of NpgsqlDataReader.GetTableNameFromQuery()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetTablesFromOidsArrayList">
+            <summary>Sets the shim of NpgsqlDataReader.GetTablesFromOids(ArrayList oids)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetValueInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetValue(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.GetValuesObjectArray">
+            <summary>Sets the shim of NpgsqlDataReader.GetValues(Object[] Values)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.HasRowsGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_HasRows()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.HaveResultSet">
+            <summary>Sets the shim of NpgsqlDataReader.HaveResultSet()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.HaveRow">
+            <summary>Sets the shim of NpgsqlDataReader.HaveRow()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.IsAutoIncrementHashtableInt32">
+            <summary>Sets the shim of NpgsqlDataReader.IsAutoIncrement(Hashtable columnLookup, Int32 FieldIndex)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.IsClosedGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_IsClosed()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.IsDBNullInt32">
+            <summary>Sets the shim of NpgsqlDataReader.IsDBNull(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.IsKeyStringArrayList">
+            <summary>Sets the shim of NpgsqlDataReader.IsKey(String ColumnName, ArrayList ListOfKeys)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.IsNullableHashtableInt32">
+            <summary>Sets the shim of NpgsqlDataReader.IsNullable(Hashtable columnLookup, Int32 FieldIndex)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.ItemGetInt32">
+            <summary>Sets the shim of NpgsqlDataReader.get_Item(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.ItemGetString">
+            <summary>Sets the shim of NpgsqlDataReader.get_Item(String name)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.NextResult">
+            <summary>Sets the shim of NpgsqlDataReader.NextResult()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.Read">
+            <summary>Sets the shim of NpgsqlDataReader.Read()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.ReaderClosedAddEventHandler">
+            <summary>Sets the shim of NpgsqlDataReader.add_ReaderClosed(EventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.ReaderClosedRemoveEventHandler">
+            <summary>Sets the shim of NpgsqlDataReader.remove_ReaderClosed(EventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.RecordsAffectedGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_RecordsAffected()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.StaticConstructor">
+            <summary>Sets the shim of NpgsqlDataReader.NpgsqlDataReader()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the shim of NpgsqlDataReader.System.Collections.IEnumerable.GetEnumerator()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.CheckHaveResultSet">
+            <summary>Sets the shim of NpgsqlDataReader.CheckHaveResultSet()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.CheckHaveRow">
+            <summary>Sets the shim of NpgsqlDataReader.CheckHaveRow()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.Close">
+            <summary>Sets the shim of NpgsqlDataReader.Close()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.DepthGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_Depth()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.Dispose">
+            <summary>Sets the shim of NpgsqlDataReader.Dispose()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of NpgsqlDataReader.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.FieldCountGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_FieldCount()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.FillSchemaTable_v2DataTable">
+            <summary>Sets the shim of NpgsqlDataReader.FillSchemaTable_v2(DataTable schema)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.FillSchemaTable_v3DataTable">
+            <summary>Sets the shim of NpgsqlDataReader.FillSchemaTable_v3(DataTable schema)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetBaseColumnNameHashtableInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetBaseColumnName(Hashtable columnLookup, Int32 FieldIndex)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetBooleanInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetBoolean(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetByteInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetByte(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetBytesInt32Int64ByteArrayInt32Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetBytes(Int32 i, Int64 fieldOffset, Byte[] buffer, Int32 bufferoffset, Int32 length)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetCharInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetChar(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetCharsInt32Int64CharArrayInt32Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetChars(Int32 i, Int64 fieldoffset, Char[] buffer, Int32 bufferoffset, Int32 length)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetColumns">
+            <summary>Sets the shim of NpgsqlDataReader.GetColumns()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetDataInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetData(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetDataTypeNameInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDataTypeName(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetDataTypeOIDInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDataTypeOID(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetDateTimeInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDateTime(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetDecimalInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDecimal(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetDoubleInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetDouble(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetFieldDbTypeInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetFieldDbType(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetFieldNpgsqlDbTypeInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetFieldNpgsqlDbType(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetFieldTypeInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetFieldType(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetFloatInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetFloat(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetGuidInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetGuid(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetInt16Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetInt16(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetInt32Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetInt32(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetInt64Int32">
+            <summary>Sets the shim of NpgsqlDataReader.GetInt64(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetNameInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetName(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetOrdinalString">
+            <summary>Sets the shim of NpgsqlDataReader.GetOrdinal(String Name)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetPrimaryKeysString">
+            <summary>Sets the shim of NpgsqlDataReader.GetPrimaryKeys(String tablename)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetResultsetSchema">
+            <summary>Sets the shim of NpgsqlDataReader.GetResultsetSchema()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetSchemaTable">
+            <summary>Sets the shim of NpgsqlDataReader.GetSchemaTable()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetStringInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetString(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetTableNameFromQuery">
+            <summary>Sets the shim of NpgsqlDataReader.GetTableNameFromQuery()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetTablesFromOidsArrayList">
+            <summary>Sets the shim of NpgsqlDataReader.GetTablesFromOids(ArrayList oids)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetValueInt32">
+            <summary>Sets the shim of NpgsqlDataReader.GetValue(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.GetValuesObjectArray">
+            <summary>Sets the shim of NpgsqlDataReader.GetValues(Object[] Values)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.HasRowsGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_HasRows()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.HaveResultSet">
+            <summary>Sets the shim of NpgsqlDataReader.HaveResultSet()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.HaveRow">
+            <summary>Sets the shim of NpgsqlDataReader.HaveRow()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.IsAutoIncrementHashtableInt32">
+            <summary>Sets the shim of NpgsqlDataReader.IsAutoIncrement(Hashtable columnLookup, Int32 FieldIndex)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.IsClosedGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_IsClosed()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.IsDBNullInt32">
+            <summary>Sets the shim of NpgsqlDataReader.IsDBNull(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.IsKeyStringArrayList">
+            <summary>Sets the shim of NpgsqlDataReader.IsKey(String ColumnName, ArrayList ListOfKeys)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.IsNullableHashtableInt32">
+            <summary>Sets the shim of NpgsqlDataReader.IsNullable(Hashtable columnLookup, Int32 FieldIndex)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.ItemGetInt32">
+            <summary>Sets the shim of NpgsqlDataReader.get_Item(Int32 i)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.ItemGetString">
+            <summary>Sets the shim of NpgsqlDataReader.get_Item(String name)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.NextResult">
+            <summary>Sets the shim of NpgsqlDataReader.NextResult()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.Read">
+            <summary>Sets the shim of NpgsqlDataReader.Read()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.ReaderClosedAddEventHandler">
+            <summary>Sets the shim of NpgsqlDataReader.add_ReaderClosed(EventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.ReaderClosedRemoveEventHandler">
+            <summary>Sets the shim of NpgsqlDataReader.remove_ReaderClosed(EventHandler value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.RecordsAffectedGet">
+            <summary>Sets the shim of NpgsqlDataReader.get_RecordsAffected()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlDataReader.AllInstances.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the shim of NpgsqlDataReader.System.Collections.IEnumerable.GetEnumerator()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlError">
+            <summary>Shim type of Npgsql.NpgsqlError</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlError.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlError.#ctor(Npgsql.NpgsqlError)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlError.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlError.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.BackendProtocolVersionGet">
+            <summary>Sets the shim of NpgsqlError.get_BackendProtocolVersion()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.CodeGet">
+            <summary>Sets the shim of NpgsqlError.get_Code()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.ConstructorProtocolVersion">
+            <summary>Sets the shim of NpgsqlError.NpgsqlError(ProtocolVersion protocolVersion)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.ConstructorProtocolVersionString">
+            <summary>Sets the shim of NpgsqlError.NpgsqlError(ProtocolVersion protocolVersion, String errorMessage)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.DetailGet">
+            <summary>Sets the shim of NpgsqlError.get_Detail()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.ErrorSqlGet">
+            <summary>Sets the shim of NpgsqlError.get_ErrorSql()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.ErrorSqlSetString">
+            <summary>Sets the shim of NpgsqlError.set_ErrorSql(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.FileGet">
+            <summary>Sets the shim of NpgsqlError.get_File()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.HintGet">
+            <summary>Sets the shim of NpgsqlError.get_Hint()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.LineGet">
+            <summary>Sets the shim of NpgsqlError.get_Line()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.MessageGet">
+            <summary>Sets the shim of NpgsqlError.get_Message()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.PositionGet">
+            <summary>Sets the shim of NpgsqlError.get_Position()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.ReadFromStreamStreamEncoding">
+            <summary>Sets the shim of NpgsqlError.ReadFromStream(Stream inputStream, Encoding encoding)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.ReadFromStream_Ver_2StreamEncoding">
+            <summary>Sets the shim of NpgsqlError.ReadFromStream_Ver_2(Stream inputStream, Encoding encoding)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.ReadFromStream_Ver_3StreamEncoding">
+            <summary>Sets the shim of NpgsqlError.ReadFromStream_Ver_3(Stream inputStream, Encoding encoding)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.RoutineGet">
+            <summary>Sets the shim of NpgsqlError.get_Routine()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.SeverityGet">
+            <summary>Sets the shim of NpgsqlError.get_Severity()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.StaticConstructor">
+            <summary>Sets the shim of NpgsqlError.NpgsqlError()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.ToString">
+            <summary>Sets the shim of NpgsqlError.ToString()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.WhereGet">
+            <summary>Sets the shim of NpgsqlError.get_Where()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlError.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.BackendProtocolVersionGet">
+            <summary>Sets the shim of NpgsqlError.get_BackendProtocolVersion()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.CodeGet">
+            <summary>Sets the shim of NpgsqlError.get_Code()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.DetailGet">
+            <summary>Sets the shim of NpgsqlError.get_Detail()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.ErrorSqlGet">
+            <summary>Sets the shim of NpgsqlError.get_ErrorSql()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.ErrorSqlSetString">
+            <summary>Sets the shim of NpgsqlError.set_ErrorSql(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.FileGet">
+            <summary>Sets the shim of NpgsqlError.get_File()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.HintGet">
+            <summary>Sets the shim of NpgsqlError.get_Hint()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.LineGet">
+            <summary>Sets the shim of NpgsqlError.get_Line()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.MessageGet">
+            <summary>Sets the shim of NpgsqlError.get_Message()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.PositionGet">
+            <summary>Sets the shim of NpgsqlError.get_Position()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.ReadFromStreamStreamEncoding">
+            <summary>Sets the shim of NpgsqlError.ReadFromStream(Stream inputStream, Encoding encoding)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.ReadFromStream_Ver_2StreamEncoding">
+            <summary>Sets the shim of NpgsqlError.ReadFromStream_Ver_2(Stream inputStream, Encoding encoding)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.ReadFromStream_Ver_3StreamEncoding">
+            <summary>Sets the shim of NpgsqlError.ReadFromStream_Ver_3(Stream inputStream, Encoding encoding)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.RoutineGet">
+            <summary>Sets the shim of NpgsqlError.get_Routine()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.SeverityGet">
+            <summary>Sets the shim of NpgsqlError.get_Severity()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.ToString01">
+            <summary>Sets the shim of NpgsqlError.ToString()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlError.AllInstances.WhereGet">
+            <summary>Sets the shim of NpgsqlError.get_Where()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlEventLog">
+            <summary>Shim type of Npgsql.NpgsqlEventLog</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlEventLog.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlEventLog.#ctor(Npgsql.NpgsqlEventLog)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlEventLog.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlEventLog.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.Constructor">
+            <summary>Sets the shim of NpgsqlEventLog.NpgsqlEventLog()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.EchoMessagesGet">
+            <summary>Sets the shim of NpgsqlEventLog.get_EchoMessages()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.EchoMessagesSetBoolean">
+            <summary>Sets the shim of NpgsqlEventLog.set_EchoMessages(Boolean value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LevelGet">
+            <summary>Sets the shim of NpgsqlEventLog.get_Level()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LevelSetLogLevel">
+            <summary>Sets the shim of NpgsqlEventLog.set_Level(LogLevel value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogIndexerGetLogLevelStringObject">
+            <summary>Sets the shim of NpgsqlEventLog.LogIndexerGet(LogLevel msglevel, String ClassName, Object IndexerParam)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogIndexerSetLogLevelStringObjectObject">
+            <summary>Sets the shim of NpgsqlEventLog.LogIndexerSet(LogLevel msglevel, String ClassName, Object IndexerParam, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogMethodEnterLogLevelStringString">
+            <summary>Sets the shim of NpgsqlEventLog.LogMethodEnter(LogLevel msglevel, String ClassName, String MethodName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogMethodEnterLogLevelStringStringObject">
+            <summary>Sets the shim of NpgsqlEventLog.LogMethodEnter(LogLevel msglevel, String ClassName, String MethodName, Object MethodParameter)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogMethodEnterLogLevelStringStringObjectArray">
+            <summary>Sets the shim of NpgsqlEventLog.LogMethodEnter(LogLevel msglevel, String ClassName, String MethodName, Object[] MethodParameters)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogMethodEnterLogLevelStringStringObjectObject">
+            <summary>Sets the shim of NpgsqlEventLog.LogMethodEnter(LogLevel msglevel, String ClassName, String MethodName, Object MethodParameter1, Object MethodParameter2)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogMethodEnterLogLevelStringStringObjectObjectObject">
+            <summary>Sets the shim of NpgsqlEventLog.LogMethodEnter(LogLevel msglevel, String ClassName, String MethodName, Object MethodParameter1, Object MethodParameter2, Object MethodParameter3)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogMsgResourceManagerStringLogLevelObjectArray">
+            <summary>Sets the shim of NpgsqlEventLog.LogMsg(ResourceManager resman, String ResourceString, LogLevel msglevel, Object[] Parameters)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogMsgStringLogLevel">
+            <summary>Sets the shim of NpgsqlEventLog.LogMsg(String message, LogLevel msglevel)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogNameGet">
+            <summary>Sets the shim of NpgsqlEventLog.get_LogName()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogNameSetString">
+            <summary>Sets the shim of NpgsqlEventLog.set_LogName(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogPropertyGetLogLevelStringString">
+            <summary>Sets the shim of NpgsqlEventLog.LogPropertyGet(LogLevel msglevel, String ClassName, String PropertyName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.LogPropertySetLogLevelStringStringObject">
+            <summary>Sets the shim of NpgsqlEventLog.LogPropertySet(LogLevel msglevel, String ClassName, String PropertyName, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlEventLog.StaticConstructor">
+            <summary>Sets the shim of NpgsqlEventLog.NpgsqlEventLog()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlEventLog.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlException">
+            <summary>Shim type of Npgsql.NpgsqlException</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlException.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlException.#ctor(Npgsql.NpgsqlException)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlException.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlException.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AppendStringStringWriterStringString">
+            <summary>Sets the shim of NpgsqlException.AppendString(StringWriter Stream, String Format, String Str)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.BaseMessageGet">
+            <summary>Sets the shim of NpgsqlException.get_BaseMessage()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.CodeGet">
+            <summary>Sets the shim of NpgsqlException.get_Code()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.ConstructorIList">
+            <summary>Sets the shim of NpgsqlException.NpgsqlException(IList errors)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of NpgsqlException.NpgsqlException(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.ConstructorString">
+            <summary>Sets the shim of NpgsqlException.NpgsqlException(String message)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.ConstructorStringException">
+            <summary>Sets the shim of NpgsqlException.NpgsqlException(String message, Exception innerException)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.DetailGet">
+            <summary>Sets the shim of NpgsqlException.get_Detail()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.ErrorSqlGet">
+            <summary>Sets the shim of NpgsqlException.get_ErrorSql()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.ErrorsGet">
+            <summary>Sets the shim of NpgsqlException.get_Errors()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.FileGet">
+            <summary>Sets the shim of NpgsqlException.get_File()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the shim of NpgsqlException.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.HintGet">
+            <summary>Sets the shim of NpgsqlException.get_Hint()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.ItemGetInt32">
+            <summary>Sets the shim of NpgsqlException.get_Item(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.LineGet">
+            <summary>Sets the shim of NpgsqlException.get_Line()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.PositionGet">
+            <summary>Sets the shim of NpgsqlException.get_Position()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.RoutineGet">
+            <summary>Sets the shim of NpgsqlException.get_Routine()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.SeverityGet">
+            <summary>Sets the shim of NpgsqlException.get_Severity()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.StaticConstructor">
+            <summary>Sets the shim of NpgsqlException.NpgsqlException()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.ToString">
+            <summary>Sets the shim of NpgsqlException.ToString()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.WhereGet">
+            <summary>Sets the shim of NpgsqlException.get_Where()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlException.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.BaseMessageGet">
+            <summary>Sets the shim of NpgsqlException.get_BaseMessage()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.CodeGet">
+            <summary>Sets the shim of NpgsqlException.get_Code()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.DetailGet">
+            <summary>Sets the shim of NpgsqlException.get_Detail()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.ErrorSqlGet">
+            <summary>Sets the shim of NpgsqlException.get_ErrorSql()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.ErrorsGet">
+            <summary>Sets the shim of NpgsqlException.get_Errors()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.FileGet">
+            <summary>Sets the shim of NpgsqlException.get_File()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.GetObjectDataSerializationInfoStreamingContext">
+            <summary>Sets the shim of NpgsqlException.GetObjectData(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.HintGet">
+            <summary>Sets the shim of NpgsqlException.get_Hint()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.ItemGetInt32">
+            <summary>Sets the shim of NpgsqlException.get_Item(Int32 Index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.LineGet">
+            <summary>Sets the shim of NpgsqlException.get_Line()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.PositionGet">
+            <summary>Sets the shim of NpgsqlException.get_Position()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.RoutineGet">
+            <summary>Sets the shim of NpgsqlException.get_Routine()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.SeverityGet">
+            <summary>Sets the shim of NpgsqlException.get_Severity()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.ToString01">
+            <summary>Sets the shim of NpgsqlException.ToString()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlException.AllInstances.WhereGet">
+            <summary>Sets the shim of NpgsqlException.get_Where()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlNoticeEventArgs">
+            <summary>Shim type of Npgsql.NpgsqlNoticeEventArgs</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlNoticeEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlNoticeEventArgs.#ctor(Npgsql.NpgsqlNoticeEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlNoticeEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlNoticeEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlNoticeEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlNoticeEventArgs.ConstructorNpgsqlError">
+            <summary>Sets the shim of NpgsqlNoticeEventArgs.NpgsqlNoticeEventArgs(NpgsqlError eNotice)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlNoticeEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlNotificationEventArgs">
+            <summary>Shim type of Npgsql.NpgsqlNotificationEventArgs</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlNotificationEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlNotificationEventArgs.#ctor(Npgsql.NpgsqlNotificationEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlNotificationEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlNotificationEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlNotificationEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlNotificationEventArgs.ConstructorInt32String">
+            <summary>Sets the shim of NpgsqlNotificationEventArgs.NpgsqlNotificationEventArgs(Int32 nPID, String nCondition)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlNotificationEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlParameter">
+            <summary>Shim type of Npgsql.NpgsqlParameter</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameter.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameter.#ctor(Npgsql.NpgsqlParameter)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameter.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameter.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameter.Bind(System.Data.IDataParameter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameter.Bind(System.Data.IDbDataParameter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameter.Bind(System.ICloneable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.Constructor">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ConstructorStringDbType">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter(String parameterName, DbType parameterType)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ConstructorStringDbTypeInt32">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter(String parameterName, DbType parameterType, Int32 size)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ConstructorStringDbTypeInt32String">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter(String parameterName, DbType parameterType, Int32 size, String sourceColumn)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ConstructorStringDbTypeInt32StringParameterDirectionBooleanByteByteDataRowVersionObject">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter(String parameterName, DbType parameterType, Int32 size, String sourceColumn, ParameterDirection direction, Boolean isNullable, Byte precision, Byte scale, DataRowVersion sourceVersion, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ConstructorStringNpgsqlDbType">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter(String parameterName, NpgsqlDbType parameterType)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ConstructorStringNpgsqlDbTypeInt32">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter(String parameterName, NpgsqlDbType parameterType, Int32 size)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ConstructorStringNpgsqlDbTypeInt32String">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter(String parameterName, NpgsqlDbType parameterType, Int32 size, String sourceColumn)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ConstructorStringNpgsqlDbTypeInt32StringParameterDirectionBooleanByteByteDataRowVersionObject">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter(String parameterName, NpgsqlDbType parameterType, Int32 size, String sourceColumn, ParameterDirection direction, Boolean isNullable, Byte precision, Byte scale, DataRowVersion sourceVersion, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ConstructorStringObject">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter(String parameterName, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.DbTypeGet">
+            <summary>Sets the shim of NpgsqlParameter.get_DbType()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.DbTypeSetDbType">
+            <summary>Sets the shim of NpgsqlParameter.set_DbType(DbType value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.DirectionGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Direction()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.DirectionSetParameterDirection">
+            <summary>Sets the shim of NpgsqlParameter.set_Direction(ParameterDirection value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.IsNullableGet">
+            <summary>Sets the shim of NpgsqlParameter.get_IsNullable()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.IsNullableSetBoolean">
+            <summary>Sets the shim of NpgsqlParameter.set_IsNullable(Boolean value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.NpgsqlDbTypeGet">
+            <summary>Sets the shim of NpgsqlParameter.get_NpgsqlDbType()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.NpgsqlDbTypeSetNpgsqlDbType">
+            <summary>Sets the shim of NpgsqlParameter.set_NpgsqlDbType(NpgsqlDbType value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ParameterNameGet">
+            <summary>Sets the shim of NpgsqlParameter.get_ParameterName()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ParameterNameSetString">
+            <summary>Sets the shim of NpgsqlParameter.set_ParameterName(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.PrecisionGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Precision()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.PrecisionSetByte">
+            <summary>Sets the shim of NpgsqlParameter.set_Precision(Byte value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ScaleGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Scale()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ScaleSetByte">
+            <summary>Sets the shim of NpgsqlParameter.set_Scale(Byte value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.SizeGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Size()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.SizeSetInt32">
+            <summary>Sets the shim of NpgsqlParameter.set_Size(Int32 value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.SourceColumnGet">
+            <summary>Sets the shim of NpgsqlParameter.get_SourceColumn()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.SourceColumnSetString">
+            <summary>Sets the shim of NpgsqlParameter.set_SourceColumn(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.SourceVersionGet">
+            <summary>Sets the shim of NpgsqlParameter.get_SourceVersion()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.SourceVersionSetDataRowVersion">
+            <summary>Sets the shim of NpgsqlParameter.set_SourceVersion(DataRowVersion value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.StaticConstructor">
+            <summary>Sets the shim of NpgsqlParameter.NpgsqlParameter()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.SystemICloneableClone">
+            <summary>Sets the shim of NpgsqlParameter.System.ICloneable.Clone()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ValueGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Value()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.ValueSetObject">
+            <summary>Sets the shim of NpgsqlParameter.set_Value(Object value)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.DbTypeGet">
+            <summary>Sets the shim of NpgsqlParameter.get_DbType()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.DbTypeSetDbType">
+            <summary>Sets the shim of NpgsqlParameter.set_DbType(DbType value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.DirectionGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Direction()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.DirectionSetParameterDirection">
+            <summary>Sets the shim of NpgsqlParameter.set_Direction(ParameterDirection value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.IsNullableGet">
+            <summary>Sets the shim of NpgsqlParameter.get_IsNullable()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.IsNullableSetBoolean">
+            <summary>Sets the shim of NpgsqlParameter.set_IsNullable(Boolean value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.NpgsqlDbTypeGet">
+            <summary>Sets the shim of NpgsqlParameter.get_NpgsqlDbType()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.NpgsqlDbTypeSetNpgsqlDbType">
+            <summary>Sets the shim of NpgsqlParameter.set_NpgsqlDbType(NpgsqlDbType value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.ParameterNameGet">
+            <summary>Sets the shim of NpgsqlParameter.get_ParameterName()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.ParameterNameSetString">
+            <summary>Sets the shim of NpgsqlParameter.set_ParameterName(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.PrecisionGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Precision()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.PrecisionSetByte">
+            <summary>Sets the shim of NpgsqlParameter.set_Precision(Byte value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.ScaleGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Scale()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.ScaleSetByte">
+            <summary>Sets the shim of NpgsqlParameter.set_Scale(Byte value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.SizeGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Size()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.SizeSetInt32">
+            <summary>Sets the shim of NpgsqlParameter.set_Size(Int32 value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.SourceColumnGet">
+            <summary>Sets the shim of NpgsqlParameter.get_SourceColumn()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.SourceColumnSetString">
+            <summary>Sets the shim of NpgsqlParameter.set_SourceColumn(String value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.SourceVersionGet">
+            <summary>Sets the shim of NpgsqlParameter.get_SourceVersion()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.SourceVersionSetDataRowVersion">
+            <summary>Sets the shim of NpgsqlParameter.set_SourceVersion(DataRowVersion value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.SystemICloneableClone">
+            <summary>Sets the shim of NpgsqlParameter.System.ICloneable.Clone()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.ValueGet">
+            <summary>Sets the shim of NpgsqlParameter.get_Value()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameter.AllInstances.ValueSetObject">
+            <summary>Sets the shim of NpgsqlParameter.set_Value(Object value)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlParameterCollection">
+            <summary>Shim type of Npgsql.NpgsqlParameterCollection</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameterCollection.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameterCollection.#ctor(Npgsql.NpgsqlParameterCollection)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameterCollection.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameterCollection.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameterCollection.Bind(System.Data.IDataParameterCollection)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameterCollection.Bind(System.Collections.ICollection)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameterCollection.Bind(System.Collections.IEnumerable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlParameterCollection.Bind(System.Collections.IList)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AddNpgsqlParameter">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(NpgsqlParameter value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AddObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AddStringNpgsqlDbType">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(String parameterName, NpgsqlDbType parameterType)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AddStringNpgsqlDbTypeInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(String parameterName, NpgsqlDbType parameterType, Int32 size)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AddStringNpgsqlDbTypeInt32String">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(String parameterName, NpgsqlDbType parameterType, Int32 size, String sourceColumn)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AddStringObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(String parameterName, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.CheckTypeObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.CheckType(Object Object)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.Clear">
+            <summary>Sets the shim of NpgsqlParameterCollection.Clear()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.Constructor">
+            <summary>Sets the shim of NpgsqlParameterCollection.NpgsqlParameterCollection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ContainsObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.Contains(Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ContainsString">
+            <summary>Sets the shim of NpgsqlParameterCollection.Contains(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.CopyToArrayInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.CopyTo(Array array, Int32 index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.CountGet">
+            <summary>Sets the shim of NpgsqlParameterCollection.get_Count()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.IndexOfObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.IndexOf(Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.IndexOfString">
+            <summary>Sets the shim of NpgsqlParameterCollection.IndexOf(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.InsertInt32Object">
+            <summary>Sets the shim of NpgsqlParameterCollection.Insert(Int32 index, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.IsFixedSizeSystemCollectionsIListget">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IList.get_IsFixedSize()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.IsReadOnlySystemCollectionsIListget">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IList.get_IsReadOnly()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.IsSynchronizedSystemCollectionsICollectionget">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.ICollection.get_IsSynchronized()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ItemGetInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ItemGetString">
+            <summary>Sets the shim of NpgsqlParameterCollection.get_Item(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ItemSetInt32NpgsqlParameter">
+            <summary>Sets the shim of NpgsqlParameterCollection.set_Item(Int32 index, NpgsqlParameter value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ItemSetStringNpgsqlParameter">
+            <summary>Sets the shim of NpgsqlParameterCollection.set_Item(String parameterName, NpgsqlParameter value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ItemSystemCollectionsIListgetInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IList.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ItemSystemCollectionsIListsetInt32Object">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IList.set_Item(Int32 index, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ItemSystemDataIDataParameterCollectiongetString">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Data.IDataParameterCollection.get_Item(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.ItemSystemDataIDataParameterCollectionsetStringObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Data.IDataParameterCollection.set_Item(String parameterName, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.RemoveAtInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.RemoveAt(Int32 index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.RemoveAtString">
+            <summary>Sets the shim of NpgsqlParameterCollection.RemoveAt(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.RemoveObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.Remove(Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.StaticConstructor">
+            <summary>Sets the shim of NpgsqlParameterCollection.NpgsqlParameterCollection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.SyncRootSystemCollectionsICollectionget">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.ICollection.get_SyncRoot()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IEnumerable.GetEnumerator()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.TryGetValueStringNpgsqlParameterOut">
+            <summary>Sets the shim of NpgsqlParameterCollection.TryGetValue(String parameterName, NpgsqlParameter&amp; parameter)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.AddNpgsqlParameter">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(NpgsqlParameter value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.AddObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.AddStringNpgsqlDbType">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(String parameterName, NpgsqlDbType parameterType)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.AddStringNpgsqlDbTypeInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(String parameterName, NpgsqlDbType parameterType, Int32 size)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.AddStringNpgsqlDbTypeInt32String">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(String parameterName, NpgsqlDbType parameterType, Int32 size, String sourceColumn)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.AddStringObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.Add(String parameterName, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.CheckTypeObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.CheckType(Object Object)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.Clear">
+            <summary>Sets the shim of NpgsqlParameterCollection.Clear()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ContainsObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.Contains(Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ContainsString">
+            <summary>Sets the shim of NpgsqlParameterCollection.Contains(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.CopyToArrayInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.CopyTo(Array array, Int32 index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.CountGet">
+            <summary>Sets the shim of NpgsqlParameterCollection.get_Count()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.IndexOfObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.IndexOf(Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.IndexOfString">
+            <summary>Sets the shim of NpgsqlParameterCollection.IndexOf(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.InsertInt32Object">
+            <summary>Sets the shim of NpgsqlParameterCollection.Insert(Int32 index, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.IsFixedSizeSystemCollectionsIListget">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IList.get_IsFixedSize()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.IsReadOnlySystemCollectionsIListget">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IList.get_IsReadOnly()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.IsSynchronizedSystemCollectionsICollectionget">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.ICollection.get_IsSynchronized()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ItemGetInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ItemGetString">
+            <summary>Sets the shim of NpgsqlParameterCollection.get_Item(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ItemSetInt32NpgsqlParameter">
+            <summary>Sets the shim of NpgsqlParameterCollection.set_Item(Int32 index, NpgsqlParameter value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ItemSetStringNpgsqlParameter">
+            <summary>Sets the shim of NpgsqlParameterCollection.set_Item(String parameterName, NpgsqlParameter value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ItemSystemCollectionsIListgetInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IList.get_Item(Int32 index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ItemSystemCollectionsIListsetInt32Object">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IList.set_Item(Int32 index, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ItemSystemDataIDataParameterCollectiongetString">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Data.IDataParameterCollection.get_Item(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.ItemSystemDataIDataParameterCollectionsetStringObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Data.IDataParameterCollection.set_Item(String parameterName, Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.RemoveAtInt32">
+            <summary>Sets the shim of NpgsqlParameterCollection.RemoveAt(Int32 index)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.RemoveAtString">
+            <summary>Sets the shim of NpgsqlParameterCollection.RemoveAt(String parameterName)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.RemoveObject">
+            <summary>Sets the shim of NpgsqlParameterCollection.Remove(Object value)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.SyncRootSystemCollectionsICollectionget">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.ICollection.get_SyncRoot()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.SystemCollectionsIEnumerableGetEnumerator">
+            <summary>Sets the shim of NpgsqlParameterCollection.System.Collections.IEnumerable.GetEnumerator()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlParameterCollection.AllInstances.TryGetValueStringNpgsqlParameterOut">
+            <summary>Sets the shim of NpgsqlParameterCollection.TryGetValue(String parameterName, NpgsqlParameter&amp; parameter)</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlTransaction">
+            <summary>Shim type of Npgsql.NpgsqlTransaction</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlTransaction.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlTransaction.#ctor(Npgsql.NpgsqlTransaction)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlTransaction.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlTransaction.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlTransaction.Bind(System.Data.IDbTransaction)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimNpgsqlTransaction.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.Cancel">
+            <summary>Sets the shim of NpgsqlTransaction.Cancel()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.CheckDisposed">
+            <summary>Sets the shim of NpgsqlTransaction.CheckDisposed()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.Commit">
+            <summary>Sets the shim of NpgsqlTransaction.Commit()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.ConnectionGet">
+            <summary>Sets the shim of NpgsqlTransaction.get_Connection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.ConnectionSystemDataIDbTransactionget">
+            <summary>Sets the shim of NpgsqlTransaction.System.Data.IDbTransaction.get_Connection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.ConstructorNpgsqlConnection">
+            <summary>Sets the shim of NpgsqlTransaction.NpgsqlTransaction(NpgsqlConnection conn)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.ConstructorNpgsqlConnectionIsolationLevel">
+            <summary>Sets the shim of NpgsqlTransaction.NpgsqlTransaction(NpgsqlConnection conn, IsolationLevel isolation)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.Dispose">
+            <summary>Sets the shim of NpgsqlTransaction.Dispose()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.DisposeBoolean">
+            <summary>Sets the shim of NpgsqlTransaction.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.DisposedGet">
+            <summary>Sets the shim of NpgsqlTransaction.get_Disposed()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.IsolationLevelGet">
+            <summary>Sets the shim of NpgsqlTransaction.get_IsolationLevel()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.Rollback">
+            <summary>Sets the shim of NpgsqlTransaction.Rollback()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.StaticConstructor">
+            <summary>Sets the shim of NpgsqlTransaction.NpgsqlTransaction()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.Cancel">
+            <summary>Sets the shim of NpgsqlTransaction.Cancel()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.CheckDisposed">
+            <summary>Sets the shim of NpgsqlTransaction.CheckDisposed()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.Commit">
+            <summary>Sets the shim of NpgsqlTransaction.Commit()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.ConnectionGet">
+            <summary>Sets the shim of NpgsqlTransaction.get_Connection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.ConnectionSystemDataIDbTransactionget">
+            <summary>Sets the shim of NpgsqlTransaction.System.Data.IDbTransaction.get_Connection()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.Dispose">
+            <summary>Sets the shim of NpgsqlTransaction.Dispose()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of NpgsqlTransaction.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.DisposedGet">
+            <summary>Sets the shim of NpgsqlTransaction.get_Disposed()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.IsolationLevelGet">
+            <summary>Sets the shim of NpgsqlTransaction.get_IsolationLevel()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimNpgsqlTransaction.AllInstances.Rollback">
+            <summary>Sets the shim of NpgsqlTransaction.Rollback()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimServerVersion">
+            <summary>Shim type of Npgsql.ServerVersion</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimServerVersion.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimServerVersion.#ctor(Npgsql.ServerVersion)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimServerVersion.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:Npgsql.Fakes.ShimServerVersion.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.ConstructorInt32Int32Int32">
+            <summary>Sets the shim of ServerVersion.ServerVersion(Int32 Major, Int32 Minor, Int32 Patch)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.EqualityOpServerVersionServerVersion">
+            <summary>Sets the shim of ServerVersion.op_Equality(ServerVersion One, ServerVersion TheOther)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.EqualsObject">
+            <summary>Sets the shim of ServerVersion.Equals(Object O)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.GetHashCode">
+            <summary>Sets the shim of ServerVersion.GetHashCode()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.GreaterThanOpServerVersionServerVersion">
+            <summary>Sets the shim of ServerVersion.op_GreaterThan(ServerVersion One, ServerVersion TheOther)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.GreaterThanOrEqualOpServerVersionServerVersion">
+            <summary>Sets the shim of ServerVersion.op_GreaterThanOrEqual(ServerVersion One, ServerVersion TheOther)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.InequalityOpServerVersionServerVersion">
+            <summary>Sets the shim of ServerVersion.op_Inequality(ServerVersion One, ServerVersion TheOther)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.LessThanOpServerVersionServerVersion">
+            <summary>Sets the shim of ServerVersion.op_LessThan(ServerVersion One, ServerVersion TheOther)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.LessThanOrEqualOpServerVersionServerVersion">
+            <summary>Sets the shim of ServerVersion.op_LessThanOrEqual(ServerVersion One, ServerVersion TheOther)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.MajorGet">
+            <summary>Sets the shim of ServerVersion.get_Major()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.MinorGet">
+            <summary>Sets the shim of ServerVersion.get_Minor()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.PatchGet">
+            <summary>Sets the shim of ServerVersion.get_Patch()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.StaticConstructor">
+            <summary>Sets the shim of ServerVersion.ServerVersion()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.ToString">
+            <summary>Sets the shim of ServerVersion.ToString()</summary>
+        </member>
+        <member name="T:Npgsql.Fakes.ShimServerVersion.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.AllInstances.EqualsObject">
+            <summary>Sets the shim of ServerVersion.Equals(Object O)</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.AllInstances.GetHashCode01">
+            <summary>Sets the shim of ServerVersion.GetHashCode()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.AllInstances.MajorGet">
+            <summary>Sets the shim of ServerVersion.get_Major()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.AllInstances.MinorGet">
+            <summary>Sets the shim of ServerVersion.get_Minor()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.AllInstances.PatchGet">
+            <summary>Sets the shim of ServerVersion.get_Patch()</summary>
+        </member>
+        <member name="P:Npgsql.Fakes.ShimServerVersion.AllInstances.ToString01">
+            <summary>Sets the shim of ServerVersion.ToString()</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimFastpath">
+            <summary>Shim type of NpgsqlTypes.Fastpath</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimFastpath.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimFastpath.#ctor(NpgsqlTypes.Fastpath)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimFastpath.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimFastpath.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AddFunctionStringInt32">
+            <summary>Sets the shim of Fastpath.AddFunction(String name, Int32 fnid)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AddFunctionsIDataReader">
+            <summary>Sets the shim of Fastpath.AddFunctions(IDataReader rs)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.ConstructorNpgsqlConnection">
+            <summary>Sets the shim of Fastpath.Fastpath(NpgsqlConnection conn)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.ConstructorNpgsqlConnectionStream">
+            <summary>Sets the shim of Fastpath.Fastpath(NpgsqlConnection conn, Stream stream)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.FastpathCallInt32BooleanFastpathArgArray">
+            <summary>Sets the shim of Fastpath.FastpathCall(Int32 fnid, Boolean resulttype, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.FastpathCallStringBooleanFastpathArgArray">
+            <summary>Sets the shim of Fastpath.FastpathCall(String name, Boolean resulttype, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.FastpathV2Int32BooleanFastpathArgArray">
+            <summary>Sets the shim of Fastpath.FastpathV2(Int32 fnid, Boolean resulttype, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.FastpathV3Int32BooleanFastpathArgArray">
+            <summary>Sets the shim of Fastpath.FastpathV3(Int32 fnid, Boolean resulttype, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.GetDataStringFastpathArgArray">
+            <summary>Sets the shim of Fastpath.GetData(String name, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.GetIDString">
+            <summary>Sets the shim of Fastpath.GetID(String name)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.GetIntegerStringFastpathArgArray">
+            <summary>Sets the shim of Fastpath.GetInteger(String name, FastpathArg[] args)</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimFastpath.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AllInstances.AddFunctionStringInt32">
+            <summary>Sets the shim of Fastpath.AddFunction(String name, Int32 fnid)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AllInstances.AddFunctionsIDataReader">
+            <summary>Sets the shim of Fastpath.AddFunctions(IDataReader rs)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AllInstances.FastpathCallInt32BooleanFastpathArgArray">
+            <summary>Sets the shim of Fastpath.FastpathCall(Int32 fnid, Boolean resulttype, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AllInstances.FastpathCallStringBooleanFastpathArgArray">
+            <summary>Sets the shim of Fastpath.FastpathCall(String name, Boolean resulttype, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AllInstances.FastpathV2Int32BooleanFastpathArgArray">
+            <summary>Sets the shim of Fastpath.FastpathV2(Int32 fnid, Boolean resulttype, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AllInstances.FastpathV3Int32BooleanFastpathArgArray">
+            <summary>Sets the shim of Fastpath.FastpathV3(Int32 fnid, Boolean resulttype, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AllInstances.GetDataStringFastpathArgArray">
+            <summary>Sets the shim of Fastpath.GetData(String name, FastpathArg[] args)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AllInstances.GetIDString">
+            <summary>Sets the shim of Fastpath.GetID(String name)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpath.AllInstances.GetIntegerStringFastpathArgArray">
+            <summary>Sets the shim of Fastpath.GetInteger(String name, FastpathArg[] args)</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimFastpathArg">
+            <summary>Shim type of NpgsqlTypes.FastpathArg</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimFastpathArg.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimFastpathArg.#ctor(NpgsqlTypes.FastpathArg)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimFastpathArg.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimFastpathArg.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpathArg.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpathArg.ConstructorByteArray">
+            <summary>Sets the shim of FastpathArg.FastpathArg(Byte[] bytes)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpathArg.ConstructorByteArrayInt32Int32">
+            <summary>Sets the shim of FastpathArg.FastpathArg(Byte[] buf, Int32 off, Int32 len)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpathArg.ConstructorInt32">
+            <summary>Sets the shim of FastpathArg.FastpathArg(Int32 value)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpathArg.ConstructorString">
+            <summary>Sets the shim of FastpathArg.FastpathArg(String s)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpathArg.SendSize">
+            <summary>Sets the shim of FastpathArg.SendSize()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpathArg.SendStream">
+            <summary>Sets the shim of FastpathArg.Send(Stream s)</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimFastpathArg.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpathArg.AllInstances.SendSize">
+            <summary>Sets the shim of FastpathArg.SendSize()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimFastpathArg.AllInstances.SendStream">
+            <summary>Sets the shim of FastpathArg.Send(Stream s)</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimLargeObject">
+            <summary>Shim type of NpgsqlTypes.LargeObject</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimLargeObject.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimLargeObject.#ctor(NpgsqlTypes.LargeObject)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimLargeObject.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimLargeObject.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.Close">
+            <summary>Sets the shim of LargeObject.Close()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.ConstructorFastpathInt32Int32">
+            <summary>Sets the shim of LargeObject.LargeObject(Fastpath fp, Int32 oid, Int32 mode)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.GetOID">
+            <summary>Sets the shim of LargeObject.GetOID()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.ReadByteArrayInt32Int32">
+            <summary>Sets the shim of LargeObject.Read(Byte[] buf, Int32 off, Int32 len)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.ReadInt32">
+            <summary>Sets the shim of LargeObject.Read(Int32 len)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.SeekInt32">
+            <summary>Sets the shim of LargeObject.Seek(Int32 pos)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.SeekInt32Int32">
+            <summary>Sets the shim of LargeObject.Seek(Int32 pos, Int32 refi)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.Size">
+            <summary>Sets the shim of LargeObject.Size()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.Tell">
+            <summary>Sets the shim of LargeObject.Tell()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.WriteByteArray">
+            <summary>Sets the shim of LargeObject.Write(Byte[] buf)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.WriteByteArrayInt32Int32">
+            <summary>Sets the shim of LargeObject.Write(Byte[] buf, Int32 off, Int32 len)</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.Close">
+            <summary>Sets the shim of LargeObject.Close()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.GetOID">
+            <summary>Sets the shim of LargeObject.GetOID()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.ReadByteArrayInt32Int32">
+            <summary>Sets the shim of LargeObject.Read(Byte[] buf, Int32 off, Int32 len)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.ReadInt32">
+            <summary>Sets the shim of LargeObject.Read(Int32 len)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.SeekInt32">
+            <summary>Sets the shim of LargeObject.Seek(Int32 pos)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.SeekInt32Int32">
+            <summary>Sets the shim of LargeObject.Seek(Int32 pos, Int32 refi)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.Size">
+            <summary>Sets the shim of LargeObject.Size()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.Tell">
+            <summary>Sets the shim of LargeObject.Tell()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.WriteByteArray">
+            <summary>Sets the shim of LargeObject.Write(Byte[] buf)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObject.AllInstances.WriteByteArrayInt32Int32">
+            <summary>Sets the shim of LargeObject.Write(Byte[] buf, Int32 off, Int32 len)</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimLargeObjectManager">
+            <summary>Shim type of NpgsqlTypes.LargeObjectManager</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimLargeObjectManager.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimLargeObjectManager.#ctor(NpgsqlTypes.LargeObjectManager)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimLargeObjectManager.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimLargeObjectManager.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.Constructor">
+            <summary>Sets the shim of LargeObjectManager.LargeObjectManager()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.ConstructorNpgsqlConnection">
+            <summary>Sets the shim of LargeObjectManager.LargeObjectManager(NpgsqlConnection conn)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.Create">
+            <summary>Sets the shim of LargeObjectManager.Create()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.CreateInt32">
+            <summary>Sets the shim of LargeObjectManager.Create(Int32 mode)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.DeleteInt32">
+            <summary>Sets the shim of LargeObjectManager.Delete(Int32 oid)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.OpenInt32">
+            <summary>Sets the shim of LargeObjectManager.Open(Int32 oid)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.OpenInt32Int32">
+            <summary>Sets the shim of LargeObjectManager.Open(Int32 oid, Int32 mode)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.StaticConstructor">
+            <summary>Sets the shim of LargeObjectManager.LargeObjectManager()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.UnlinkInt32">
+            <summary>Sets the shim of LargeObjectManager.Unlink(Int32 oid)</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimLargeObjectManager.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.AllInstances.Create">
+            <summary>Sets the shim of LargeObjectManager.Create()</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.AllInstances.CreateInt32">
+            <summary>Sets the shim of LargeObjectManager.Create(Int32 mode)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.AllInstances.DeleteInt32">
+            <summary>Sets the shim of LargeObjectManager.Delete(Int32 oid)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.AllInstances.OpenInt32">
+            <summary>Sets the shim of LargeObjectManager.Open(Int32 oid)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.AllInstances.OpenInt32Int32">
+            <summary>Sets the shim of LargeObjectManager.Open(Int32 oid, Int32 mode)</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimLargeObjectManager.AllInstances.UnlinkInt32">
+            <summary>Sets the shim of LargeObjectManager.Unlink(Int32 oid)</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlBox">
+            <summary>Shim type of NpgsqlTypes.NpgsqlBox</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlBox.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlBox.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlBox.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimNpgsqlBox.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlBox.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlCircle">
+            <summary>Shim type of NpgsqlTypes.NpgsqlCircle</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlCircle.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlCircle.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlCircle.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimNpgsqlCircle.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlCircle.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlInet">
+            <summary>Shim type of NpgsqlTypes.NpgsqlInet</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlInet.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlInet.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlInet.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimNpgsqlInet.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimNpgsqlInet.ImplicitOpNpgsqlInetIPAddress">
+            <summary>Sets the shim of NpgsqlInet.op_Implicit(NpgsqlInet x)</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlInet.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlLSeg">
+            <summary>Shim type of NpgsqlTypes.NpgsqlLSeg</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlLSeg.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlLSeg.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlLSeg.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimNpgsqlLSeg.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlLSeg.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlPath">
+            <summary>Shim type of NpgsqlTypes.NpgsqlPath</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlPath.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlPath.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlPath.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimNpgsqlPath.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlPath.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlPoint">
+            <summary>Shim type of NpgsqlTypes.NpgsqlPoint</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlPoint.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlPoint.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlPoint.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimNpgsqlPoint.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlPoint.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlPolygon">
+            <summary>Shim type of NpgsqlTypes.NpgsqlPolygon</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlPolygon.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlPolygon.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.ShimNpgsqlPolygon.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.ShimNpgsqlPolygon.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.ShimNpgsqlPolygon.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.StubFastpath">
+            <summary>Stub type of NpgsqlTypes.Fastpath</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubFastpath.#ctor(Npgsql.NpgsqlConnection)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubFastpath.#ctor(Npgsql.NpgsqlConnection,System.IO.Stream)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubFastpath.InitializeStub">
+            <summary>Initializes a new instance of type StubFastpath</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubFastpath.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubFastpath.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubFastpath.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.StubFastpathArg">
+            <summary>Stub type of NpgsqlTypes.FastpathArg</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubFastpathArg.#ctor(System.String)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubFastpathArg.#ctor(System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubFastpathArg.#ctor(System.Byte[])">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubFastpathArg.#ctor(System.Byte[],System.Int32,System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubFastpathArg.InitializeStub">
+            <summary>Initializes a new instance of type StubFastpathArg</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubFastpathArg.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubFastpathArg.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubFastpathArg.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.StubLargeObject">
+            <summary>Stub type of NpgsqlTypes.LargeObject</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubLargeObject.#ctor(NpgsqlTypes.Fastpath,System.Int32,System.Int32)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubLargeObject.InitializeStub">
+            <summary>Initializes a new instance of type StubLargeObject</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubLargeObject.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubLargeObject.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubLargeObject.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:NpgsqlTypes.Fakes.StubLargeObjectManager">
+            <summary>Stub type of NpgsqlTypes.LargeObjectManager</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubLargeObjectManager.#ctor(Npgsql.NpgsqlConnection)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:NpgsqlTypes.Fakes.StubLargeObjectManager.InitializeStub">
+            <summary>Initializes a new instance of type StubLargeObjectManager</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubLargeObjectManager.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubLargeObjectManager.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:NpgsqlTypes.Fakes.StubLargeObjectManager.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

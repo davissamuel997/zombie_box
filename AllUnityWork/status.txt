@@ -1,0 +1,644 @@
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   ../.gitignore
+	new file:   ZombieBox/Assets/Editor/NavMeshFixer.cs
+	modified:   ZombieBox/Assets/Scripts/CharSelect.cs
+	new file:   ZombieBox/Assets/Scripts/Enemy.cs
+	new file:   ZombieBox/Assets/Scripts/EnemyManager.cs
+	new file:   ZombieBox/Assets/Scripts/LoginMenu.cs
+	new file:   ZombieBox/Assets/Scripts/PathScript.cs
+	modified:   ZombieBox/Assets/Scripts/PlayButtonScript.cs
+	modified:   ZombieBox/Assets/Scripts/PlayerScript.cs
+	new file:   ZombieBox/Assets/Scripts/Turret.cs
+	new file:   ZombieBox/Assets/Scripts/TurretManager.cs
+	new file:   ZombieBox/Assets/Scripts/WeaponManager.cs
+	new file:   ZombieBox/Assets/plugins/SimpleJSON.cs
+	new file:   ZombieBox/NavMeshFixer.cs
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   ZombieBox/Assembly-CSharp-Editor-vs.csproj
+	modified:   ZombieBox/Assembly-CSharp-Editor.csproj
+	modified:   ZombieBox/Assembly-CSharp-firstpass-vs.csproj
+	modified:   ZombieBox/Assembly-CSharp-firstpass.csproj
+	modified:   ZombieBox/Assembly-CSharp-vs.csproj
+	modified:   ZombieBox/Assembly-CSharp.csproj
+	modified:   ZombieBox/Assembly-UnityScript-vs.unityproj
+	modified:   ZombieBox/Assembly-UnityScript.unityproj
+	modified:   ZombieBox/Assets/Resources/Materials/char03.mat
+	deleted:    ZombieBox/Assets/Standard Assets/Characters/PhysicsMaterials.meta
+	modified:   ZombieBox/Assets/_Scenes/base.unity
+	modified:   ZombieBox/Library/AssetImportState
+	modified:   ZombieBox/Library/AssetServerCacheV3
+	modified:   ZombieBox/Library/CurrentLayout.dwlt
+	modified:   ZombieBox/Library/EditorUserBuildSettings.asset
+	modified:   ZombieBox/Library/InspectorExpandedItems.asset
+	modified:   ZombieBox/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll
+	modified:   ZombieBox/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll.mdb
+	modified:   ZombieBox/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+	modified:   ZombieBox/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll.mdb
+	modified:   ZombieBox/Library/ScriptAssemblies/Assembly-CSharp.dll
+	modified:   ZombieBox/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+	modified:   ZombieBox/Library/ScriptAssemblies/Assembly-UnityScript.dll
+	modified:   ZombieBox/Library/ScriptAssemblies/Assembly-UnityScript.dll.mdb
+	modified:   ZombieBox/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+	modified:   ZombieBox/Library/assetDatabase3
+	modified:   ZombieBox/Library/expandedItems
+	modified:   ZombieBox/Library/metadata/00/00000000000000001000000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000002000000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000003000000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000004000000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000004100000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000005000000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000005100000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000006000000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000006100000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000007000000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000008000000000000000
+	modified:   ZombieBox/Library/metadata/00/00000000000000009000000000000000
+	modified:   ZombieBox/Library/metadata/00/0000000000000000a000000000000000
+	modified:   ZombieBox/Library/metadata/00/0000000000000000b000000000000000
+	modified:   ZombieBox/Library/metadata/00/0000000000000000c000000000000000
+	modified:   ZombieBox/Library/metadata/00/0043a017203127549a01e4db21f41077
+	modified:   ZombieBox/Library/metadata/00/0043a017203127549a01e4db21f41077.info
+	modified:   ZombieBox/Library/metadata/04/04fc644cc1b478e4b9512702422752ac
+	modified:   ZombieBox/Library/metadata/04/04fc644cc1b478e4b9512702422752ac.info
+	modified:   ZombieBox/Library/metadata/05/05cc6b6adc8ae3f43ada5c0aa3f764d5
+	modified:   ZombieBox/Library/metadata/05/05cc6b6adc8ae3f43ada5c0aa3f764d5.info
+	modified:   ZombieBox/Library/metadata/06/0626b924325d1c34cafa6b22297f4e4f
+	modified:   ZombieBox/Library/metadata/06/0626b924325d1c34cafa6b22297f4e4f.info
+	modified:   ZombieBox/Library/metadata/09/0911b25fecc08064f873a7b18be988ad
+	modified:   ZombieBox/Library/metadata/09/0911b25fecc08064f873a7b18be988ad.info
+	modified:   ZombieBox/Library/metadata/0b/0bd26ec2051f39f45a70538f228ecf27
+	modified:   ZombieBox/Library/metadata/0b/0bd26ec2051f39f45a70538f228ecf27.info
+	modified:   ZombieBox/Library/metadata/0c/0c6271a290ef75b4c97d58746c86c5b8
+	modified:   ZombieBox/Library/metadata/0c/0c6271a290ef75b4c97d58746c86c5b8.info
+	modified:   ZombieBox/Library/metadata/10/105d92d0f65b56341b333ea2a23faa72
+	modified:   ZombieBox/Library/metadata/10/105d92d0f65b56341b333ea2a23faa72.info
+	modified:   ZombieBox/Library/metadata/14/1400372a25f0fb545b5a3f5561e44b57.info
+	modified:   ZombieBox/Library/metadata/1b/1b7b18c9a92ae89408d706b32f75f61d
+	modified:   ZombieBox/Library/metadata/1b/1b7b18c9a92ae89408d706b32f75f61d.info
+	modified:   ZombieBox/Library/metadata/1f/1f36faa5b5445d84c8477a30fc546098
+	modified:   ZombieBox/Library/metadata/1f/1f36faa5b5445d84c8477a30fc546098.info
+	modified:   ZombieBox/Library/metadata/23/23f22ca646d6a1741b9ce8a28b871fee
+	modified:   ZombieBox/Library/metadata/23/23f22ca646d6a1741b9ce8a28b871fee.info
+	modified:   ZombieBox/Library/metadata/24/240927af5c4f7464a9f882fa0e081d5a
+	modified:   ZombieBox/Library/metadata/24/240927af5c4f7464a9f882fa0e081d5a.info
+	modified:   ZombieBox/Library/metadata/24/2485c5d6069c7cc4197542778a64f5ae
+	modified:   ZombieBox/Library/metadata/24/2485c5d6069c7cc4197542778a64f5ae.info
+	modified:   ZombieBox/Library/metadata/25/25a322433beb57d45befadf19ba4a83d.info
+	modified:   ZombieBox/Library/metadata/28/28a46318d5f78924b905bc9aaa9d0688
+	modified:   ZombieBox/Library/metadata/28/28a46318d5f78924b905bc9aaa9d0688.info
+	modified:   ZombieBox/Library/metadata/29/298ecb2bca3ab2d43af6305f03ab1bcf
+	modified:   ZombieBox/Library/metadata/29/298ecb2bca3ab2d43af6305f03ab1bcf.info
+	modified:   ZombieBox/Library/metadata/32/32008c94552dc4148bd884004976ba57
+	modified:   ZombieBox/Library/metadata/32/32008c94552dc4148bd884004976ba57.info
+	modified:   ZombieBox/Library/metadata/32/32954edc0d8322f4cbb9bcab9eb71b7f.info
+	modified:   ZombieBox/Library/metadata/33/33710339867b1374287856f34e5d3f61
+	modified:   ZombieBox/Library/metadata/33/33710339867b1374287856f34e5d3f61.info
+	modified:   ZombieBox/Library/metadata/33/339180936bd245b4bbd9006310854a15
+	modified:   ZombieBox/Library/metadata/33/339180936bd245b4bbd9006310854a15.info
+	modified:   ZombieBox/Library/metadata/34/34a2647efe0b87d42b42dc59baa0e33f
+	modified:   ZombieBox/Library/metadata/34/34a2647efe0b87d42b42dc59baa0e33f.info
+	modified:   ZombieBox/Library/metadata/35/35689c8c39429f34e806a41b699069e8
+	modified:   ZombieBox/Library/metadata/35/35689c8c39429f34e806a41b699069e8.info
+	modified:   ZombieBox/Library/metadata/3c/3c29f479607f1d341a1d4a3ad19c5a8c
+	modified:   ZombieBox/Library/metadata/3c/3c29f479607f1d341a1d4a3ad19c5a8c.info
+	modified:   ZombieBox/Library/metadata/3d/3d8675433a508ec47b8f895201eacf20
+	modified:   ZombieBox/Library/metadata/3d/3d8675433a508ec47b8f895201eacf20.info
+	modified:   ZombieBox/Library/metadata/42/420475585da48044d894052d505767f7
+	modified:   ZombieBox/Library/metadata/42/420475585da48044d894052d505767f7.info
+	modified:   ZombieBox/Library/metadata/44/4403e6106adb3314697f80fcd38842ad
+	modified:   ZombieBox/Library/metadata/44/4403e6106adb3314697f80fcd38842ad.info
+	modified:   ZombieBox/Library/metadata/44/4485339ba9e329d43982afa13b41d1f0
+	modified:   ZombieBox/Library/metadata/44/4485339ba9e329d43982afa13b41d1f0.info
+	modified:   ZombieBox/Library/metadata/47/474c2376d7068d94fb7681d05ad0a36f
+	modified:   ZombieBox/Library/metadata/47/474c2376d7068d94fb7681d05ad0a36f.info
+	modified:   ZombieBox/Library/metadata/47/47c1908c2f046164e8de8e003d0662af
+	modified:   ZombieBox/Library/metadata/47/47c1908c2f046164e8de8e003d0662af.info
+	modified:   ZombieBox/Library/metadata/49/49b611e658efbf443b686a4036f74fe3
+	modified:   ZombieBox/Library/metadata/49/49b611e658efbf443b686a4036f74fe3.info
+	modified:   ZombieBox/Library/metadata/4b/4b332c9042bc63949926b765063e9ae9
+	modified:   ZombieBox/Library/metadata/4b/4b332c9042bc63949926b765063e9ae9.info
+	modified:   ZombieBox/Library/metadata/4c/4cf5b36ea792d2c42829c3a9a2fd9b73.info
+	modified:   ZombieBox/Library/metadata/4d/4db017495c69e8140a56a0e2b669e3f8
+	modified:   ZombieBox/Library/metadata/4d/4db017495c69e8140a56a0e2b669e3f8.info
+	modified:   ZombieBox/Library/metadata/4d/4de26cc97e4d98842a5f711250fcb974
+	modified:   ZombieBox/Library/metadata/4d/4de26cc97e4d98842a5f711250fcb974.info
+	modified:   ZombieBox/Library/metadata/54/5428549d0b34c8e448aa0c02e729ccf0
+	modified:   ZombieBox/Library/metadata/54/5428549d0b34c8e448aa0c02e729ccf0.info
+	modified:   ZombieBox/Library/metadata/54/5485e2f56028a3c4cb54f5caa167377e
+	modified:   ZombieBox/Library/metadata/54/5485e2f56028a3c4cb54f5caa167377e.info
+	modified:   ZombieBox/Library/metadata/58/58795b7cc2648d24da3a1ca67efb23df
+	modified:   ZombieBox/Library/metadata/58/58795b7cc2648d24da3a1ca67efb23df.info
+	modified:   ZombieBox/Library/metadata/59/596435251c4a0384d8270901382c27fc
+	modified:   ZombieBox/Library/metadata/5a/5a4c3c98e4bda8543a73f791754594fd
+	modified:   ZombieBox/Library/metadata/5a/5a4c3c98e4bda8543a73f791754594fd.info
+	modified:   ZombieBox/Library/metadata/5b/5b1a64ea234fb2343b8d0686c51280de
+	modified:   ZombieBox/Library/metadata/5b/5b1a64ea234fb2343b8d0686c51280de.info
+	modified:   ZombieBox/Library/metadata/5b/5b5bead423e449c4794b2c65f3423400
+	modified:   ZombieBox/Library/metadata/5b/5b5bead423e449c4794b2c65f3423400.info
+	modified:   ZombieBox/Library/metadata/5e/5e4574279002ffb489a9e695a6d7c185
+	modified:   ZombieBox/Library/metadata/5e/5e4574279002ffb489a9e695a6d7c185.info
+	modified:   ZombieBox/Library/metadata/5f/5f32cd94baa94578a686d4b9d6b660f7
+	modified:   ZombieBox/Library/metadata/5f/5f970689c5290a94f824d606405ba2cb
+	modified:   ZombieBox/Library/metadata/5f/5f970689c5290a94f824d606405ba2cb.info
+	modified:   ZombieBox/Library/metadata/5f/5fd6de412bd080a469759635180c8867
+	modified:   ZombieBox/Library/metadata/5f/5fd6de412bd080a469759635180c8867.info
+	modified:   ZombieBox/Library/metadata/60/606aec39f0f7bfe4ab534019b3f58c2d
+	modified:   ZombieBox/Library/metadata/60/606aec39f0f7bfe4ab534019b3f58c2d.info
+	modified:   ZombieBox/Library/metadata/69/69bf27529e4213d49a51a22fa7955721.info
+	modified:   ZombieBox/Library/metadata/6a/6a85f8ac68300d84085dc0e040d4ca25
+	modified:   ZombieBox/Library/metadata/6a/6a85f8ac68300d84085dc0e040d4ca25.info
+	modified:   ZombieBox/Library/metadata/6b/6b738fd7cdc4d584b8ec1ae533763393
+	modified:   ZombieBox/Library/metadata/6b/6b738fd7cdc4d584b8ec1ae533763393.info
+	modified:   ZombieBox/Library/metadata/6d/6d2e25791c90b2d478075d331970b41d
+	modified:   ZombieBox/Library/metadata/6f/6f6e853a4fa096b4d95ee85bf35cf3b6.info
+	modified:   ZombieBox/Library/metadata/70/70bbb63e686b88842b0c7736ea8400cc.info
+	modified:   ZombieBox/Library/metadata/70/70f4e9108b0ab0348878f1fbf9ddb740
+	modified:   ZombieBox/Library/metadata/70/70f4e9108b0ab0348878f1fbf9ddb740.info
+	modified:   ZombieBox/Library/metadata/72/726ba35406790a044b5d086c187ce9d5
+	modified:   ZombieBox/Library/metadata/72/726ba35406790a044b5d086c187ce9d5.info
+	modified:   ZombieBox/Library/metadata/73/735f4b17f0cc96d40981a3d6d5a98512.info
+	modified:   ZombieBox/Library/metadata/73/73e6d3e44a47fd64f84a8f97c69431e0
+	modified:   ZombieBox/Library/metadata/73/73e6d3e44a47fd64f84a8f97c69431e0.info
+	modified:   ZombieBox/Library/metadata/74/742c2381364f9ab4399d8cb78d037b4e
+	modified:   ZombieBox/Library/metadata/74/742c2381364f9ab4399d8cb78d037b4e.info
+	modified:   ZombieBox/Library/metadata/75/75baf932b4a06064da89b7d6f93ab595.info
+	modified:   ZombieBox/Library/metadata/77/77eb40d9440d8ed4aa1fdf9f0e967e60
+	modified:   ZombieBox/Library/metadata/77/77eb40d9440d8ed4aa1fdf9f0e967e60.info
+	modified:   ZombieBox/Library/metadata/7b/7baef21793e000b4d89469f49190d9e6
+	modified:   ZombieBox/Library/metadata/7b/7baef21793e000b4d89469f49190d9e6.info
+	modified:   ZombieBox/Library/metadata/80/80a3616ca19596e4da0f10f14d241e9f
+	modified:   ZombieBox/Library/metadata/82/827c9cd4a3943534f909ac6473e17288
+	modified:   ZombieBox/Library/metadata/82/827c9cd4a3943534f909ac6473e17288.info
+	modified:   ZombieBox/Library/metadata/87/870353891bb340e2b2a9c8707e7419ba
+	modified:   ZombieBox/Library/metadata/8d/8d4cbe83230444142a10f252fa037492
+	modified:   ZombieBox/Library/metadata/8d/8d4cbe83230444142a10f252fa037492.info
+	modified:   ZombieBox/Library/metadata/8e/8e3f2ff806de9b845a54ce3843b78d5e.info
+	modified:   ZombieBox/Library/metadata/8f/8fcf2528600df2b4db35e58935a1ac72
+	modified:   ZombieBox/Library/metadata/8f/8fcf2528600df2b4db35e58935a1ac72.info
+	modified:   ZombieBox/Library/metadata/90/905f424bb38f77849944caf6d0fdc4d0
+	modified:   ZombieBox/Library/metadata/90/905f424bb38f77849944caf6d0fdc4d0.info
+	modified:   ZombieBox/Library/metadata/90/9062f81471d8cab4fa0e4da3bd41346b
+	modified:   ZombieBox/Library/metadata/90/9062f81471d8cab4fa0e4da3bd41346b.info
+	modified:   ZombieBox/Library/metadata/94/9484693edea712343991ef1a23bde719
+	modified:   ZombieBox/Library/metadata/94/9484693edea712343991ef1a23bde719.info
+	modified:   ZombieBox/Library/metadata/98/9866a92691696b346901281f2b329034
+	modified:   ZombieBox/Library/metadata/98/9866a92691696b346901281f2b329034.info
+	modified:   ZombieBox/Library/metadata/9d/9d7c6e4896067aa4fa512a00f692ac1c
+	modified:   ZombieBox/Library/metadata/9d/9d7c6e4896067aa4fa512a00f692ac1c.info
+	modified:   ZombieBox/Library/metadata/9e/9e2c294895fce494ea90f408592987c4.info
+	modified:   ZombieBox/Library/metadata/9f/9f1758d35b3a6114488af2c0803bbb3c
+	modified:   ZombieBox/Library/metadata/9f/9f1758d35b3a6114488af2c0803bbb3c.info
+	modified:   ZombieBox/Library/metadata/a1/a158d6cee8aa7c7449e619ff53887180
+	modified:   ZombieBox/Library/metadata/a1/a158d6cee8aa7c7449e619ff53887180.info
+	modified:   ZombieBox/Library/metadata/a2/a2c30b3617bbcac42baa23aacaf428da
+	modified:   ZombieBox/Library/metadata/a2/a2c30b3617bbcac42baa23aacaf428da.info
+	modified:   ZombieBox/Library/metadata/a3/a314130ef93019048a98cbaf8c5b1675.info
+	modified:   ZombieBox/Library/metadata/a3/a3983c59ebf804b4abba687bd7c9e92f
+	modified:   ZombieBox/Library/metadata/a3/a3983c59ebf804b4abba687bd7c9e92f.info
+	modified:   ZombieBox/Library/metadata/a3/a3b997593a4f12c4c991490593f3b513
+	modified:   ZombieBox/Library/metadata/a7/a7a999ca60ad92b4287b017320ead4e8
+	modified:   ZombieBox/Library/metadata/a7/a7a999ca60ad92b4287b017320ead4e8.info
+	modified:   ZombieBox/Library/metadata/a7/a7e879741a413ab49a2474eb9145a3d4.info
+	modified:   ZombieBox/Library/metadata/a9/a94c9a7eb94ceec4a8d67a1890e22e51
+	modified:   ZombieBox/Library/metadata/a9/a94c9a7eb94ceec4a8d67a1890e22e51.info
+	modified:   ZombieBox/Library/metadata/a9/a98963dc968045d43bef784243ae58e0
+	modified:   ZombieBox/Library/metadata/a9/a98963dc968045d43bef784243ae58e0.info
+	modified:   ZombieBox/Library/metadata/ab/ab34e2eaf487e5a4383a6da1a71092dd.info
+	modified:   ZombieBox/Library/metadata/ae/aec32f523b870e349b5552ffb377dd61
+	modified:   ZombieBox/Library/metadata/ae/aec32f523b870e349b5552ffb377dd61.info
+	modified:   ZombieBox/Library/metadata/af/af4ba243e16f19d4a937f5b4e40c309c
+	modified:   ZombieBox/Library/metadata/af/af4ba243e16f19d4a937f5b4e40c309c.info
+	modified:   ZombieBox/Library/metadata/b0/b0d68d5e3ed517f418ea02f9d2820ca0
+	modified:   ZombieBox/Library/metadata/b0/b0d68d5e3ed517f418ea02f9d2820ca0.info
+	modified:   ZombieBox/Library/metadata/b0/b0e02470b232bff458e85d7c2e5b9329
+	modified:   ZombieBox/Library/metadata/b0/b0e02470b232bff458e85d7c2e5b9329.info
+	modified:   ZombieBox/Library/metadata/b4/b41a94ae4bf7df542b00fa89fae48dc8.info
+	modified:   ZombieBox/Library/metadata/b5/b5f6f666cde8e984f948786beac3692d.info
+	modified:   ZombieBox/Library/metadata/b6/b61f5bf6a1d0dca4e83ac7f2b3faa72e
+	modified:   ZombieBox/Library/metadata/b6/b61f5bf6a1d0dca4e83ac7f2b3faa72e.info
+	modified:   ZombieBox/Library/metadata/b7/b73f561564dace7419b954f2c2520efd
+	modified:   ZombieBox/Library/metadata/b7/b73f561564dace7419b954f2c2520efd.info
+	modified:   ZombieBox/Library/metadata/b9/b97c14f7e34497348998a8d2eb1ceea3
+	modified:   ZombieBox/Library/metadata/b9/b97c14f7e34497348998a8d2eb1ceea3.info
+	modified:   ZombieBox/Library/metadata/ba/ba071a8dc6c395c4bb76c8cb04f72bea
+	modified:   ZombieBox/Library/metadata/ba/ba071a8dc6c395c4bb76c8cb04f72bea.info
+	modified:   ZombieBox/Library/metadata/bd/bd4d0fe9ab26dea479b63715fd3c0b27
+	modified:   ZombieBox/Library/metadata/be/be5f90688da91f84f9ad8b671c9b7d6c
+	modified:   ZombieBox/Library/metadata/be/be5f90688da91f84f9ad8b671c9b7d6c.info
+	modified:   ZombieBox/Library/metadata/c1/c1df37939d348714899b39348ef03128
+	modified:   ZombieBox/Library/metadata/c1/c1df37939d348714899b39348ef03128.info
+	modified:   ZombieBox/Library/metadata/c2/c254af51d33c5bb488487f1b65a23db6
+	modified:   ZombieBox/Library/metadata/c2/c254af51d33c5bb488487f1b65a23db6.info
+	modified:   ZombieBox/Library/metadata/c4/c44872a3ea87aee4289861c8d8aa440f.info
+	modified:   ZombieBox/Library/metadata/c7/c7d8231f6e1f08746a0ae31cf7ff509f
+	modified:   ZombieBox/Library/metadata/cb/cb3392a5b560a90408bcc870dd2ae6c4
+	modified:   ZombieBox/Library/metadata/cb/cb3392a5b560a90408bcc870dd2ae6c4.info
+	modified:   ZombieBox/Library/metadata/cb/cb97000d2018035419f4ba5f323b667f
+	modified:   ZombieBox/Library/metadata/cb/cb97000d2018035419f4ba5f323b667f.info
+	modified:   ZombieBox/Library/metadata/cd/cda64a0dabbf1b040b9fd7656d0fb657
+	modified:   ZombieBox/Library/metadata/cd/cda64a0dabbf1b040b9fd7656d0fb657.info
+	modified:   ZombieBox/Library/metadata/d1/d194286610fc96c43992817e34847cfc
+	modified:   ZombieBox/Library/metadata/d1/d194286610fc96c43992817e34847cfc.info
+	modified:   ZombieBox/Library/metadata/d6/d6953aea0335b804fa7fcb4eb57b7750.info
+	modified:   ZombieBox/Library/metadata/e2/e21ac81ac9625ac4a808e09eb38e2c63
+	modified:   ZombieBox/Library/metadata/e2/e21ac81ac9625ac4a808e09eb38e2c63.info
+	modified:   ZombieBox/Library/metadata/e3/e3191c183e25e034a9884b73e0ee4df3
+	modified:   ZombieBox/Library/metadata/e3/e3191c183e25e034a9884b73e0ee4df3.info
+	modified:   ZombieBox/Library/metadata/e3/e38965beaf4e38f44b19da0b5f37f5ab.info
+	modified:   ZombieBox/Library/metadata/e4/e4d9a6a4e18a4e44598ffa32e83124c8
+	modified:   ZombieBox/Library/metadata/e4/e4d9a6a4e18a4e44598ffa32e83124c8.info
+	modified:   ZombieBox/Library/metadata/e4/e4f1fee3de32377429fd1348fae62b10
+	modified:   ZombieBox/Library/metadata/e4/e4f1fee3de32377429fd1348fae62b10.info
+	modified:   ZombieBox/Library/metadata/e9/e952a8c2c8ae79a47abb4f5cb27d58ad
+	modified:   ZombieBox/Library/metadata/e9/e952a8c2c8ae79a47abb4f5cb27d58ad.info
+	deleted:    ZombieBox/Library/metadata/ea/ea2a5216ffb8d4b319d09e8d7782120c
+	deleted:    ZombieBox/Library/metadata/ea/ea2a5216ffb8d4b319d09e8d7782120c.info
+	modified:   ZombieBox/Library/metadata/ea/ea5873cfd9158664f89459f0c9e1d853
+	modified:   ZombieBox/Library/metadata/ea/ea5873cfd9158664f89459f0c9e1d853.info
+	modified:   ZombieBox/Library/metadata/ea/eabfaa4b770d82b469254bb7c6c159e8.info
+	modified:   ZombieBox/Library/metadata/eb/eb5f6e2757c821940b69cf1456f7865a
+	modified:   ZombieBox/Library/metadata/eb/eb5f6e2757c821940b69cf1456f7865a.info
+	modified:   ZombieBox/Library/metadata/f0/f0a53573a6dac964e8e7c2378d88d17d
+	modified:   ZombieBox/Library/metadata/f0/f0a53573a6dac964e8e7c2378d88d17d.info
+	modified:   ZombieBox/Library/metadata/f4/f472f8e24c2063742a20031c4479577d
+	modified:   ZombieBox/Library/metadata/f4/f472f8e24c2063742a20031c4479577d.info
+	modified:   ZombieBox/Library/metadata/f5/f588d850485d0ae479d73cf3bd0b7b00
+	modified:   ZombieBox/Library/metadata/f5/f588d850485d0ae479d73cf3bd0b7b00.info
+	modified:   ZombieBox/Library/metadata/f5/f5f67c52d1564df4a8936ccd202a3bd8
+	modified:   ZombieBox/Library/metadata/f8/f8cc798cb0a943a45aca0e67a8abb2f7
+	modified:   ZombieBox/Library/metadata/f8/f8cc798cb0a943a45aca0e67a8abb2f7.info
+	modified:   ZombieBox/Library/shadercompiler-32bit-1.log
+	modified:   ZombieBox/Library/shadercompiler-32bit-2.log
+	modified:   ZombieBox/Library/shadercompiler-32bit-3.log
+	modified:   ZombieBox/Library/shadercompiler-32bit-4.log
+	modified:   ZombieBox/Library/shadercompiler-64bit-1.log
+	modified:   ZombieBox/Library/shadercompiler-64bit-2.log
+	modified:   ZombieBox/Library/shadercompiler-64bit-3.log
+	modified:   ZombieBox/Library/shadercompiler-64bit-4.log
+	deleted:    ZombieBox/Temp/StagingArea/AndroidManifest-main.xml
+	deleted:    ZombieBox/Temp/StagingArea/AndroidManifest.xml
+	deleted:    ZombieBox/Temp/StagingArea/Package_unaligned.apk
+	deleted:    ZombieBox/Temp/StagingArea/assets.ap_
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/Assembly-CSharp-firstpass.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/Assembly-CSharp.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/Assembly-UnityScript.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/Mono.Security.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/System.Core.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/System.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.Analytics.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.Networking.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.UI.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/UnityEngine.xml
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Managed/mscorlib.dll
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/Resources/unity_builtin_extra
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/level0
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/mainData
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/settings.xml
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/sharedassets0.assets.split0
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/sharedassets0.assets.split1
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/sharedassets0.assets.split2
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/sharedassets1.assets.split0
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/sharedassets1.assets.split1
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/sharedassets1.resource
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/splash.png
+	deleted:    ZombieBox/Temp/StagingArea/assets/bin/Data/unity default resources
+	deleted:    ZombieBox/Temp/StagingArea/bin/classes.dex
+	deleted:    ZombieBox/Temp/StagingArea/bin/resources.ap_
+	deleted:    ZombieBox/Temp/StagingArea/gen/com/GroupFive/ZombieBox/R.java
+	deleted:    ZombieBox/Temp/StagingArea/libs/armeabi-v7a/gdbserver
+	deleted:    ZombieBox/Temp/StagingArea/libs/armeabi-v7a/libmain.so
+	deleted:    ZombieBox/Temp/StagingArea/libs/armeabi-v7a/libmono.so
+	deleted:    ZombieBox/Temp/StagingArea/libs/armeabi-v7a/libunity.so
+	deleted:    ZombieBox/Temp/StagingArea/libs/x86/gdbserver
+	deleted:    ZombieBox/Temp/StagingArea/libs/x86/libmain.so
+	deleted:    ZombieBox/Temp/StagingArea/libs/x86/libmono.so
+	deleted:    ZombieBox/Temp/StagingArea/libs/x86/libunity.so
+	deleted:    ZombieBox/Temp/StagingArea/res/drawable-xhdpi/app_banner.png
+	deleted:    ZombieBox/Temp/StagingArea/res/drawable/app_icon.png
+	deleted:    ZombieBox/Temp/StagingArea/res/values/strings.xml
+	deleted:    ZombieBox/Temp/UnityTempFile-0020834b42fc51f4b9f3788a92826347
+	deleted:    ZombieBox/Temp/UnityTempFile-005e3c4455e7f1a4a9910c0f8b7bac4c
+	deleted:    ZombieBox/Temp/UnityTempFile-012f873e5251d504c9492a53fa5e1f8b
+	deleted:    ZombieBox/Temp/UnityTempFile-01e48c2adc8e3194ebcd4627e0792083
+	deleted:    ZombieBox/Temp/UnityTempFile-063c92b37f9764548ae4e7573a71fc0f
+	deleted:    ZombieBox/Temp/UnityTempFile-074b897f01fe56c4092bb7a2a66137f2
+	deleted:    ZombieBox/Temp/UnityTempFile-080b5e5ae6324b04bb7cf98cdafbac64
+	deleted:    ZombieBox/Temp/UnityTempFile-0816d2dfa4f04a44782d646a0220418e
+	deleted:    ZombieBox/Temp/UnityTempFile-0947b07816b70fb4da8b71967b51ccec
+	deleted:    ZombieBox/Temp/UnityTempFile-0b633599ce34a73469c038025aa06962
+	deleted:    ZombieBox/Temp/UnityTempFile-0b994eaeba24dcf42ba41f9cbd89ca82
+	deleted:    ZombieBox/Temp/UnityTempFile-0c0dd870d0c919e47be85ee87eccd376
+	deleted:    ZombieBox/Temp/UnityTempFile-0cce75cb620560040aec55ab7ee108ea
+	deleted:    ZombieBox/Temp/UnityTempFile-0cf58686c86885b4fbfe1dcaa1146574
+	deleted:    ZombieBox/Temp/UnityTempFile-0d46deabe2f5ee943be2238a0673ef1d
+	deleted:    ZombieBox/Temp/UnityTempFile-0e0ae63115fabca459d1b59e32acaab6
+	deleted:    ZombieBox/Temp/UnityTempFile-0e828ba6a273e034a983b75bce9150c0
+	deleted:    ZombieBox/Temp/UnityTempFile-0eace40a4b9577e4c9148e5f2ae11779
+	deleted:    ZombieBox/Temp/UnityTempFile-0fe8ebc7fff8bdd4b9383e587c3fe6f9
+	deleted:    ZombieBox/Temp/UnityTempFile-100e25be5a800ab4591d4ecedc109ba9
+	deleted:    ZombieBox/Temp/UnityTempFile-10ca58331b8262d41a0c3d16cd5cc277
+	deleted:    ZombieBox/Temp/UnityTempFile-112f1aae5d9879e48ac817f940e47256
+	deleted:    ZombieBox/Temp/UnityTempFile-118b429dcc72de04380c567cf6792a33
+	deleted:    ZombieBox/Temp/UnityTempFile-14404c03a5cd9f54aa029b5e2c56c05b
+	deleted:    ZombieBox/Temp/UnityTempFile-144e591cda17b8c45b4f2817da8e22d5
+	deleted:    ZombieBox/Temp/UnityTempFile-158949bbd7d71a2438c07eb11fc18043
+	deleted:    ZombieBox/Temp/UnityTempFile-15a6e8fd1365b0c46b17271cee705888
+	deleted:    ZombieBox/Temp/UnityTempFile-15b10d0dffc2e634d8b651a80978103a
+	deleted:    ZombieBox/Temp/UnityTempFile-1680af183397cce4fbeb43e16545e6df
+	deleted:    ZombieBox/Temp/UnityTempFile-194c53d4878e595458e1787b400ddfb9
+	deleted:    ZombieBox/Temp/UnityTempFile-1a4551b580ad68940a9036e853afc134
+	deleted:    ZombieBox/Temp/UnityTempFile-1db7809f2b34c5a448db84c18948524e
+	deleted:    ZombieBox/Temp/UnityTempFile-1ec6397bd1fae25458708a41f8f4c51a
+	deleted:    ZombieBox/Temp/UnityTempFile-1f5b6278b1bad7c47b6c4df121f95c83
+	deleted:    ZombieBox/Temp/UnityTempFile-1f7215f76ddfe974daa8e2faa27207a7
+	deleted:    ZombieBox/Temp/UnityTempFile-215b25cdbf0eecf47820160613fa27a9
+	deleted:    ZombieBox/Temp/UnityTempFile-218e51f46fc41cd42b471e6636e7dd13
+	deleted:    ZombieBox/Temp/UnityTempFile-22d0fac015d6e264e953e08030ce9c39
+	deleted:    ZombieBox/Temp/UnityTempFile-230e08f1f42b3554bad9d7ed0275d8a0
+	deleted:    ZombieBox/Temp/UnityTempFile-23e0d235b39688547a7a1beaeee3614c
+	deleted:    ZombieBox/Temp/UnityTempFile-23e3c0e756e201c45888f4dd6f0113c2
+	deleted:    ZombieBox/Temp/UnityTempFile-2480f1a54611552478916e12d7b216c9
+	deleted:    ZombieBox/Temp/UnityTempFile-256792d60337f694f8614f7d2c28e224
+	deleted:    ZombieBox/Temp/UnityTempFile-256bc5690b02048479bf7786e69efdcf
+	deleted:    ZombieBox/Temp/UnityTempFile-27e16cb701c32b64eae6630054a62369
+	deleted:    ZombieBox/Temp/UnityTempFile-28a19ca4cb7950c4298d5667245c2eb3
+	deleted:    ZombieBox/Temp/UnityTempFile-29302553abe1a0742a301e1ccf7d5356
+	deleted:    ZombieBox/Temp/UnityTempFile-29aa0a62e1e6ec14b8cdd9f38af38b74
+	deleted:    ZombieBox/Temp/UnityTempFile-29b66d9bf9a94ed4898e41ed6488222d
+	deleted:    ZombieBox/Temp/UnityTempFile-29c329049231d274fb88088229c4e019
+	deleted:    ZombieBox/Temp/UnityTempFile-2bbe39540f276a747ba790e11fa9e532
+	deleted:    ZombieBox/Temp/UnityTempFile-2bda6acf7de5e6a4fbb6ad8b0b95dd54
+	deleted:    ZombieBox/Temp/UnityTempFile-2c9e034d189acea42946033925e9122c
+	deleted:    ZombieBox/Temp/UnityTempFile-2cffec0d99f495949b76933e1c6f2559
+	deleted:    ZombieBox/Temp/UnityTempFile-2d17c97f8b9cca7459c2141ec240d6dc
+	deleted:    ZombieBox/Temp/UnityTempFile-2df8ea6e44c719a4fb1fd6f28b105e85
+	deleted:    ZombieBox/Temp/UnityTempFile-2ecd36b629391124d8b6286bbfc9e37b
+	deleted:    ZombieBox/Temp/UnityTempFile-308cc95d62e1f75439d151ca54496154
+	deleted:    ZombieBox/Temp/UnityTempFile-329c0328b67b63446ba0f5eb56e0a563
+	deleted:    ZombieBox/Temp/UnityTempFile-34953d508c1b8a74b847f829a801a734
+	deleted:    ZombieBox/Temp/UnityTempFile-34b143ce738c8fb48a7dd7461552b4cb
+	deleted:    ZombieBox/Temp/UnityTempFile-34f1cb412f7916949883e5c5a4757f71
+	deleted:    ZombieBox/Temp/UnityTempFile-352c54dc70a5de14f8af68a9269d23b1
+	deleted:    ZombieBox/Temp/UnityTempFile-38016d883cb7028409a64b6c71172700
+	deleted:    ZombieBox/Temp/UnityTempFile-383d01cda86eac64cb0daa9f7fa305a6
+	deleted:    ZombieBox/Temp/UnityTempFile-394437639471ce34c97b80eacc8283e1
+	deleted:    ZombieBox/Temp/UnityTempFile-3af5c1e07d227b8488e4bbf35ae0b3d2
+	deleted:    ZombieBox/Temp/UnityTempFile-3b84f8790e1cf834581ee476ff3b4cb1
+	deleted:    ZombieBox/Temp/UnityTempFile-3c0cc9387ba5de74c877236d77c7c5c4
+	deleted:    ZombieBox/Temp/UnityTempFile-3e539e05bbeeaa34b9632b544c614a75
+	deleted:    ZombieBox/Temp/UnityTempFile-3f0ca6d904244224c9f8b2928d1096ff
+	deleted:    ZombieBox/Temp/UnityTempFile-3f2e32306ecbe13439fa4986c9d77f49
+	deleted:    ZombieBox/Temp/UnityTempFile-40396826b723c464a8bb15fa14a5b96e
+	deleted:    ZombieBox/Temp/UnityTempFile-423ad142e58b9ab47b9878d1675debaf
+	deleted:    ZombieBox/Temp/UnityTempFile-4551d6a22872397418ddbe0d2323fbb3
+	deleted:    ZombieBox/Temp/UnityTempFile-45cfc36286c1441488afc576b698d797
+	deleted:    ZombieBox/Temp/UnityTempFile-465ff76e295df4143b8c9b351af1cf59
+	deleted:    ZombieBox/Temp/UnityTempFile-47475465024bc9f418b5dd6b8a648a0c
+	deleted:    ZombieBox/Temp/UnityTempFile-474d06520cc241a418a8d6c8a16fc74f
+	deleted:    ZombieBox/Temp/UnityTempFile-476448cde1a5a624eb42aea883bcef17
+	deleted:    ZombieBox/Temp/UnityTempFile-47e78f5c6b878af45a66f176e50f6280
+	deleted:    ZombieBox/Temp/UnityTempFile-48f023bbe1c3105469d62eb734880e39
+	deleted:    ZombieBox/Temp/UnityTempFile-49b83c8d82ca1f54ba4af48d3ff526c3
+	deleted:    ZombieBox/Temp/UnityTempFile-4c0863bc37776904f83826ee3d7fc712
+	deleted:    ZombieBox/Temp/UnityTempFile-4e03a2f763d89a640b2569374df6c659
+	deleted:    ZombieBox/Temp/UnityTempFile-4e68c8aceab6ff04eb676f1cf717fbb6
+	deleted:    ZombieBox/Temp/UnityTempFile-512d69796ced3624cbe13b6ad5ba834d
+	deleted:    ZombieBox/Temp/UnityTempFile-516caa44d06dd094a974bab85edcb27a
+	deleted:    ZombieBox/Temp/UnityTempFile-51cb0b0f28d7f7c45a10cafc1f7f68e0
+	deleted:    ZombieBox/Temp/UnityTempFile-5268cf9923377804dafcf3e21a5d87de
+	deleted:    ZombieBox/Temp/UnityTempFile-53251dddf8006e749b57e30c99c889c6
+	deleted:    ZombieBox/Temp/UnityTempFile-53742bf5c3d117d4f8824e85f14b898a
+	deleted:    ZombieBox/Temp/UnityTempFile-53b9acf2b39486a4bbd2c8b853990144
+	deleted:    ZombieBox/Temp/UnityTempFile-550f1ee81c397a5449be6c7d8506722e
+	deleted:    ZombieBox/Temp/UnityTempFile-56530bbe26f3ceb48884b8f120ce3df2
+	deleted:    ZombieBox/Temp/UnityTempFile-5692993779b3e1a4ea2829ad41dae3e4
+	deleted:    ZombieBox/Temp/UnityTempFile-57e036702f7553142b8d4c4ff683343b
+	deleted:    ZombieBox/Temp/UnityTempFile-58a7c69626890d249bdd27743ce4b378
+	deleted:    ZombieBox/Temp/UnityTempFile-58a9451027fb824438b55eb202d4ba63
+	deleted:    ZombieBox/Temp/UnityTempFile-59a74b83d5c77664ebafc6846d16be5f
+	deleted:    ZombieBox/Temp/UnityTempFile-59cfd661023286847b04c68cd6b7f48b
+	deleted:    ZombieBox/Temp/UnityTempFile-59eb5256dd64e384da24ee3382fa7465
+	deleted:    ZombieBox/Temp/UnityTempFile-5a208626fffac7d479964cbb5347048d
+	deleted:    ZombieBox/Temp/UnityTempFile-5aa673c223597214e9ce8ca8ef165ef8
+	deleted:    ZombieBox/Temp/UnityTempFile-5ab844443050a284a9c00eaae40ea0f0
+	deleted:    ZombieBox/Temp/UnityTempFile-5b92840ac235f4c4883b3d4abad8277d
+	deleted:    ZombieBox/Temp/UnityTempFile-5d915bf7532f02543a096acaf3717b04
+	deleted:    ZombieBox/Temp/UnityTempFile-5dadc27005f6c6f47956fb110fef7b20
+	deleted:    ZombieBox/Temp/UnityTempFile-5e807a8820f9e3c48a96a653ca10c0fc
+	deleted:    ZombieBox/Temp/UnityTempFile-6009694e7ff49ed48b4a57b8a48c2420
+	deleted:    ZombieBox/Temp/UnityTempFile-62b532a5e4cecf4418ddf0c4ad0f6c85
+	deleted:    ZombieBox/Temp/UnityTempFile-63d4184799fd1254ebcf9318b31033ae
+	deleted:    ZombieBox/Temp/UnityTempFile-65e3939f4521a5a4a944c16c8ea2608b
+	deleted:    ZombieBox/Temp/UnityTempFile-66231cf5e995e714d81b3b9d465f9799
+	deleted:    ZombieBox/Temp/UnityTempFile-66c8e763215c09249951c4c886d43236
+	deleted:    ZombieBox/Temp/UnityTempFile-6795375397c597647962474106d53e5c
+	deleted:    ZombieBox/Temp/UnityTempFile-69648f11f86c9284b9e9196bb8562795
+	deleted:    ZombieBox/Temp/UnityTempFile-6a73b6712b60920479a9dcff260b79f5
+	deleted:    ZombieBox/Temp/UnityTempFile-6bb8df184761d9c41b9ff4f76b88850e
+	deleted:    ZombieBox/Temp/UnityTempFile-6c182f1b89669b54684e88483043968c
+	deleted:    ZombieBox/Temp/UnityTempFile-6d5a12cdd57495e4899771eb6b07adde
+	deleted:    ZombieBox/Temp/UnityTempFile-6f0957654e86c3446a6e6e097edcea4b
+	deleted:    ZombieBox/Temp/UnityTempFile-6f142fae9384c164f9246638aa99fb67
+	deleted:    ZombieBox/Temp/UnityTempFile-7354c0c98de9b2d4994d45251c32cd7d
+	deleted:    ZombieBox/Temp/UnityTempFile-76d8d4b510f1e71428a0600497c339a0
+	deleted:    ZombieBox/Temp/UnityTempFile-76e88e86d993423429a81f719a519c74
+	deleted:    ZombieBox/Temp/UnityTempFile-778afb80cdb4e1f4da3e9c1955b052ac
+	deleted:    ZombieBox/Temp/UnityTempFile-77a26a19e55d6804b9d8a7e5fcb7e2c2
+	deleted:    ZombieBox/Temp/UnityTempFile-79d576556f4305443bda456a75b13fdf
+	deleted:    ZombieBox/Temp/UnityTempFile-7a15cf982b30aab4ba197bf4b8abe4ff
+	deleted:    ZombieBox/Temp/UnityTempFile-7ab5672bc0f1e934cae836ec576729cc
+	deleted:    ZombieBox/Temp/UnityTempFile-7c24e50cedf090d428fd8bbbcaaca4d6
+	deleted:    ZombieBox/Temp/UnityTempFile-7da15b78f8081fc459f2550ec4479750
+	deleted:    ZombieBox/Temp/UnityTempFile-7df2ed10e37c8c64bb59e0b24e717353
+	deleted:    ZombieBox/Temp/UnityTempFile-7e2e07575f874e44abd2fa10850c060f
+	deleted:    ZombieBox/Temp/UnityTempFile-7f392196a2653a4418d2e2046925341c
+	deleted:    ZombieBox/Temp/UnityTempFile-82f569cb875a9e34387bc14279da788b
+	deleted:    ZombieBox/Temp/UnityTempFile-8302582f1843b2e43a3d635f44a58cea
+	deleted:    ZombieBox/Temp/UnityTempFile-8336ce92eaf087d458a4923f02d5fb66
+	deleted:    ZombieBox/Temp/UnityTempFile-8339253cde0fc9540901dcf366b7199c
+	deleted:    ZombieBox/Temp/UnityTempFile-8607d36a5ae73c54ea5e0905922f27ea
+	deleted:    ZombieBox/Temp/UnityTempFile-86bacae3e302569468d882847bd32485
+	deleted:    ZombieBox/Temp/UnityTempFile-87fca7fe24626154fbfc3f4596ae57b9
+	deleted:    ZombieBox/Temp/UnityTempFile-8827062bee3b16546b88ec083464c9db
+	deleted:    ZombieBox/Temp/UnityTempFile-885d9cb43b057454eb26ef88a7f708e9
+	deleted:    ZombieBox/Temp/UnityTempFile-8976b88cead4d694da02b0fa6363eac3
+	deleted:    ZombieBox/Temp/UnityTempFile-8a26d534f0b09e7488b6dc3d51ca33ba
+	deleted:    ZombieBox/Temp/UnityTempFile-8d0c95cc92b851040b294f46e4c90a16
+	deleted:    ZombieBox/Temp/UnityTempFile-8e952b27bd359eb4a9a10e211f1c6883
+	deleted:    ZombieBox/Temp/UnityTempFile-8ee6fa75ef275c14895b5ad1fb60e97a
+	deleted:    ZombieBox/Temp/UnityTempFile-921147ee2eabcb74a8e343f7e3051e40
+	deleted:    ZombieBox/Temp/UnityTempFile-932f79f16c037524eae2cb81d6ab59da
+	deleted:    ZombieBox/Temp/UnityTempFile-933a794322e04c94e99b026305dcec86
+	deleted:    ZombieBox/Temp/UnityTempFile-94882b5ea21972549a012fac97d765e8
+	deleted:    ZombieBox/Temp/UnityTempFile-94d1615e856317344af21ca24dcb7bc6
+	deleted:    ZombieBox/Temp/UnityTempFile-9540d6860ccf2224185b8dff8837c621
+	deleted:    ZombieBox/Temp/UnityTempFile-9801e8ef113bebc4d8993c102bcdfa1e
+	deleted:    ZombieBox/Temp/UnityTempFile-986af0b2eaf461946927e370a1de6ba0
+	deleted:    ZombieBox/Temp/UnityTempFile-98fb56243c6dab8459d33789f23de252
+	deleted:    ZombieBox/Temp/UnityTempFile-991cef8c1085093419719f6eba006e73
+	deleted:    ZombieBox/Temp/UnityTempFile-9a1a3225d3e48dc40a3e3974e6df2679
+	deleted:    ZombieBox/Temp/UnityTempFile-9a9b519bdad6c554980d2f218a039cbd
+	deleted:    ZombieBox/Temp/UnityTempFile-9b3530bb91ec8f24794cce4b72ecacd8
+	deleted:    ZombieBox/Temp/UnityTempFile-9c397c3d9eadf594cb688058c057d6be
+	deleted:    ZombieBox/Temp/UnityTempFile-9c4673745bbda8648bc26a6089cf5230
+	deleted:    ZombieBox/Temp/UnityTempFile-9c9291d12bed65449a8beab23a268978
+	deleted:    ZombieBox/Temp/UnityTempFile-9d4049c47edd75d4bbc3ce87fd04a362
+	deleted:    ZombieBox/Temp/UnityTempFile-9d4d615d513540742bcbeebf6a22df2e
+	deleted:    ZombieBox/Temp/UnityTempFile-9e0c5596bb405b144aaaa035218383aa
+	deleted:    ZombieBox/Temp/UnityTempFile-9e56e0eeeb1904e4d9ef0387714d27f7
+	deleted:    ZombieBox/Temp/UnityTempFile-9eb134f72fbab3b4d8650c3d962045c7
+	deleted:    ZombieBox/Temp/UnityTempFile-a02f0e40a8e05a14e8545b638d96c0ea
+	deleted:    ZombieBox/Temp/UnityTempFile-a57026c31f1734448a2c578720aa075a
+	deleted:    ZombieBox/Temp/UnityTempFile-a6160fc725ee0394c8cc10300cc2c01e
+	deleted:    ZombieBox/Temp/UnityTempFile-a84788500f0fc504bad96bb27141e9b9
+	deleted:    ZombieBox/Temp/UnityTempFile-a87fecb31f5c6934ab671b5a673e65c6
+	deleted:    ZombieBox/Temp/UnityTempFile-a8f449779874669478f7a12470b5bd62
+	deleted:    ZombieBox/Temp/UnityTempFile-b0ab825aaf74b454fb62ef1692334b8d
+	deleted:    ZombieBox/Temp/UnityTempFile-b194b390702b5fa4f931a2f91a4797e1
+	deleted:    ZombieBox/Temp/UnityTempFile-b23fb1f26b6256e4daef5f36bf1051ed
+	deleted:    ZombieBox/Temp/UnityTempFile-b2889c1b1d8ee1e488e8a9a05785d0c1
+	deleted:    ZombieBox/Temp/UnityTempFile-b4d91de8f88ea9146a49a5ef33d63b2f
+	deleted:    ZombieBox/Temp/UnityTempFile-b7cf85bc64aa2134792e2011535af520
+	deleted:    ZombieBox/Temp/UnityTempFile-b9339b3a68dcd1343b72dc5e7e11f9a3
+	deleted:    ZombieBox/Temp/UnityTempFile-b9dc0fe8c8e47794cb16f28868cfefde
+	deleted:    ZombieBox/Temp/UnityTempFile-bba354dcf4b385d4da256715c35d472b
+	deleted:    ZombieBox/Temp/UnityTempFile-bc53fa9c7d6e76244a9ede892323c1b4
+	deleted:    ZombieBox/Temp/UnityTempFile-bdae814ff75f3e34cbb1378b4d092ea5
+	deleted:    ZombieBox/Temp/UnityTempFile-bf84a6e976534eb468f862501799f447
+	deleted:    ZombieBox/Temp/UnityTempFile-c00c9586a04794c42a09319cdccba5a0
+	deleted:    ZombieBox/Temp/UnityTempFile-c0ad06904e7ed6749b99ad21e2add569
+	deleted:    ZombieBox/Temp/UnityTempFile-c0b68f0f39af6b346aad78c6f00dc831
+	deleted:    ZombieBox/Temp/UnityTempFile-c4a985decfc293c44a64dcbd83d2aa12
+	deleted:    ZombieBox/Temp/UnityTempFile-c4fd45edf09778d459e45512a85e371b
+	deleted:    ZombieBox/Temp/UnityTempFile-c702203cd9407bc4eb41670858d8acce
+	deleted:    ZombieBox/Temp/UnityTempFile-ca789636f292a9446ac2bf51c12d4acc
+	deleted:    ZombieBox/Temp/UnityTempFile-cb5598c2278a35147acacb7a7a49f6ed
+	deleted:    ZombieBox/Temp/UnityTempFile-cc520f808cf90294c8218e2b6703496a
+	deleted:    ZombieBox/Temp/UnityTempFile-ce69e2b3de65b6c4e89cbb25a2d63677
+	deleted:    ZombieBox/Temp/UnityTempFile-cec3ce53a7ff6214aa6a89d66cc55b94
+	deleted:    ZombieBox/Temp/UnityTempFile-cec6f31f4d809744ba0f2bf7152e3170
+	deleted:    ZombieBox/Temp/UnityTempFile-cfa8bfe69693f284c8d1fa42c4dfbe3f
+	deleted:    ZombieBox/Temp/UnityTempFile-d0637d3c2a94fae44979849866bfa050
+	deleted:    ZombieBox/Temp/UnityTempFile-d0ddda1e0064f4141984fda65d4366d6
+	deleted:    ZombieBox/Temp/UnityTempFile-d15ddfa9f8d58cc458e92f5009c953db
+	deleted:    ZombieBox/Temp/UnityTempFile-d39194eda20584b40a407eed38e28980
+	deleted:    ZombieBox/Temp/UnityTempFile-d3b66475a898c414b890a5a284779e4c
+	deleted:    ZombieBox/Temp/UnityTempFile-d4504b9e854c10f409a15aff9db1e513
+	deleted:    ZombieBox/Temp/UnityTempFile-d49d4b794618d7b4b8e3b2b0067e5fd9
+	deleted:    ZombieBox/Temp/UnityTempFile-d4fb740026ec55a429ea17f2153cebc7
+	deleted:    ZombieBox/Temp/UnityTempFile-d5320c532fc1ae34b88733ba60c672ea
+	deleted:    ZombieBox/Temp/UnityTempFile-d76a7fc43b0d3d147a689f4b22b8633a
+	deleted:    ZombieBox/Temp/UnityTempFile-d7b33f1966233c542ba5c447a49eda3b
+	deleted:    ZombieBox/Temp/UnityTempFile-d8032ba5ddbaf0a4dae54512c031b659
+	deleted:    ZombieBox/Temp/UnityTempFile-d8449a0f9c13ced41ae985bd4089c4d3
+	deleted:    ZombieBox/Temp/UnityTempFile-d9348ddde8efc4144af10a0b2a73a2c9
+	deleted:    ZombieBox/Temp/UnityTempFile-d981474199443c74581b26831a25983f
+	deleted:    ZombieBox/Temp/UnityTempFile-d9afdbb8574ec314f9aaadfd8457c4d4
+	deleted:    ZombieBox/Temp/UnityTempFile-dafc74ce7d2084c4b8e3aa3fbe72a226
+	deleted:    ZombieBox/Temp/UnityTempFile-dbe1f19c82bb01c46b6d3834e10a957a
+	deleted:    ZombieBox/Temp/UnityTempFile-dc2c22e0249689b48b181606271edaef
+	deleted:    ZombieBox/Temp/UnityTempFile-ddcda62ebcb8ffc4db86e515ace354d3
+	deleted:    ZombieBox/Temp/UnityTempFile-ddd375db9651c9b4fb1a2487592f50c4
+	deleted:    ZombieBox/Temp/UnityTempFile-de810b04a021d594d8ce7944f4e3f59b
+	deleted:    ZombieBox/Temp/UnityTempFile-de8f82fe393848247a35f1e7671ecf2b
+	deleted:    ZombieBox/Temp/UnityTempFile-e02e6d34cbae29d40bdecbbd9d8efd95
+	deleted:    ZombieBox/Temp/UnityTempFile-e0b052c636ee85f4cbc3b3a79c726eba
+	deleted:    ZombieBox/Temp/UnityTempFile-e0f0af14995771144876e46cd6b4cec3
+	deleted:    ZombieBox/Temp/UnityTempFile-e1c31817b29b8774e906ce09b01d7571
+	deleted:    ZombieBox/Temp/UnityTempFile-e25687fa856676749b750f49a14650dd
+	deleted:    ZombieBox/Temp/UnityTempFile-e2eb496a8751c9542877c0feba834caf
+	deleted:    ZombieBox/Temp/UnityTempFile-e340399371d83ab45a9a559c926893e0
+	deleted:    ZombieBox/Temp/UnityTempFile-e4e495fa126bcb342886d7e2e9f89d54
+	deleted:    ZombieBox/Temp/UnityTempFile-e6fcc18cd09563c409eabae40f7194ed
+	deleted:    ZombieBox/Temp/UnityTempFile-e7add44085f9ac94492827fdd73abcd1
+	deleted:    ZombieBox/Temp/UnityTempFile-e7f32ed9985f3eb4491f0a4b43271b58
+	deleted:    ZombieBox/Temp/UnityTempFile-e859366ff57518e478fcf6c7491e9ad9
+	deleted:    ZombieBox/Temp/UnityTempFile-e93c589295fb38542818d42ebbb19fd7
+	deleted:    ZombieBox/Temp/UnityTempFile-e995c4dd60464ba43aa59fd7e14fe5fb
+	deleted:    ZombieBox/Temp/UnityTempFile-e9d169cb7e0247149b82638a15629bdf
+	deleted:    ZombieBox/Temp/UnityTempFile-ea63999216fd3714fa9a89497ed877f2
+	deleted:    ZombieBox/Temp/UnityTempFile-ea94a2891d6ffa04188df6851c0a4ac1
+	deleted:    ZombieBox/Temp/UnityTempFile-ec053d47ae55b3e4cbde76fb481a7202
+	deleted:    ZombieBox/Temp/UnityTempFile-ec27cb711722f384aaebe6b673dbcdd3
+	deleted:    ZombieBox/Temp/UnityTempFile-ecd42f051aee7bc499ee4320802f77a0
+	deleted:    ZombieBox/Temp/UnityTempFile-ed7868b9e05e32943ab5feb988a823fd
+	deleted:    ZombieBox/Temp/UnityTempFile-f28c93346790d8d4c91e5af3773c8b3a
+	deleted:    ZombieBox/Temp/UnityTempFile-f299f4a78f7ddce418c1c5f6bf9a56fa
+	deleted:    ZombieBox/Temp/UnityTempFile-f371086ade1c01a4ca8d4663b5be4211
+	deleted:    ZombieBox/Temp/UnityTempFile-f43f85aaba3c4504aa82b505bec4444d
+	deleted:    ZombieBox/Temp/UnityTempFile-f6cacc4a41457014c847d054ff43988b
+	deleted:    ZombieBox/Temp/UnityTempFile-f71ca0f5968fff7408bddbe468de6a76
+	deleted:    ZombieBox/Temp/UnityTempFile-f78529b5a718ec743b7fa6c347cfb56c
+	deleted:    ZombieBox/Temp/UnityTempFile-f7a09ac5851c16440a40e7d04a68ed43
+	deleted:    ZombieBox/Temp/UnityTempFile-f7cce3623d178674c9d94800563de95e
+	deleted:    ZombieBox/Temp/UnityTempFile-f7f61fbf6f0e2524790e0f32b64c365c
+	deleted:    ZombieBox/Temp/UnityTempFile-f88d281ba398dc3458a79a0cbf03497d
+	deleted:    ZombieBox/Temp/UnityTempFile-fa36d30ec874a914e85399a65ad53284
+	deleted:    ZombieBox/Temp/UnityTempFile-fa51d3782bd30424586473b1d26371f3
+	deleted:    ZombieBox/Temp/UnityTempFile-fc3d2e2b3c0e0e74ea6e11d693d38940
+	deleted:    ZombieBox/Temp/UnityTempFile-fd052a348ead0ca4baa563ab2dcf00cc
+	modified:   ZombieBox/Temp/__BuildPlayer Backupscene
+	deleted:    ZombieBox/Temp/__EditModeScene
+	modified:   ZombieBox/ZombieBox-csharp.sln
+	modified:   ZombieBox/ZombieBox.sln
+	modified:   ZombieBox/ZombieBox.userprefs
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../.gitignore~
+	ZombieBox/.gitignore
+	ZombieBox/Assets/Editor/NavMeshFixer.cs.meta
+	ZombieBox/Assets/Scripts/Enemy.cs.meta
+	ZombieBox/Assets/Scripts/EnemyManager.cs.meta
+	ZombieBox/Assets/Scripts/LoginMenu.cs.meta
+	ZombieBox/Assets/Scripts/PathScript.cs.meta
+	ZombieBox/Assets/Scripts/Turret.cs.meta
+	ZombieBox/Assets/Scripts/TurretManager.cs.meta
+	ZombieBox/Assets/Scripts/WeaponManager.cs.meta
+	ZombieBox/Assets/_Scenes/base.meta
+	ZombieBox/Assets/_Scenes/base/
+	ZombieBox/Assets/_Scenes/loginScene.unity
+	ZombieBox/Assets/_Scenes/loginScene.unity.meta
+	ZombieBox/Assets/plugins.meta
+	ZombieBox/Assets/plugins/ICSharpCode.SharpZipLib.dll
+	ZombieBox/Assets/plugins/ICSharpCode.SharpZipLib.dll.meta
+	ZombieBox/Assets/plugins/SimpleJSON.cs.meta
+	ZombieBox/Library/CurrentMaximizeLayout.dwlt
+	ZombieBox/Library/metadata/00/00fbc204e3358cd4fb91ee0604e0b8a3
+	ZombieBox/Library/metadata/0f/0f0078564e2ff0545823af718c624809
+	ZombieBox/Library/metadata/11/
+	ZombieBox/Library/metadata/36/
+	ZombieBox/Library/metadata/3e/
+	ZombieBox/Library/metadata/52/
+	ZombieBox/Library/metadata/5e/5ef328494fca85148bb746014c16c292
+	ZombieBox/Library/metadata/6f/6f576a6958b6d8b40bcde9be347ec478
+	ZombieBox/Library/metadata/9d/9d2e01e35e5b4944f8165f6f483044f0
+	ZombieBox/Library/metadata/9f/9f3cd74c646612c44bb2312c0e2160b9
+	ZombieBox/Library/metadata/ac/
+	ZombieBox/Library/metadata/af/af3c1de72097a5e479e9f3e968cb6621
+	ZombieBox/Library/metadata/d2/
+	ZombieBox/Library/metadata/ee/
+	ZombieBox/Temp/UnityLockfile
+	ZombieBox/Temp/UnityTempFile-3a690934e63cf4d45a6ec6b27f4ea4ce
+	ZombieBox/Temp/UnityTempFile-5bd4ffdc91b1f024eb76672fd30cd41f
+	ZombieBox/Temp/UnityTempFile-5dbfaf1336a5f794491da3241b6f48e6
+	ZombieBox/Temp/UnityTempFile-760d826a519d3d94e8f5ecfeb93068ba
+	ZombieBox/Temp/UnityTempFile-883db23d94fed134bafd9d09e0339f0d
+	ZombieBox/Temp/UnityTempFile-8c0211d2dbeb2a144af377beeff8f916
+	ZombieBox/Temp/UnityTempFile-9240e94e1c2dfbc4886a4a7ccae0a81d
+	ZombieBox/UpgradeLog.htm
+	ZombieBox/bin/
+	ZombieBox/obj/
+	status.txt
+

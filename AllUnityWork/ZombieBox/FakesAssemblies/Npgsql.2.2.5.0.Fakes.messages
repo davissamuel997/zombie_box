@@ -1,0 +1,139 @@
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Consts: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.HashAlgorithm: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.MD5: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.MD5CryptoServiceProvider: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlAsciiRow: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlBackEndKeyData: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlBind: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlBinaryRow: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlCancelRequest: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlClosedState: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlCommand: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlCommandBuilder: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlConnectedState: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlConnection: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlConnectionString: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.ConnectionStringKeys: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.ConnectionStringDefaults: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.SslMode: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlConnector: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlConnectorPool: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlDataAdapter: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlDataReader: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlDescribe: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlNoticeEventArgs: type has no family visible contructors.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlError: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.LogLevel: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlEventLog: type has no family visible contructors.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlException: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlExecute: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlFlush: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlMediator: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlMessageTypes_Ver_2: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlMessageTypes_Ver_3: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlNotificationEventArgs: type has no family visible contructors.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlParameter: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlParameterCollection: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlParameterStatus: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlParse: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlPasswordPacket: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlQuery: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlReadyState: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlResultSet: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlRow: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlRowDescriptionFieldData: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlRowDescription: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlSchema: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlStartupPacket: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlStartupState: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlState: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlSync: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlTransaction: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.ProtocolVersion: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.ServerVersion: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.FormatCode: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.PGUtil: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlDbType: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.BasicBackendToNativeTypeConverter: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.BasicNativeToBackendTypeConverter: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.ExtendedBackendToNativeTypeConverter: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.ExtendedNativeToBackendTypeConverter: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlPoint: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlBox: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlLSeg: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlPath: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlPolygon: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlCircle: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlInet: type is a value type.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlTypesHelper: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlBackendTypeInfo: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlNativeTypeInfo: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlBackendTypeMapping: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.NpgsqlNativeTypeMapping: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NoticeEventHandler: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NotificationEventHandler: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlRowUpdatedEventHandler: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for Npgsql.NpgsqlRowUpdatingEventHandler: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.ConvertBackendToNativeHandler: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate stub for NpgsqlTypes.ConvertNativeToBackendHandler: type is sealed.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Consts: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.HashAlgorithm: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.MD5: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.MD5CryptoServiceProvider: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlAsciiRow: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlBackEndKeyData: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlBind: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlBinaryRow: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlCancelRequest: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlClosedState: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlConnectedState: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlConnection: Could not resolve assembly 'Mono.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756'. Are you missing an assembly reference?.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlConnectionString: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.ConnectionStringKeys: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.ConnectionStringDefaults: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.SslMode: type is an enum.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlConnector: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlConnectorPool: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlDataReader+Columns: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlDataReader+KeyLookup: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlDataReader+Tables: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlDescribe: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.LogLevel: type is an enum.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlExecute: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlFlush: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlMediator: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlMessageTypes_Ver_2: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlMessageTypes_Ver_3: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlParameterStatus: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlParse: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlPasswordPacket: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlQuery: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlReadyState: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlResultSet: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlRow: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlRowDescriptionFieldData: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlRowDescription: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlSchema: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlStartupPacket: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlStartupState: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlState: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlSync: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.ProtocolVersion: type is an enum.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.FormatCode: type is an enum.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.PGUtil: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.NpgsqlDbType: type is an enum.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.BasicBackendToNativeTypeConverter: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.BasicNativeToBackendTypeConverter: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.ExtendedBackendToNativeTypeConverter: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.ExtendedNativeToBackendTypeConverter: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.NpgsqlTypesHelper: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.NpgsqlBackendTypeInfo: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.NpgsqlNativeTypeInfo: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.NpgsqlBackendTypeMapping: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.NpgsqlNativeTypeMapping: type is not visible to exported or assembly(Npgsql.2.2.5.0.Fakes).
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NoticeEventHandler: type is a delegate.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NotificationEventHandler: type is a delegate.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlRowUpdatedEventHandler: type is a delegate.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for Npgsql.NpgsqlRowUpdatingEventHandler: type is a delegate.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.ConvertBackendToNativeHandler: type is a delegate.
+D:\Processes\repos\zombie_box\AllUnityWork\ZombieBox\Fakes\Npgsql.fakes : warning : Cannot generate shim for NpgsqlTypes.ConvertNativeToBackendHandler: type is a delegate.
