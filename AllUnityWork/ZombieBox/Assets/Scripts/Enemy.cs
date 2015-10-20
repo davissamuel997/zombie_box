@@ -7,16 +7,21 @@ public class Enemy
     // Use this for initialization
     public GameObject enemyObject;
 
-    private int health = 100;
+    private int health = 1000;
     private const int MAP1_SIZE = 25;
     public bool alive = true;
+    public int id = 0;
 
+    public Enemy(int num)
+    {
+        id = num;
+    }
     public Vector3 getSpawnLocation()
     {
         float x = Random.value;
         float z = Random.value;
-      
-        if ((int)(z *10) % 2 == 0)
+
+        if ((int)(z * 10) % 2 == 0)
         {
             z *= -1;
         }
@@ -31,10 +36,14 @@ public class Enemy
         {
             return;
         }
-            health -= val;
+        health -= val;
+
         if (health <= 0)
         {
             alive = false;
+            Debug.Log("Killed Enemy " + id + " at " + enemyObject.transform.position);
+            GameObject.Destroy(enemyObject);
         }
     }
+
 }
