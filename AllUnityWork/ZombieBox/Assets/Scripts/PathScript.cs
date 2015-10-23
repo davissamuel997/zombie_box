@@ -17,12 +17,21 @@ public class PathScript : MonoBehaviour {
 
         baseTarget = GameObject.FindGameObjectsWithTag("Base")[0].transform;
 
+		this.GetComponentInParent<Animator>().SetInteger("movementSetting", 1);
+
 
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		agent.SetDestination (baseTarget.position);
+		if (GameObject.FindGameObjectWithTag("Base").GetComponent<BaseManager>().Health != 0)
+		{
+			agent.SetDestination(baseTarget.position);
+		}
+		else
+		{
+			this.GetComponentInParent<Animator>().SetInteger("movementSetting", 0);
+		}
 	}
 }
