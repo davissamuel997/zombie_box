@@ -4,19 +4,9 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using System.Text;
 using System;
-/*
-Severity	Code	Description	Project	File	Line
-Warning		The primary reference "Npgsql, Version=2.2.5.0, Culture=neutral, 
-PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL" could not be resolved because it has an 
-indirect dependency on the framework assembly "System.DirectoryServices, Version=2.0.0.0, Culture=neutral, 
-PublicKeyToken=b03f5f7f11d50a3a" which could not be resolved in the currently targeted framework. ".NETFramework,Version=v3.5,
-Profile=Unity Subset v3.5". To resolve this problem, either remove the reference "Npgsql, Version=2.2.5.0, Culture=neutral, 
-PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL" or retarget your application to a framework version which contains "
-System.DirectoryServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".	ZombieBox.CSharp		
-
 
 using Npgsql;
-*/
+
     public class LoginMenu : MonoBehaviour {
 
 	public static GameObject selected;
@@ -26,12 +16,12 @@ using Npgsql;
 	private InputField usernameInput;
 	private InputField passwordInput;
 	private WWW webCall;
-    /*public System.Data.DataSet data = new System.Data.DataSet();
-    */
+    public System.Data.DataSet data = new System.Data.DataSet();
+    
     public void getData()
     {
         string connString = "Server=localhost;Port=5432;User Id=Eric;Password=;Database=railsdb_development";
-        /*
+        
         NpgsqlConnection conn = new NpgsqlConnection(connString);
         conn.Open();
         string sql = "SELECT * from posts";
@@ -45,22 +35,29 @@ using Npgsql;
             {
                 foreach (System.Data.DataColumn column in table.Columns)
                 {
-                    Debug.Log(row[column]);
+                   
+                    string temp = row[column].ToString();
+                   // Debug.Log(temp);
+                    
+                    if (temp.Equals(usernameInput.text))
+                    {
+                        Debug.Log("User Name recognized");
+                    }
                 }
             }
-        }*/
+        }
     }
 	void Start()
 	{
 
 			string connString = "Server=localhost;Port=5432;User Id=Eric;Password=;Database=railsdb_development";
-		/*
+		
 		NpgsqlConnection conn = new NpgsqlConnection (connString);
 		conn.Open ();
 		string sql = "SELECT * from posts";
 		NpgsqlDataAdapter da = new NpgsqlDataAdapter (sql, conn);
 		System.Collections.CollectionBase test;
-	*/
+	
 
         
 		loginButton = GameObject.FindObjectOfType<Button>();
@@ -72,7 +69,6 @@ using Npgsql;
 		});
 
 		init_flag = false;
-        getData();
         
 	}
 
@@ -89,6 +85,7 @@ using Npgsql;
 	public void login()
 	{
 		Debug.Log ("loging in");
+        getData();
 		Debug.Log (usernameInput.text);
 		Debug.Log (passwordInput.text);
 
