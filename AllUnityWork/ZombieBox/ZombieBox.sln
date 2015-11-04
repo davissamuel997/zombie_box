@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
+# Visual Studio 2015
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZombieBox.CSharp.Plugins", "ZombieBox.CSharp.Plugins.csproj", "{E9796546-D4A5-BB69-AA05-9B9C7651D949}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZombieBox.CSharp", "ZombieBox.CSharp.csproj", "{AEF06E16-0008-12FF-CB28-B0F9C8CF4046}"

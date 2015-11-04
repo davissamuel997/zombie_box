@@ -12,13 +12,18 @@ public class Turret
     public const float BASE_RADIUS = 20.0f;
     public const int BASE_DAMAGE = 10;
     public const int BASE_FIRE_RATE = 1000;  //fire rate in ms
+    Animator animator;
     int id = 0;
 
     public Turret(int num)
     {
         id = num;
     }
-
+    public void setGameObject(GameObject obj)
+    {
+        turretObject = obj;
+        animator = obj.GetComponent<Animator>();
+    }
     public void damageEnemies(List<Enemy> enemyList)
     {
 
@@ -45,6 +50,7 @@ public class Turret
             min.takeDamage(BASE_DAMAGE);
             track(min.enemyObject.transform.position);
             Debug.Log("Turret #" + id + " Target Enemy " + min.id + " at " + min.enemyObject.transform.position);
+            animator.SetBool("fire", true);
             if (!min.alive)
             {
                 enemyList.Remove(min);

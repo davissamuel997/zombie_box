@@ -15,7 +15,7 @@ public class TurretManager : MonoBehaviour
         Turret temp = new Turret(turretCount);
         Vector3 pos = new Vector3(x, 2, z);
 
-        temp.turretObject = (GameObject)Instantiate(Resources.Load("prefabs/turret"), pos, q);
+        temp.setGameObject((GameObject)Instantiate(Resources.Load("prefabs/turret"), pos, q));
         temp.baseTurret = (GameObject)Instantiate(Resources.Load("prefabs/baseTurret"), new Vector3(pos.x, (pos.y - 1.5f), pos.z), q);
 
         Debug.Log("Spawned Turret " + pos);
