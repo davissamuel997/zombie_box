@@ -414,8 +414,8 @@ public class WeaponScript : MonoBehaviour {
 		canSwicthMode = false;
 		//GetComponent<AudioSource>().clip = soundDraw;
 		//GetComponent<AudioSource>().Play();
-		weaponAnim.GetComponent<Animation>().Play("Draw", PlayMode.StopAll);
-		weaponAnim.GetComponent<Animation>().CrossFade("Draw");
+		//weaponAnim.GetComponent<Animation>().Play("Draw", PlayMode.StopAll);
+		//weaponAnim.GetComponent<Animation>().CrossFade("Draw");
 		yield return new WaitForSeconds(drawTime);
 		draw = false;
 		reloading = false;
