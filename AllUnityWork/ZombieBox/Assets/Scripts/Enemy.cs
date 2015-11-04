@@ -15,6 +15,7 @@ public class Enemy
     public Enemy(int num)
     {
         id = num;
+
     }
     public Vector3 getSpawnLocation()
     {

@@ -1,5 +1,5 @@
 5.2.1f1:2.1.0.0
-StandaloneWindows
+Android
 C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll
 C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll
 C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
@@ -22,4 +22,4 @@ C:\Program Files\Unity\Editor\Data\PlaybackEngines\webglsupport/UnityEditor.WebG
 C:\Program Files\Unity\Editor\Data\PlaybackEngines\linuxstandalonesupport/UnityEditor.LinuxStandalone.Extensions.dll
 C:\Program Files\Unity\Editor\Data\PlaybackEngines\windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
 C:\Program Files\Unity\Editor\Data\PlaybackEngines\macstandalonesupport/UnityEditor.OSXStandalone.Extensions.dll
-C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\2015\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll
+C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\2013\Editor\SyntaxTree.VisualStudio.Unity.Bridge.dll

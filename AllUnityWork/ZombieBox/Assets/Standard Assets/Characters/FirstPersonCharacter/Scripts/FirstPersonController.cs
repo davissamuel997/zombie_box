@@ -57,7 +57,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			weaponCameraGO = GameObject.FindWithTag("WeaponCamera");
 			coll = GetComponent<CapsuleCollider>();
 			//rayDistance = coll.height * .5f + coll.radius;
-			playerWeapons.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+			//playerWeapons.GetComponent<Animation>().wrapMode = WrapMode.Loop;
 
 			//Screen.lockCursor = true;
 		}

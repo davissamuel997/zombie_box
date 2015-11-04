@@ -20,6 +20,7 @@ public class EnemyManager : MonoBehaviour
             Debug.Log("Spawned Enemy At " + pos);
             temp.enemyObject.SetActive(true);
             enemyList.Add(temp);
+			
         }
     }
 

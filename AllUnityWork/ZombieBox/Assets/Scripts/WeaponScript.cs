@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 
-public enum fireMode { none, semi, auto, burst, launcher }
+public enum fireMode { none, semi, auto, burst }
 public enum Ammo { Magazines, Bullets }
 
 [ExecuteInEditMode]
@@ -10,11 +10,9 @@ public class WeaponScript : MonoBehaviour {
 
 	public fireMode currentMode = fireMode.semi;
 	public fireMode firstMode = fireMode.semi;
-	public fireMode secondMode = fireMode.launcher;
+	public fireMode secondMode = fireMode.auto;
 
 	public Ammo ammoMode = Ammo.Magazines;
-
-	public bool canReloadLauncher = false;
 
 	public AudioClip soundDraw;
 	public AudioClip soundFire;
@@ -30,7 +28,6 @@ public class WeaponScript : MonoBehaviour {
 	public LayerMask layerMask;
 	//public Renderer muzzleFlash;
 	//public Light muzzleLight;
-
 
 	public int damage = 50;
 	public int bulletsPerMag = 50;
@@ -115,11 +112,12 @@ public class WeaponScript : MonoBehaviour {
 		currentMode = firstMode;
 		fireRate = fireRateFirstMode;
 		aiming = false;
-
 		if (ammoMode == Ammo.Bullets)
 		{
 			magazines = magazines * bulletsPerMag;
 		}
+		//weaponAnim.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+		//weaponAnim.GetComponent<Animator>().SetBool("IsWalking", false);
 	}
 	
 	// Update is called once per frame
@@ -129,14 +127,18 @@ public class WeaponScript : MonoBehaviour {
 		{
 			if (CrossPlatformInputManager.GetButtonDown("Shoot"))
 			{
+				Debug.Log("shoot pressed");
+
 				if (currentMode == fireMode.semi)
 				{
 					fireSemi();
+					Debug.Log("semi");
 				}
 
 				if (currentMode == fireMode.burst)
 				{
 					fireBurst();
+					Debug.Log("burst");
 				}
 
 				if (bulletsLeft > 0)
@@ -294,6 +296,8 @@ public class WeaponScript : MonoBehaviour {
 			{
 				hit.collider.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
 
+				Debug.Log("enemy found");
+
 				GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
 				if (Physics.Raycast(position, direction, out hit, range, layerMask.value))
 				{
@@ -408,8 +412,8 @@ public class WeaponScript : MonoBehaviour {
 	{
 		draw = true;
 		canSwicthMode = false;
-		GetComponent<AudioSource>().clip = soundDraw;
-		GetComponent<AudioSource>().Play();
+		//GetComponent<AudioSource>().clip = soundDraw;
+		//GetComponent<AudioSource>().Play();
 		weaponAnim.GetComponent<Animation>().Play("Draw", PlayMode.StopAll);
 		weaponAnim.GetComponent<Animation>().CrossFade("Draw");
 		yield return new WaitForSeconds(drawTime);
