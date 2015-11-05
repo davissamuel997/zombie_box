@@ -48,7 +48,6 @@ public class WeaponManager : MonoBehaviour {
 	void Update () {
 		if ( CrossPlatformInputManager.GetButtonDown("SwitchWeapon") && canSwitch)
 		{
-			Debug.Log("Weapon switch code");
 			weaponToSelect++;
 			if (weaponToSelect > (weaponsInUse.Length - 1))
 			{
@@ -97,7 +96,7 @@ public class WeaponManager : MonoBehaviour {
 			if (a)
 				a.enabled = true;
 		}*/
-		Debug.Log(weaponsInUse[i].gameObject);
+		//Debug.Log(weaponsInUse[i].gameObject);
 		weaponsInUse[i].gameObject.SendMessage("DrawWeapon", SendMessageOptions.DontRequireReceiver);
 		WeaponIndex temp = weaponsInUse[i].gameObject.transform.GetComponent<WeaponIndex>();
 		weaponToDrop = temp.setWeapon;

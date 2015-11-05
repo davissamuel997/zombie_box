@@ -13,8 +13,8 @@ public class LevelManager : MonoBehaviour {
         base_mng = GameObject.FindObjectOfType<BaseManager>();
         enemy_mng = GameObject.FindObjectOfType<EnemyManager>();
         turret_mng = GameObject.FindObjectOfType<TurretManager>();
-        enemy_mng.spawnEnemies(20);
-        turret_mng.setEnemyList(enemy_mng.getEnemyList());
+        enemy_mng.spawnEnemies(1);
+        //turret_mng.setEnemyList(enemy_mng.getEnemyList());
         
 
         

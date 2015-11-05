@@ -312,8 +312,8 @@ public class WeaponScript : MonoBehaviour {
 		PlayAudioClip(soundFire, transform.position, 0.7f);
 		m_LastFrameShot = Time.frameCount;
 
-		weaponAnim.GetComponent<Animation>().Rewind("Fire");
-		weaponAnim.GetComponent<Animation>().Play("Fire");
+		//weaponAnim.GetComponent<Animation>().Rewind("Fire");
+		//weaponAnim.GetComponent<Animation>().Play("Fire");
 		//KickBack();
 		bulletsLeft--;
 	}
@@ -326,8 +326,8 @@ public class WeaponScript : MonoBehaviour {
 		source.clip = clip;
 		source.volume = volume;
 		source.pitch = Random.Range(0.95f, 1.05f);
-		source.Play();
-		Destroy(go, clip.length);
+		//source.Play();
+		//Destroy(go, clip.length);
 	}
 
 	IEnumerator OutOfAmmo()
@@ -338,9 +338,9 @@ public class WeaponScript : MonoBehaviour {
 		playing = true;
 		PlayAudioClip(soundEmpty, transform.position, 0.7f);
 
-		weaponAnim.GetComponent<Animation>()["Fire"].speed = 2.0f;
-		weaponAnim.GetComponent<Animation>().Rewind("Fire");
-		weaponAnim.GetComponent<Animation>().Play("Fire");
+		//weaponAnim.GetComponent<Animation>()["Fire"].speed = 2.0f;
+		//weaponAnim.GetComponent<Animation>().Rewind("Fire");
+		//weaponAnim.GetComponent<Animation>().Play("Fire");
 		yield return new WaitForSeconds(0.2f);
 		playing = false;
 	}
@@ -356,9 +356,9 @@ public class WeaponScript : MonoBehaviour {
 			canSwicthMode = false;
 			if (magazines > 0 && bulletsLeft != bulletsPerMag)
 			{
-				weaponAnim.GetComponent<Animation>()["Reload"].speed = reloadAnimSpeed;
-				weaponAnim.GetComponent<Animation>().Play("Reload", PlayMode.StopAll);
-				weaponAnim.GetComponent<Animation>().CrossFade("Reload");
+				//weaponAnim.GetComponent<Animation>()["Reload"].speed = reloadAnimSpeed;
+				//weaponAnim.GetComponent<Animation>().Play("Reload", PlayMode.StopAll);
+				//weaponAnim.GetComponent<Animation>().CrossFade("Reload");
 				GetComponent<AudioSource>().PlayOneShot(soundReload);
 				yield return new WaitForSeconds(reloadTime);
 				magazines--;
