@@ -14,10 +14,14 @@ public class zombieLoader : MonoBehaviour {
 		int selection = (int)(nums.Length *Random.value);
 		
 		GameObject prefab = (GameObject)Resources.Load("Characters/Zombie_" + nums[selection]);
-		GameObject currentArmPrefab = (GameObject)Instantiate(prefab, new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
+		GameObject zombie = (GameObject)Instantiate(prefab, this.transform.position, new Quaternion(0, 0, 0, 0));
+
+        zombie.transform.localScale = new Vector3(1, 1, 1);
+        zombie.transform.localEulerAngles = new Vector3(0, 0, 0);
+        zombie.transform.parent = this.transform;
 
 
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () 

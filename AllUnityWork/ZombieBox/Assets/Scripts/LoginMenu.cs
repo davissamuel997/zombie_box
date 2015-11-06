@@ -50,7 +50,7 @@ using Npgsql;
 	void Start()
 	{
 
-			string connString = "Server=localhost;Port=5432;User Id=Eric;Password=;Database=railsdb_development";
+			string connString = "Server=ec2-50-19-208-138.compute-1.amazonaws.com;Port=5432;User Id=utrrhvfbgrydtz;Password=fIzDft9cKGp4LMrc6tIlvA63WP;Database=d85j68vua3mpp0";
 		
 		NpgsqlConnection conn = new NpgsqlConnection (connString);
 		conn.Open ();

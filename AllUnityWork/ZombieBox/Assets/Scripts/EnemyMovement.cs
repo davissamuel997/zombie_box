@@ -3,7 +3,8 @@ using System.Collections;
 
 public class EnemyMovement : MonoBehaviour
 {
-	Transform player;
+	Transform playerTarget;
+    Transform baseTarget;
 	PlayerHealth playerHealth;
 	EnemyHealth enemyHealth;
 	NavMeshAgent nav;
@@ -13,19 +14,37 @@ public class EnemyMovement : MonoBehaviour
 
 	void Awake()
 	{
-		player = GameObject.FindGameObjectWithTag("Player").transform;
-		playerHealth = player.GetComponent<PlayerHealth>();
+		playerTarget = GameObject.FindGameObjectWithTag("Player").transform;
+        baseTarget = GameObject.FindGameObjectWithTag("Base").transform;
+		playerHealth = playerTarget.GetComponent<PlayerHealth>();
 		enemyHealth = GetComponent<EnemyHealth>();
+        nav = this.GetComponent<NavMeshAgent>();
 		nav = GetComponent<NavMeshAgent>();
 	}
-
+    
 
 	void Update()
 	{
+        
 		if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
 		{
-			nav.SetDestination(player.position);
-		}
+            if (this.transform.name == "fastEnemy")
+                nav.SetDestination(playerTarget.position);
+            else if (this.transform.name == "slowEnemy")
+                nav.SetDestination(baseTarget.position);
+            else
+            {
+                if (Vector3.Distance(this.transform.position, playerTarget.position) < 5.0f)
+                {
+                    nav.SetDestination(playerTarget.position);
+                }
+                else
+                {
+                    nav.SetDestination(baseTarget.position);
+                }
+
+            }
+        }
 		else
 		{
 			nav.enabled = false;
