@@ -8,6 +8,7 @@ public class EnemyMovement : MonoBehaviour
 	PlayerHealth playerHealth;
 	EnemyHealth enemyHealth;
 	NavMeshAgent nav;
+	Animator anim;
 
 	public int movementSetting;
 
@@ -20,12 +21,14 @@ public class EnemyMovement : MonoBehaviour
 		enemyHealth = GetComponent<EnemyHealth>();
         nav = this.GetComponent<NavMeshAgent>();
 		nav = GetComponent<NavMeshAgent>();
+		anim = GetComponentInChildren<Animator>();
 	}
     
 
 	void Update()
 	{
-        
+		anim.SetInteger("movementSetting", movementSetting);
+
 		if (enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
 		{
             if (this.transform.name == "fastEnemy")
@@ -34,12 +37,14 @@ public class EnemyMovement : MonoBehaviour
                 nav.SetDestination(baseTarget.position);
             else
             {
-                if (Vector3.Distance(this.transform.position, playerTarget.position) < 5.0f)
+                if (Vector3.Distance(this.transform.position, playerTarget.position) < 10f)
                 {
+					//Debug.Log("here");
                     nav.SetDestination(playerTarget.position);
                 }
                 else
                 {
+					//Debug.Log("there");
                     nav.SetDestination(baseTarget.position);
                 }
 

@@ -20,7 +20,7 @@ public class zombieLoader : MonoBehaviour {
         zombie.transform.localEulerAngles = new Vector3(0, 0, 0);
         zombie.transform.parent = this.transform;
 
-
+		this.GetComponent<Animator>().enabled = true;
     }
 	
 	// Update is called once per frame

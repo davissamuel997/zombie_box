@@ -127,7 +127,7 @@ public class WeaponScript : MonoBehaviour {
 		{
 			if (CrossPlatformInputManager.GetButtonDown("Shoot"))
 			{
-				Debug.Log("shoot pressed");
+				//Debug.Log("shoot pressed");
 
 				if (currentMode == fireMode.semi)
 				{
@@ -149,6 +149,7 @@ public class WeaponScript : MonoBehaviour {
 			{
 				if (currentMode == fireMode.auto)
 				{
+
 					fireSemi();
 					if (bulletsLeft > 0)
 						isFiring = true;
@@ -270,15 +271,18 @@ public class WeaponScript : MonoBehaviour {
 			return;
 		}
 
-		Vector3 direction = gameObject.transform.TransformDirection(new Vector3(Random.Range(-0.01f, 0.01f) * triggerTime, Random.Range(-0.01f, 0.01f) * triggerTime, 1));
+		Vector3 direction = mainCamera.transform.TransformDirection(new Vector3(Random.Range(-0.01f, 0.01f) * triggerTime, Random.Range(-0.01f, 0.01f) * triggerTime, 1));
 		RaycastHit hit;
-		Vector3 position = transform.parent.position;
+		//Vector3 position = transform.parent.position;
+		//Vector3 direction = mainCamera.transform.TransformDirection(Vector3.forward);
 
-		if (Physics.Raycast(position, direction, out hit, range, layerMask.value))
+
+		if (Physics.Raycast(transform.position, direction, out hit, 100))
 		{
-
+			//Debug.Log("iff");
 			Vector3 contact = hit.point;
 			Quaternion rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+			GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
 
 			if (hit.rigidbody)
 			{
@@ -287,19 +291,16 @@ public class WeaponScript : MonoBehaviour {
 
 			if (hit.transform.tag == "Untagged")
 			{
-				GameObject default1 = Instantiate(untagged, contact, rotation) as GameObject;
-				hit.collider.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
-				default1.transform.parent = hit.transform;
+				//GameObject default1 = Instantiate(untagged, contact, rotation) as GameObject;
+				//hit.collider.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
+				//default1.transform.parent = hit.transform;
 			}
 
 			if (hit.transform.tag == "Enemy")
 			{
-				hit.collider.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
-
-				Debug.Log("enemy found");
-
-				GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
-				if (Physics.Raycast(position, direction, out hit, range, layerMask.value))
+				hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact);
+				//GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
+				if (Physics.Raycast(transform.position, direction, out hit, range, layerMask.value))
 				{
 					if (hit.rigidbody)
 					{
@@ -326,8 +327,8 @@ public class WeaponScript : MonoBehaviour {
 		source.clip = clip;
 		source.volume = volume;
 		source.pitch = Random.Range(0.95f, 1.05f);
-		//source.Play();
-		//Destroy(go, clip.length);
+		source.Play();
+		Destroy(go, clip.length);
 	}
 
 	IEnumerator OutOfAmmo()

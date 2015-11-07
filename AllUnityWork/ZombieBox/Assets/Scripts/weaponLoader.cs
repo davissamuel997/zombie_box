@@ -30,19 +30,27 @@ public class weaponLoader : MonoBehaviour {
 
 		setChildrenWeaponLayer(this.transform);
 
-		this.GetComponentInParent<Animator>().StartPlayback();
+		//this.GetComponentInParent<Animator>().StartPlayback();
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
+
+	void FixedUpdate()
+	{
+		float h = CrossPlatformInputManager.GetAxisRaw("Horizontal");
+		float v = CrossPlatformInputManager.GetAxisRaw("Vertical");
+
+		Animating(h, v);
+	}
+
 
 	void Animating(float h, float v)
 	{
 		bool moving = h != 0f || v != 0f;
-		Debug.Log("m" + moving);
 		this.GetComponentInParent<Animator>().SetBool("isMoving", moving);
 	}
 

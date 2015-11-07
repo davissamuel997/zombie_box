@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
 	public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
 	public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
 	public AudioClip deathClip;                 // The sound to play when the enemy dies.
+	public int sinkTime;
 
 
 	Animator anim;                              // Reference to the animator.
@@ -20,7 +21,7 @@ public class EnemyHealth : MonoBehaviour
 	void Awake()
 	{
 		// Setting up the references.
-		anim = GetComponent<Animator>();
+		anim = this.GetComponentInChildren<Animator>();
 		enemyAudio = GetComponent<AudioSource>();
 		hitParticles = GetComponentInChildren<ParticleSystem>();
 		capsuleCollider = GetComponent<CapsuleCollider>();
@@ -38,6 +39,10 @@ public class EnemyHealth : MonoBehaviour
 			// ... move the enemy down by the sinkSpeed per second.
 			transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
 		}
+
+		//Debug.Log((int)(currentHealth / startingHealth) * 100);		anim.SetInteger( "healthPercent", Mathf.CeilToInt((currentHealth*1.0f) / (startingHealth) * 100) );
+		anim.SetInteger("healthPercent", Mathf.CeilToInt((currentHealth * 1.0f) / (startingHealth) * 100));
+
 	}
 
 
@@ -49,16 +54,16 @@ public class EnemyHealth : MonoBehaviour
 			return;
 
 		// Play the hurt sound effect.
-		enemyAudio.Play();
+		//enemyAudio.Play();
 
 		// Reduce the current health by the amount of damage sustained.
 		currentHealth -= amount;
 
 		// Set the position of the particle system to where the hit was sustained.
-		hitParticles.transform.position = hitPoint;
+		//hitParticles.transform.position = hitPoint;
 
 		// And play the particles.
-		hitParticles.Play();
+		//hitParticles.Play();
 
 		// If the current health is less than or equal to zero...
 		if (currentHealth <= 0)
@@ -78,11 +83,12 @@ public class EnemyHealth : MonoBehaviour
 		capsuleCollider.isTrigger = true;
 
 		// Tell the animator that the enemy is dead.
-		anim.SetTrigger("Dead");
+		//anim.SetBool("isDead", true);
 
 		// Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
-		enemyAudio.clip = deathClip;
-		enemyAudio.Play();
+		//enemyAudio.clip = deathClip;
+		//enemyAudio.Play();
+		Invoke ( "StartSinking", sinkTime );
 	}
 
 
