@@ -4,50 +4,26 @@ using System.Collections.Generic;
 
 public class TurretManager : MonoBehaviour
 {
-    private List<Turret> turretList = new List<Turret>();
-    private List<Enemy> enemyList;
-    int turretCount = 0;
-
-    public void spawnTurret(int x, int z)
-    {
-        Quaternion q = new Quaternion(0, 0, 0, 0);
-
-        Turret temp = new Turret(turretCount);
-        Vector3 pos = new Vector3(x, 2, z);
-
-        temp.setGameObject((GameObject)Instantiate(Resources.Load("prefabs/turret"), pos, q));
-        temp.baseTurret = (GameObject)Instantiate(Resources.Load("prefabs/baseTurret"), new Vector3(pos.x, (pos.y - 1.5f), pos.z), q);
-
-        Debug.Log("Spawned Turret " + pos);
-        temp.turretObject.SetActive(true);
-        turretList.Add(temp);
-        turretCount++;
-    }
-    public void setEnemyList(List<Enemy> list)
-    {
-        enemyList = list;
-    }
+    public Transform[] spawnPoints;
+    public GameObject turret;
+   
+  
 
     // Use this for initialization
     void Start()
     {
         Debug.Log("turret manager init");
-        spawnTurret(10, 10);
-        spawnTurret(10, -10);
-    }
-
-    public void attackEnemies()
-    {
-        foreach (Turret t in turretList)
+        for (int i = 0; i < spawnPoints.Length; i++)
         {
-            t.damageEnemies(enemyList);
+            Instantiate(turret, spawnPoints[i].position, spawnPoints[i].rotation);
         }
     }
 
+    bool flag = true;
     // Update is called once per frame
     void Update()
     {
-        attackEnemies();
-
+        
     }
+    
 }

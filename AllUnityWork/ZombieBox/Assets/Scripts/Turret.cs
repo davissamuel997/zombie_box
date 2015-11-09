@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Turret
+public class Turret : MonoBehaviour
 {
     // Use this for initialization
     public GameObject turretObject;
@@ -13,53 +13,26 @@ public class Turret
     public const int BASE_DAMAGE = 10;
     public const int BASE_FIRE_RATE = 1000;  //fire rate in ms
     Animator animator;
+    static int num_turrets = 0;
     int id = 0;
-
-    public Turret(int num)
+    public Turret()
     {
-        id = num;
+        id = num_turrets;
+        num_turrets++;
     }
-    public void setGameObject(GameObject obj)
+
+    public void damageEnemies()
     {
-        turretObject = obj;
-        animator = obj.GetComponent<Animator>();
+        
     }
-    public void damageEnemies(List<Enemy> enemyList)
+
+    void Awake()
     {
-
-        float min_dist = float.MaxValue;
-        float temp = 0;
-        Enemy min = null;
-        foreach (Enemy e in enemyList)
-        {
-            temp = Vector3.Distance(e.enemyObject.transform.position, turretObject.transform.position);
-            if (temp < BASE_RADIUS)
-            {
-                if (min_dist > temp)
-                {
-                    {
-                        min_dist = temp;
-                        min = e;
-                    }
-
-                }
-            }
-        }
-        if (min != null)
-        {
-            min.takeDamage(BASE_DAMAGE);
-            track(min.enemyObject.transform.position);
-            Debug.Log("Turret #" + id + " Target Enemy " + min.id + " at " + min.enemyObject.transform.position);
-            animator.SetBool("fire", true);
-            if (!min.alive)
-            {
-                enemyList.Remove(min);
-            }
-        }
 
     }
-    public void track(Vector3 pos)
+
+    void Update()
     {
-        turretObject.transform.LookAt(pos);
+        
     }
 }
