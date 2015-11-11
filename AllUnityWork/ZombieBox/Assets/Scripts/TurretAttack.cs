@@ -7,13 +7,15 @@ public class TurretAttack : MonoBehaviour {
     Transform model;
     public int FIRE_RATE = 5;
     public int BASE_DAMAGE = 50;
+    Animator anim;
     // Use this for initialization
     void Start ()
     {
 
         model  = this.transform.FindChild("Model").FindChild("turret");
         InvokeRepeating("Fire", 5, FIRE_RATE);
-    }
+        anim = this.GetComponentInChildren<Animator>();
+     }
     void Fire()
     {
         if (targets.Count > 0)
@@ -21,6 +23,7 @@ public class TurretAttack : MonoBehaviour {
             if (((Transform)targets[0]).GetComponentInParent<EnemyHealth>().currentHealth > 0)
             {
                 ((Transform)targets[0]).GetComponentInParent<EnemyHealth>().TakeDamage(BASE_DAMAGE, ((Transform)targets[0]).position);
+                anim.SetBool("fire", true);
                 
             }
         }
