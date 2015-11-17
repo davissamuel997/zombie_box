@@ -12,6 +12,7 @@ public class StatsObject
 
 
 
+
     public StatsObject(string f, string l, int num, int k, int fire, int h)
     {
         first_name = f;

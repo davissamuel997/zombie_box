@@ -10,8 +10,9 @@ public class WeaponUpgrade : MonoBehaviour {
 	public int shotgun; // = PlayerPrefs.GetInt("shotgunDmg");
 	public int knife; // = PlayerPrefs.GetInt("knifeDmg");
 	public int crowbar; // = PlayerPrefs.GetInt("crowbarDmg");
-
-	void Start () {
+	public string name ="Weapon";
+	void Start () 
+	{
 	
 	}
 	
@@ -28,22 +29,22 @@ public class WeaponUpgrade : MonoBehaviour {
 				
 				if(found.name == "gun")
 				{
-
+					name = "Pistol";
 				}
 
 				if(found.name == "shotgun")
 				{
-
+					name = "Shotgun";
 				}
 
 				if (found.name == "knife")
 				{
-
+					name = "Knife";
 				}
 
 				if (found.name == "crowbar")
 				{
-
+					name = "Crowbar";
 				}
 				
 			}
