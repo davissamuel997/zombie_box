@@ -9,33 +9,40 @@ public class MeleeScript : MonoBehaviour {
 	public float drawTime = 1.5f;
 
 	public bool draw;
-
-	private float swingTime = 0.05f;
+    private GameObject player;
+    private float swingTime = 0.05f;
 	public bool selected = false;
-
+    private Animator anim;
+    bool attacking = false;
 	// Use this for initialization
 	void Start () {
-	
-	}
+        player = GameObject.FindWithTag("Player");
+        anim = this.transform.GetComponent<Animator>();
+        anim.enabled = true;
+    }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update ()
+    {
+        
 		if(selected)
 		{
 			if(CrossPlatformInputManager.GetButtonDown("Shoot"))
 			{
 				melee();
-			}
+                attacking = true;
+            }
 		}
+      
 	}
-
+    
 	void melee ()
 	{
-			
+        anim.SetBool("melee", true);
 	}
+    
 
-
-	IEnumerator DrawWeapon()
+    IEnumerator DrawWeapon()
 	{
 		draw = true;
 		//GetComponent<AudioSource>().clip = soundDraw;
