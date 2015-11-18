@@ -21,10 +21,6 @@ public class CharSelect : MonoBehaviour {
 				if (found.GetComponentInParent<Animator> ()) {
 					if (selected) {
 						selected.GetComponentInParent<Animator> ().SetBool ("selected", false);
-					} else {
-						canvasGroup.interactable = true;
-						canvasGroup.blocksRaycasts = true;
-						canvasGroup.alpha = 1; 
 					}
 					selected = found;
 					selected.GetComponentInParent<Animator> ().SetBool ("selected", true);

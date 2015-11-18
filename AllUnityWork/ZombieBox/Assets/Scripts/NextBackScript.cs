@@ -25,8 +25,8 @@ public class NextBackScript : MonoBehaviour {
 		back = GameObject.Find("Back");
 		next = GameObject.Find("Next");
 		back.SetActive(false);
-		stats = GameObject.Find("StatsDisplay");
-		stats.SetActive(false);
+		//stats = GameObject.Find("StatsDisplay");
+		//stats.SetActive(false);
 
 	}
 
@@ -35,12 +35,12 @@ public class NextBackScript : MonoBehaviour {
 		if(facing == 0)
 		{
 			back.SetActive(true);
-			stats.SetActive(true);
+			//stats.SetActive(true);
 		}
 		if (facing == 1)
 		{
 			next.GetComponentInChildren<Text>().text = "Play";
-			stats.SetActive(false);
+			//stats.SetActive(false);
 		}
 		if(facing == 2)
 		{
@@ -61,7 +61,7 @@ public class NextBackScript : MonoBehaviour {
 		}
 		if(facing == 2)
 		{
-			stats.SetActive(true);
+			//stats.SetActive(true);
 			next.GetComponentInChildren<Text>().text = "Next";
 		}
 		rotateLeft = true;
