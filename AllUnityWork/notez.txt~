@@ -1,0 +1,59 @@
+?character lifetime kills on platform in main menu
+
+***add weapon prefs fucntionality to weapons prefabs
+
+?
+-no fire mode
+-instead, upgrade fire rate
+-fire mode button changes to reload button
+-autoreload when clip is empty
+
+Need to do:
+-gun particles/lines
+-connect to DB
+	-SSL direct
+	-prefer login credential use
+	-get/send prefs script
+
+-list all prefs so sam can add them to DB
+	
+	private int points = 10000;
+
+	private int gunDmg = 20;
+	private int gunAmmo = 100;
+
+	private int shotgunDmg = 50;
+	private int shotgunAmmo = 40;
+
+	private int knifeDmg = 100;
+
+	private int crowbarDmg = 75;
+
+	selected skin
+
+	username
+	password
+
+	kills with skin
+	kills with gun
+	total kills
+
+	highest round completed
+
+	base skin	int?
+	turret skin	int?
+
+-clean up turrets
+-balance turrets
+
+-turret + base menu panel
+
+-base models (color and model customization)
+
+-round manager balance
+
+-put menu in base spawn player there at round start
+
+-finish game ui buttons
+-pause when menu is pressed
+-menu popup

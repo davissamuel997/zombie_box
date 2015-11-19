@@ -9,9 +9,7 @@
 -autoreload when clip is empty
 
 Need to do:
--melee sounds
--gun particles/lines/sounds
--zombie sounds
+-gun particles/lines
 -connect to DB
 	-SSL direct
 	-prefer login credential use

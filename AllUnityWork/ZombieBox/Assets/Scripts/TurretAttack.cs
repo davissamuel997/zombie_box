@@ -5,9 +5,10 @@ public class TurretAttack : MonoBehaviour {
 
     ArrayList targets = new ArrayList();
     Transform model;
-    public int FIRE_RATE = 5;
+    public float FIRE_RATE = 0.1f;
     public int BASE_DAMAGE = 50;
     Animator anim;
+    public AudioClip fireSound;
     // Use this for initialization
     void Start ()
     {
@@ -24,7 +25,8 @@ public class TurretAttack : MonoBehaviour {
             {
                 ((Transform)targets[0]).GetComponentInParent<EnemyHealth>().TakeDamage(BASE_DAMAGE, ((Transform)targets[0]).position);
                 anim.SetBool("fire", true);
-                
+                PlayAudioClip(fireSound, new Vector3(0,5,0)+transform.position, 0.2f);
+
             }
         }
     }
@@ -60,6 +62,17 @@ public class TurretAttack : MonoBehaviour {
         }
         
         
+    }
+    void PlayAudioClip(AudioClip clip, Vector3 position, float volume)
+    {
+        GameObject go = new GameObject("One shot audio");
+        go.transform.position = position;
+        AudioSource source = go.AddComponent<AudioSource>();
+        source.clip = clip;
+        source.volume = volume;
+        source.pitch = Random.Range(0.95f, 1.05f);
+        source.Play();
+        Destroy(go, clip.length);
     }
     void OnTriggerExit(Collider other)
     {

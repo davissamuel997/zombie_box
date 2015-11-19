@@ -7,6 +7,7 @@ public class MeleeScript : MonoBehaviour {
 	public int damage = 50;
 	public float drawTime = 1.5f;
 	public AudioClip meleeSlash;
+    public AudioClip meleeHit;
 	public bool draw;
     private GameObject player;
     private float swingTime = 0.05f;
@@ -79,15 +80,16 @@ public class MeleeScript : MonoBehaviour {
 				if (hit.transform.tag == "Enemy")
 				{
 					hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact);
-					//GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
-					/*if (Physics.Raycast(transform.position, direction, out hit, range, layerMask.value))
+                    PlayAudioClip(meleeHit, hit.transform.position, 0.7f);
+                    //GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
+                    /*if (Physics.Raycast(transform.position, direction, out hit, range, layerMask.value))
 					{
 						if (hit.rigidbody)
 						{
 							hit.rigidbody.AddForceAtPosition(force * direction, hit.point);
 						}
 					}*/
-				}
+                }
 
 				/*if (hit.transform.tag == "Untagged" || hit.transform.tag == "Concrete" || hit.transform.tag == "Dirt" || hit.transform.tag == "Wood" || hit.transform.tag == "Metal")
 				{

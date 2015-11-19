@@ -12,7 +12,8 @@ public class EnemyAttack : MonoBehaviour
 	PlayerHealth playerHealth;
 	EnemyHealth enemyHealth;
 	bool playerInRange;
-	float timer;
+    public AudioClip attackSound;
+    float timer;
 
 
 	void Awake()
@@ -31,9 +32,19 @@ public class EnemyAttack : MonoBehaviour
 			playerInRange = true;
 		}
 	}
+    void PlayAudioClip(AudioClip clip, Vector3 position, float volume)
+    {
+        GameObject go = new GameObject("One shot audio");
+        go.transform.position = position;
+        AudioSource source = go.AddComponent<AudioSource>();
+        source.clip = clip;
+        source.volume = volume;
+        source.pitch = Random.Range(0.95f, 1.05f);
+        source.Play();
+        Destroy(go, clip.length);
+    }
 
-
-	void OnTriggerExit(Collider other)
+    void OnTriggerExit(Collider other)
 	{
 		if (other.gameObject == player)
 		{
@@ -49,7 +60,8 @@ public class EnemyAttack : MonoBehaviour
 		if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
 		{
 			Attack();
-		}
+            PlayAudioClip(attackSound, player.transform.position,0.7f);
+        }
 
 		if (playerHealth.currentHealth <= 0)
 		{
