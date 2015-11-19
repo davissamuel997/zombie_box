@@ -432,5 +432,6 @@ public class WeaponScript : MonoBehaviour {
 		weaponCamera.GetComponent<Camera>().fieldOfView = 50;
 		transform.localPosition = hipPosition;
 	}
+    
 
 }
