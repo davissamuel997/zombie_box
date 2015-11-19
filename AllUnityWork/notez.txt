@@ -9,7 +9,7 @@
 -autoreload when clip is empty
 
 Need to do:
--melee weapons/sounds
+-melee sounds
 -gun particles/lines/sounds
 -zombie sounds
 -connect to DB

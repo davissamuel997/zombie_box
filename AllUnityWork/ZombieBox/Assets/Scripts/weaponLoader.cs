@@ -17,15 +17,8 @@ public class weaponLoader : MonoBehaviour {
 		GameObject weapon = (GameObject)Instantiate(wep, new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
 
 		weapon.transform.parent = findWeaponBone(currentArmPrefab.transform);
-        if (weapon.transform.name.Contains( "knife") || weapon.transform.name.Contains( "crowbar"))
-        {
-            weapon.AddComponent<SphereCollider>();
-            weapon.GetComponent<SphereCollider>().radius = 0.5f;
-            weapon.GetComponent<SphereCollider>().isTrigger = true;
-            weapon.GetComponent<SphereCollider>().transform.position = weapon.transform.position;
-            weapon.AddComponent<MeleeAttack>();
-        }
-       weapon.transform.localPosition = new Vector3(0, 0, 0);
+
+		weapon.transform.localPosition = new Vector3(0, 0, 0);
 		weapon.transform.localScale = new Vector3(1, 1, 1);
 		weapon.transform.localEulerAngles = new Vector3(0, 0, 0);
 
