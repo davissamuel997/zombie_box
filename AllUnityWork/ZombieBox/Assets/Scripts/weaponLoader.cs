@@ -11,7 +11,7 @@ public class weaponLoader : MonoBehaviour {
 
 
         GameObject prefab = (GameObject)Resources.Load("FPS/fps_human_" + charID);
-        GameObject wep = (GameObject)Resources.Load("weapons/" + transform.parent.name);
+        GameObject wep = (GameObject)Resources.Load("prefabs/weapons/" + transform.parent.name);
 
         GameObject currentArmPrefab = (GameObject)Instantiate(prefab, new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
         GameObject weapon = (GameObject)Instantiate(wep, new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
@@ -31,6 +31,14 @@ public class weaponLoader : MonoBehaviour {
 
         setChildrenWeaponLayer(this.transform);
 
+		if (this.GetComponentInParent<WeaponScript>())
+		{
+			GameObject muzzle = weapon.transform.GetChild(0).gameObject;
+			this.GetComponentInParent<WeaponScript>().muzzle = muzzle;
+			this.GetComponentInParent<WeaponScript>().muzzleLight = muzzle.GetComponent<Light>();
+			this.GetComponentInParent<WeaponScript>().muzzleFlash = muzzle.GetComponent<Renderer>();
+			//this.GetComponentInParent<WeaponScript>().gunLine = weapon.GetComponentInChildren<LineRenderer>();
+		}
         //this.GetComponentInParent<Animator>().StartPlayback();
 
     }

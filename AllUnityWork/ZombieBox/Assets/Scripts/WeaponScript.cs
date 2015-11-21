@@ -26,9 +26,13 @@ public class WeaponScript : MonoBehaviour {
 
 
 	public LayerMask layerMask;
-	//public Renderer muzzleFlash;
-	//public Light muzzleLight;
+	public Renderer muzzleFlash;
+	//public LineRenderer gunLine;
+	public GameObject muzzle;
+	public Light muzzleLight;
 
+	public float inacuracy = 5.2f;
+	public int pelletsPerShot = 10;
 	public int damage = 50;
 	public int bulletsPerMag = 50;
 	public int magazines = 5;
@@ -106,8 +110,7 @@ public class WeaponScript : MonoBehaviour {
 		weaponCamera = GameObject.FindWithTag("WeaponCamera");
 		mainCamera = GameObject.FindWithTag("MainCamera");
 		player = GameObject.FindWithTag("Player");
-		//muzzleFlash.enabled = false;
-		//muzzleLight.enabled = false;
+
 		bulletsLeft = bulletsPerMag;
 		currentMode = firstMode;
 		fireRate = fireRateFirstMode;
@@ -118,16 +121,36 @@ public class WeaponScript : MonoBehaviour {
 		}
 		//weaponAnim.GetComponent<Animation>().wrapMode = WrapMode.Loop;
 		//weaponAnim.GetComponent<Animator>().SetBool("IsWalking", false);
+		//muzzleFlash.enabled = false;
+		//gunLine.enabled = false;
 	}
-	
+	void LateUpdate()
+	{
+		if (muzzle)
+		{
+			if (m_LastFrameShot == Time.frameCount)
+			{
+				muzzleLight.transform.localRotation = Quaternion.AngleAxis(Random.value * 360, Vector3.right);
+				muzzleFlash.enabled = true;
+				muzzleLight.enabled = true;
+			}
+			else
+			{
+				muzzleFlash.enabled = false;
+				muzzleLight.enabled = false;
+			}
+		}
+	}
 	// Update is called once per frame
 	void Update () {
 
+		//muzzleFlash.enabled = false;
+		//gunLine.enabled = false;
 		if (selected)
 		{
 			if (CrossPlatformInputManager.GetButtonDown("Shoot"))
 			{
-				//Debug.Log("shoot pressed");
+				Debug.Log("shoot pressed");
 
 				if (currentMode == fireMode.semi)
 				{
@@ -137,8 +160,9 @@ public class WeaponScript : MonoBehaviour {
 
 				if (currentMode == fireMode.burst)
 				{
-					fireBurst();
-					Debug.Log("burst");
+					//fireBurst();
+					FireShotgun();
+					//Debug.Log("burst");
 				}
 
 				if (bulletsLeft > 0)
@@ -149,7 +173,7 @@ public class WeaponScript : MonoBehaviour {
 			{
 				if (currentMode == fireMode.auto)
 				{
-
+					Debug.Log("asdf");
 					fireSemi();
 					if (bulletsLeft > 0)
 						isFiring = true;
@@ -162,7 +186,7 @@ public class WeaponScript : MonoBehaviour {
 			}
 		}
 
-		if (CrossPlatformInputManager.GetButtonDown("FireMode") && secondMode != fireMode.none && canSwicthMode)
+		/*if (CrossPlatformInputManager.GetButtonDown("FireMode") && secondMode != fireMode.none && canSwicthMode)
 		{
 			if (currentMode != firstMode)
 			{
@@ -172,7 +196,7 @@ public class WeaponScript : MonoBehaviour {
 			{
 				StartCoroutine(SecondFireMode());
 			}
-		}
+		}*/
 	}
 
 	IEnumerator FirstFireMode()
@@ -271,18 +295,25 @@ public class WeaponScript : MonoBehaviour {
 			return;
 		}
 
+		muzzleFlash.enabled = true;
+
+		//gunLine.enabled = true;
+		//gunLine.SetPosition(0, muzzle.transform.position);
+
 		Vector3 direction = mainCamera.transform.TransformDirection(new Vector3(Random.Range(-0.01f, 0.01f) * triggerTime, Random.Range(-0.01f, 0.01f) * triggerTime, 1));
+		//Vector3 lineDirection = weaponCamera.transform.TransformDirection(new Vector3(Random.Range(-0.01f, 0.01f) * triggerTime, Random.Range(-0.01f, 0.01f) * triggerTime, 1));
 		RaycastHit hit;
 		//Vector3 position = transform.parent.position;
 		//Vector3 direction = mainCamera.transform.TransformDirection(Vector3.forward);
 
 
-		if (Physics.Raycast(transform.position, direction, out hit, 100))
+		if (Physics.Raycast(weaponCamera.transform.position, direction, out hit, 100))
 		{
+
 			//Debug.Log("iff");
 			Vector3 contact = hit.point;
 			Quaternion rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
-			GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
+			//GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
 
 			if (hit.rigidbody)
 			{
@@ -291,7 +322,7 @@ public class WeaponScript : MonoBehaviour {
 
 			if (hit.transform.tag == "Untagged")
 			{
-				//GameObject default1 = Instantiate(untagged, contact, rotation) as GameObject;
+				GameObject default1 = Instantiate(untagged, contact, rotation) as GameObject;
 				//hit.collider.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
 				//default1.transform.parent = hit.transform;
 			}
@@ -299,7 +330,7 @@ public class WeaponScript : MonoBehaviour {
 			if (hit.transform.tag == "Enemy")
 			{
 				hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact);
-				//GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
+				GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
 				if (Physics.Raycast(transform.position, direction, out hit, range, layerMask.value))
 				{
 					if (hit.rigidbody)
@@ -309,6 +340,9 @@ public class WeaponScript : MonoBehaviour {
 				}
 			}
 		}
+
+		//gunLine.SetPosition(1, muzzle.transform.position + lineDirection * 100);
+
 
 		PlayAudioClip(soundFire, transform.position, 0.7f);
 		m_LastFrameShot = Time.frameCount;
@@ -330,6 +364,19 @@ public class WeaponScript : MonoBehaviour {
 		source.Play();
 		Destroy(go, clip.length);
 	}
+
+	/*void renderBulletLine(Vector3 lineDirection)
+	{
+		GameObject prefabBulletPath = (GameObject)Resources.Load("prefabs/weapons/bulletLine");
+		GameObject bulletPath = (GameObject)Instantiate(prefabBulletPath, new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
+		bulletPath.transform.parent = muzzle.transform;
+		LineRenderer bulletLine = bulletPath.GetComponent<LineRenderer>();
+
+		bulletLine.SetPosition(0, muzzle.transform.position);
+
+		bulletLine.SetPosition(1, lineDirection);
+		Destroy(bulletPath, 0.2f);
+	}*/
 
 	IEnumerator OutOfAmmo()
 	{
@@ -433,5 +480,85 @@ public class WeaponScript : MonoBehaviour {
 		transform.localPosition = hipPosition;
 	}
     
+	void FireShotgun()
+    {
+        if (reloading || bulletsLeft <= 0 || draw)
+        {
+            if (bulletsLeft == 0)
+            {
+                StartCoroutine(OutOfAmmo());
+            }
+            return;
+        }
+
+        int pellets = 0;
+
+        if (Time.time - fireRate > nextFireTime)
+            nextFireTime = Time.time - Time.deltaTime;
+
+        if (Time.time > nextFireTime)
+        {
+            while (pellets < pelletsPerShot)
+            {
+                FireOneShot();
+                pellets++;
+            }
+            bulletsLeft--;
+            nextFireTime = Time.time + fireRate;
+            //KickBack();
+			PlayAudioClip(soundFire, transform.position, 0.7f);
+        }
+    }
+
+    void FireOneShot()
+    {
+
+        Vector3 direction = mainCamera.transform.TransformDirection(new Vector3(Random.Range(-0.71f, 0.71f) * inacuracy, Random.Range(-0.71f, 0.71f) * inacuracy, 1));
+        RaycastHit hit;
+        Vector3 position = weaponCamera.transform.position;
+
+		//Vector3 position = transform.parent.position;
+		//Vector3 direction = mainCamera.transform.TransformDirection(Vector3.forward);
+
+        if (Physics.Raycast(position, direction, out hit, range))
+        {	
+			muzzleFlash.enabled = true;
+			Vector3 contact = hit.point;
+			Quaternion rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
+			//GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
+
+			if (hit.rigidbody)
+			{
+				hit.rigidbody.AddForceAtPosition(force * direction, hit.point);
+			}
+
+			if (hit.transform.tag == "Untagged")
+			{
+				GameObject default1 = Instantiate(untagged, contact, rotation) as GameObject;
+				//hit.collider.SendMessageUpwards("ApplyDamage", damage, SendMessageOptions.DontRequireReceiver);
+				//default1.transform.parent = hit.transform;
+			}
+
+			if (hit.transform.tag == "Enemy")
+			{
+				hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact);
+				GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
+				if (Physics.Raycast(transform.position, direction, out hit, range))
+				{
+					if (hit.rigidbody)
+					{
+						hit.rigidbody.AddForceAtPosition(force * direction, hit.point);
+					}
+				}
+			}
+		}
+
+		m_LastFrameShot = Time.frameCount;
+
+		//weaponAnim.GetComponent<Animation>().Rewind("Fire");
+		//weaponAnim.GetComponent<Animation>().Play("Fire");
+		//KickBack();
+		bulletsLeft--;
+	}
 
 }
