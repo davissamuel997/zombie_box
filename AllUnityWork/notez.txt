@@ -39,15 +39,8 @@ Need to do:
 	base skin	int?
 	turret skin	int?
 
--balance turrets
-
--turret + base menu panel
-
--base models (color and model customization)
 
 -round manager balance
-
--put menu in base spawn player there at round start
 
 -finish game ui buttons
 -pause when menu is pressed
