@@ -126,19 +126,16 @@ public class WeaponScript : MonoBehaviour {
 	}
 	void LateUpdate()
 	{
-		if (muzzle)
+		if (m_LastFrameShot == Time.frameCount)
 		{
-			if (m_LastFrameShot == Time.frameCount)
-			{
-				muzzleLight.transform.localRotation = Quaternion.AngleAxis(Random.value * 360, Vector3.right);
-				muzzleFlash.enabled = true;
-				muzzleLight.enabled = true;
-			}
-			else
-			{
-				muzzleFlash.enabled = false;
-				muzzleLight.enabled = false;
-			}
+			muzzleLight.transform.localRotation = Quaternion.AngleAxis(Random.value * 360, Vector3.right);
+			muzzleFlash.enabled = true;
+			muzzleLight.enabled = true;
+		}
+		else
+		{
+			muzzleFlash.enabled = false;
+			muzzleLight.enabled = false;
 		}
 	}
 	// Update is called once per frame

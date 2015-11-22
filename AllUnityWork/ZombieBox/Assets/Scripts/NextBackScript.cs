@@ -22,8 +22,8 @@ public class NextBackScript : MonoBehaviour {
 	
 	void Start()
 	{
-		back = GameObject.Find("Back");
-		next = GameObject.Find("Next");
+		back = GameObject.Find("BackBtn");
+		next = GameObject.Find("NextBtn");
 		back.SetActive(false);
 		//stats = GameObject.Find("StatsDisplay");
 		//stats.SetActive(false);

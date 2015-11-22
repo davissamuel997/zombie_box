@@ -4,36 +4,36 @@ using System.Collections;
 public class TurretAttack : MonoBehaviour {
 
     ArrayList targets = new ArrayList();
-    public Transform model;
-    public float FIRE_RATE = 0.1f;
+	Vector3 target;
+
+	private int m_LastFrameShot = -10;
+
+	public float FIRE_RATE = 0.1f;
     public int BASE_DAMAGE = 50;
-    Animator anim;
-    Vector3 target;
+    public Animator anim;
     public AudioClip fireSound;
-    Transform pipe;
-    LineRenderer bullet;
-    Transform turret;
-    Light light;
+    public Transform pipe;
+    public LineRenderer laserSight;
+    public Transform turret;
+    public Light muzzleLight;
+	public Renderer muzzleFlash;
     
     // Use this for initialization
     void Start ()
     {
 
-        turret  = this.transform.FindChild("Model").FindChild("turret");
-        model = this.transform.FindChild("Model");
+        //turret  = this.transform.FindChild("turret");
         InvokeRepeating("Fire", 5, FIRE_RATE);
-        anim = this.GetComponentInChildren<Animator>();
-        bullet = transform.GetComponent<LineRenderer>();
-        
+        //anim = this.GetComponentInChildren<Animator>();
+        //sightLight = transform.GetComponent<LineRenderer>();
+		// pipe = turret.FindChild("Tube02");
+		laserSight.SetPosition(0, pipe.position);
+		laserSight.SetPosition(1, pipe.transform.position + pipe.transform.TransformDirection(0, 0, 1) * 0.5f);
+		laserSight.enabled = false;
 
-        pipe = turret.FindChild("Tube02");
-        bullet.enabled = false;
-        bullet.SetPosition(0,  pipe.position);
-        bullet.SetPosition(1, model.position);
-       
-        light = transform.GetComponent<Light>();
-        light.enabled = false;
-        
+        //light = turret.FindChild("Box06").GetComponentInChildren<Light>();
+        muzzleLight.enabled = false;
+		muzzleFlash.enabled = false;
 
     }
     void Fire()
@@ -42,18 +42,41 @@ public class TurretAttack : MonoBehaviour {
         {
             if (((Transform)targets[0]).GetComponentInParent<EnemyHealth>().currentHealth > 0)
             {
-                bullet.enabled = true;
                 ((Transform)targets[0]).GetComponentInParent<EnemyHealth>().TakeDamage(BASE_DAMAGE, ((Transform)targets[0]).position);
                 anim.SetBool("fire", true);
-                light.transform.position.Set(0, 0, 0);
                 PlayAudioClip(fireSound, new Vector3(0,5,0)+transform.position, 0.2f);
-
+				m_LastFrameShot = Time.frameCount;
             }
-        }
+		}
     }
+
+	void LateUpdate()
+	{
+		if (m_LastFrameShot == Time.frameCount)
+		{
+			muzzleLight.transform.localRotation = Quaternion.AngleAxis(Random.value * 360, Vector3.right);
+			muzzleFlash.enabled = true;
+			muzzleLight.enabled = true;
+		}
+		else
+		{
+			muzzleFlash.enabled = false;
+			muzzleLight.enabled = false;
+		}
+	}
+
 	// Update is called once per frame
 	void Update ()
     {
+		if(targets.Count == 0)
+		{
+			laserSight.enabled = false;
+		}
+		else
+		{
+			laserSight.enabled = true;
+		}
+
         Transform[] temp = new Transform[targets.Count];
         targets.CopyTo(temp);
 
@@ -72,6 +95,7 @@ public class TurretAttack : MonoBehaviour {
             StartCoroutine("RenderLaser");
         } 
 	}
+
     void OnTriggerEnter(Collider other)
     {
        
@@ -85,9 +109,8 @@ public class TurretAttack : MonoBehaviour {
                 targets.Add(other.transform);
             }
         }
-        
-        
     }
+
     void PlayAudioClip(AudioClip clip, Vector3 position, float volume)
     {
         GameObject go = new GameObject("One shot audio");
@@ -99,6 +122,7 @@ public class TurretAttack : MonoBehaviour {
         source.Play();
         Destroy(go, clip.length);
     }
+
     void OnTriggerExit(Collider other)
     {
         if (targets.Contains(other.transform))
@@ -107,21 +131,29 @@ public class TurretAttack : MonoBehaviour {
             targets.Remove(other.transform);
         }
     }
+
     IEnumerator RenderLaser()
     {
-        float old_x = model.transform.position.x;
-        float old_y = model.transform.position.y;
-        float old_z = model.transform.position.z;
         target = ((Transform)targets[0]).transform.position;
-        Quaternion lookRot = Quaternion.LookRotation(target - model.position);
-        
-        model.rotation = Quaternion.Lerp(model.rotation, lookRot, Time.deltaTime * 5);
-        model.transform.position.Set(old_x, old_y, old_z);
+		
+		float enemyCenterOffset;
+		if(((Transform)targets[0]).GetComponentInParent<EnemyHealth>().healthPercent >= 51)
+		{
+			enemyCenterOffset = 0.8f;
+		}
+		else
+		{
+			enemyCenterOffset = 0.2f;
+		}
 
-        bullet.SetPosition(0, pipe.position);
-        bullet.SetPosition(1, target);
+		Vector3 targetCenter = new Vector3(target.x, target.y + enemyCenterOffset, target.z);
+
+        //Quaternion lookRot = Quaternion.LookRotation(target - model.position);
+		laserSight.SetPosition(0, pipe.transform.position);
+		laserSight.SetPosition(1, pipe.transform.position + pipe.transform.TransformDirection(0, 0, 1) * Vector3.Distance(pipe.transform.position, targetCenter));
+        turret.LookAt(targetCenter);
 
         yield return null;
-
     }
+
 }

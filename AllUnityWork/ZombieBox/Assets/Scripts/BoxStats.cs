@@ -6,7 +6,7 @@ public class BoxStats : MonoBehaviour {
     TextMesh text;
     Transform dmg_box;
     Transform amo_box;
-    public WeaponUpgrade temp;
+    public Upgrader temp;
     // Use this for initialization
     void Start()
     {
