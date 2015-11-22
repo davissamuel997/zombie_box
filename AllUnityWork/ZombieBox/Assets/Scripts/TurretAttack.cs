@@ -43,7 +43,7 @@ public class TurretAttack : MonoBehaviour {
             if (((Transform)targets[0]).GetComponentInParent<EnemyHealth>().currentHealth > 0)
             {
                 ((Transform)targets[0]).GetComponentInParent<EnemyHealth>().TakeDamage(BASE_DAMAGE, ((Transform)targets[0]).position);
-                anim.SetBool("fire", true);
+                anim.SetTrigger("fire");
                 PlayAudioClip(fireSound, new Vector3(0,5,0)+transform.position, 0.2f);
 				m_LastFrameShot = Time.frameCount;
             }

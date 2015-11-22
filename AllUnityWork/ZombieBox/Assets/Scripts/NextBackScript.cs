@@ -3,7 +3,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Text.RegularExpressions;
 
-public class NextBackScript : MonoBehaviour {
+public class NextBackScript : MonoBehaviour
+{
 
 	public Camera mainCamera;
 	public CanvasGroup canvasGroup;
@@ -19,58 +20,58 @@ public class NextBackScript : MonoBehaviour {
 	private GameObject back;
 	private GameObject next;
 	private GameObject stats;
-	
+
 	void Start()
 	{
 		back = GameObject.Find("BackBtn");
 		next = GameObject.Find("NextBtn");
 		back.SetActive(false);
-		//stats = GameObject.Find("StatsDisplay");
-		//stats.SetActive(false);
-
 	}
 
-	public void NextPressed () 
+	public void NextPressed()
 	{
-		if(facing == 0)
+		if (facing == 0)
 		{
 			back.SetActive(true);
-			//stats.SetActive(true);
 		}
 		if (facing == 1)
 		{
-			next.GetComponentInChildren<Text>().text = "Play";
-			//stats.SetActive(false);
+
 		}
-		if(facing == 2)
+		if (facing == 2)
+		{
+			next.GetComponentInChildren<Text>().text = "Play";
+		}
+		if (facing == 3)
 		{
 			PlayerPrefs.SetString("charID", Regex.Replace(CharSelect.selected.name, "[^0-9]", ""));
-			
-			Application.LoadLevel ("base");              
 
+			Application.LoadLevel("base");
 		}
-		rotateRight = true;
-		facing++;
+		else
+		{
+			rotateRight = true;
+			facing++;
+		}
 	}
 
-	public void BackPressed ()
+	public void BackPressed()
 	{
-		if(facing == 1)
+		if (facing == 1)
 		{
 			back.SetActive(false);
 		}
-		if(facing == 2)
+		if (facing == 3)
 		{
-			//stats.SetActive(true);
 			next.GetComponentInChildren<Text>().text = "Next";
 		}
 		rotateLeft = true;
 		facing--;
 	}
 
-	void Update ()
+	void Update()
 	{
-		if (rotateRight)	
+		if (rotateRight)
 		{
 			rotation += 90.0f;
 			qTo = Quaternion.Euler(0.0f, rotation, 0.0f);
@@ -84,20 +85,5 @@ public class NextBackScript : MonoBehaviour {
 		}
 
 		mainCamera.transform.rotation = Quaternion.RotateTowards(mainCamera.transform.rotation, qTo, speed * Time.deltaTime);
-
-		/*if (facing == 0)
-		{
-
-		}
-
-		if (facing == 1)
-		{
-
-		}
-
-		if (facing == 2)
-		{
-
-		}*/
 	}
 }

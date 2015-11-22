@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 9dc5be18076f2b9429041a09f9fc2628
-timeCreated: 1444788115
+timeCreated: 1448222086
 licenseType: Free
 ModelImporter:
   serializedVersion: 18
@@ -56,7 +56,7 @@ ModelImporter:
     4300012: Box05
     4300014: Box06
     4300016: Box07
-    7400000: TurretShoot
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -77,57 +77,7 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: TurretShoot
-      takeName: Take 001
-      firstFrame: 0
-      lastFrame: 4
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      - path: Box01
-        weight: 1
-      - path: Box02
-        weight: 1
-      - path: Box03
-        weight: 1
-      - path: Box04
-        weight: 1
-      - path: Box05
-        weight: 1
-      - path: Box06
-        weight: 1
-      - path: Box07
-        weight: 1
-      - path: mr Area Omni01
-        weight: 1
-      - path: mr Area Omni02
-        weight: 1
-      - path: Tube01
-        weight: 1
-      - path: Tube02
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
+    clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []

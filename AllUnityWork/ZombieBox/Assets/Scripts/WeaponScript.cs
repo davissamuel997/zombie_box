@@ -116,6 +116,7 @@ public class WeaponScript : MonoBehaviour {
         currentMode = firstMode;
         fireRate = fireRateFirstMode;
         aiming = false;
+
         if (ammoMode == Ammo.Bullets)
         {
             magazines = magazines * bulletsPerMag;
@@ -395,7 +396,7 @@ public class WeaponScript : MonoBehaviour {
 			yield break;
 
 		playing = true;
-		PlayAudioClip(soundEmpty, transform.position, 0.7f);
+		//PlayAudioClip(soundEmpty, transform.position, 0.7f);
 
 		//weaponAnim.GetComponent<Animation>()["Fire"].speed = 2.0f;
 		//weaponAnim.GetComponent<Animation>().Rewind("Fire");
