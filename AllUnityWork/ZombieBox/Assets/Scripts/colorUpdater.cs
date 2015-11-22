@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class colorUpdater : MonoBehaviour
 {
-
 	public Slider rSlider;
 	public Slider gSlider;
 	public Slider bSlider;

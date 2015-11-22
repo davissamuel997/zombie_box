@@ -25,9 +25,6 @@ public class NextBackScript : MonoBehaviour {
 		back = GameObject.Find("BackBtn");
 		next = GameObject.Find("NextBtn");
 		back.SetActive(false);
-		//stats = GameObject.Find("StatsDisplay");
-		//stats.SetActive(false);
-
 	}
 
 	public void NextPressed () 
@@ -35,22 +32,26 @@ public class NextBackScript : MonoBehaviour {
 		if(facing == 0)
 		{
 			back.SetActive(true);
-			//stats.SetActive(true);
 		}
 		if (facing == 1)
 		{
-			next.GetComponentInChildren<Text>().text = "Play";
-			//stats.SetActive(false);
-		}
-		if(facing == 2)
-		{
-			PlayerPrefs.SetString("charID", Regex.Replace(CharSelect.selected.name, "[^0-9]", ""));
-			
-			Application.LoadLevel ("base");              
 
 		}
-		rotateRight = true;
-		facing++;
+		if (facing == 2)
+		{
+			next.GetComponentInChildren<Text>().text = "Play";
+		}
+		if(facing == 3)
+		{
+			PlayerPrefs.SetString("charID", Regex.Replace(CharSelect.selected.name, "[^0-9]", ""));
+
+			Application.LoadLevel("base");
+		}
+		else
+		{
+			rotateRight = true;
+			facing++;
+		}
 	}
 
 	public void BackPressed ()
@@ -59,9 +60,8 @@ public class NextBackScript : MonoBehaviour {
 		{
 			back.SetActive(false);
 		}
-		if(facing == 2)
+		if(facing == 3)
 		{
-			//stats.SetActive(true);
 			next.GetComponentInChildren<Text>().text = "Next";
 		}
 		rotateLeft = true;
@@ -84,20 +84,5 @@ public class NextBackScript : MonoBehaviour {
 		}
 
 		mainCamera.transform.rotation = Quaternion.RotateTowards(mainCamera.transform.rotation, qTo, speed * Time.deltaTime);
-
-		/*if (facing == 0)
-		{
-
-		}
-
-		if (facing == 1)
-		{
-
-		}
-
-		if (facing == 2)
-		{
-
-		}*/
 	}
 }
