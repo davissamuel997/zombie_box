@@ -158,12 +158,12 @@ public class Upgrader : MonoBehaviour {
 		{
 			if (selectedName == "gun")
 			{
-				if (upgradeAmmo && points > 100)
+				if (upgradeAmmo && points >= 100)
 				{
 					gunAmmo += 10;
 					points -= 100;
 				}
-				if (upgradeDmg && points > 150)
+				if (upgradeDmg && points >= 150)
 				{
 					gunDmg += 5;
 					points -= 150;
@@ -182,12 +182,12 @@ public class Upgrader : MonoBehaviour {
 
 			if (selectedName == "shotgun")
 			{
-				if (upgradeAmmo && points > 120)
+				if (upgradeAmmo && points >= 120)
 				{
 					shotgunAmmo += 10;
 					points -= 120;
 				}
-				if (upgradeDmg && points > 200)
+				if (upgradeDmg && points >= 200)
 				{
 					shotgunDmg += 15;
 					points -= 200;
@@ -207,7 +207,7 @@ public class Upgrader : MonoBehaviour {
 			if (selectedName == "knife")
 			{
 				
-				if (upgradeDmg && points > 300)
+				if (upgradeDmg && points >= 300)
 				{
 					knifeDmg += 50;
 					points -= 300;
@@ -228,7 +228,7 @@ public class Upgrader : MonoBehaviour {
 			if (selectedName == "crowbar")
 			{
 
-				if (upgradeDmg && points > 200)
+				if (upgradeDmg && points >= 200)
 				{
 					crowbarDmg += 30;
 					points -= 200;
@@ -254,7 +254,7 @@ public class Upgrader : MonoBehaviour {
 
 		if (turretUpdating)
 		{
-			if (turretUpgradeDmg && points > 400)
+			if (turretUpgradeDmg && points >= 400)
 			{
 				turretDmg += 1;
 				points -= 400;
@@ -264,7 +264,7 @@ public class Upgrader : MonoBehaviour {
 				turretCostDmg.GetComponent<TextMesh>().text = "" + 400;
 
 			}
-			if (turretUpgradeRate && points > 400)
+			if (turretUpgradeRate && points >= 400)
 			{
 				turretRate = turretRate * 0.99f;
 				points -= 400;
