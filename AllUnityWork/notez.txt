@@ -10,9 +10,40 @@
 
 Need to do:
 
--CONNECT ALL USER VARIABLES! THIS IS A BIG ONE
+
+-list all prefs so sam can add them to DB
+	
+	private int points = 10000;
+
+	private int gunDmg = 20;
+	private int gunAmmo = 100;
+
+	private int shotgunDmg = 50;
+	private int shotgunAmmo = 40;
+
+	private int knifeDmg = 100;
+
+	private int crowbarDmg = 75;
+
+	selected skin
+
+	username
+	password
+	FIX
+	kills with skin
+	kills with gun
+	total kills
+
+	highest round completed
+
+	base skin	int?
+	turret skin	int?
 
 -balance turrets
+
+-turret + base menu panel
+
+-base models (color and model customization)
 
 -round manager balance
 
