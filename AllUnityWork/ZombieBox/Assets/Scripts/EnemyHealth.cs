@@ -17,7 +17,7 @@ public class EnemyHealth : MonoBehaviour
 	CapsuleCollider capsuleCollider;            // Reference to the capsule collider.
 	bool isDead;                                // Whether the enemy is dead.
 	bool isSinking;                             // Whether the enemy has started sinking through the floor.
-
+    RoundStats stats;
 
 	void Awake()
 	{
@@ -27,8 +27,11 @@ public class EnemyHealth : MonoBehaviour
 		hitParticles = GetComponentInChildren<ParticleSystem>();
 		capsuleCollider = GetComponent<CapsuleCollider>();
 
-		// Setting the current health when the enemy first spawns.
-		currentHealth = startingHealth;
+        // Setting the current health when the enemy first spawns.
+        stats = GameObject.Find("RoundStats").GetComponent<RoundStats>();
+        startingHealth = stats.ENEMY_HEALTH;
+        currentHealth = startingHealth;
+        
 	}
 
 

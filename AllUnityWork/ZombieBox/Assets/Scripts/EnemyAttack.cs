@@ -9,9 +9,13 @@ public class EnemyAttack : MonoBehaviour
 
 	Animator anim;
 	GameObject player;
-	PlayerHealth playerHealth;
+    GameObject baseObj;
+    Transform model;
+    PlayerHealth playerHealth;
+    BaseHealth baseHealth;
 	EnemyHealth enemyHealth;
 	bool playerInRange;
+    bool baseInRange;
     public AudioClip attackSound;
     float timer;
 
@@ -21,6 +25,9 @@ public class EnemyAttack : MonoBehaviour
 		player = GameObject.FindGameObjectWithTag("Player");
 		playerHealth = player.GetComponent<PlayerHealth>();
 		enemyHealth = GetComponent<EnemyHealth>();
+        baseObj = GameObject.Find("Base");
+        model = baseObj.transform.FindChild("baseModel").FindChild("Mesh1");
+        baseHealth = baseObj.GetComponent<BaseHealth>();
 		anim = this.GetComponentInChildren<Animator>();
 	}
 
@@ -31,7 +38,12 @@ public class EnemyAttack : MonoBehaviour
 		{
 			playerInRange = true;
 		}
-	}
+        if (other.gameObject.transform == model)
+        {
+            Debug.Log("found " + model);
+            baseInRange = true;
+        }
+    }
     void PlayAudioClip(AudioClip clip, Vector3 position, float volume)
     {
         GameObject go = new GameObject("One shot audio");
@@ -50,7 +62,11 @@ public class EnemyAttack : MonoBehaviour
 		{
 			playerInRange = false;
 		}
-	}
+        if (other.gameObject == model)
+        {
+            baseInRange = false ;
+        }
+    }
 
 
 	void Update()
@@ -60,16 +76,39 @@ public class EnemyAttack : MonoBehaviour
 		if (timer >= timeBetweenAttacks && playerInRange && enemyHealth.currentHealth > 0)
 		{
 			Attack();
-            PlayAudioClip(attackSound, player.transform.position,0.7f);
+           
         }
 
 		if (playerHealth.currentHealth <= 0)
 		{
 			anim.SetBool("playerDead", true);
 		}
-	}
 
+        if (timer >= timeBetweenAttacks && baseInRange && enemyHealth.currentHealth > 0)
+        {
+            AttackBase();
+        }
 
+        if (baseHealth.currentHealth <= 0)
+        {
+            anim.SetBool("playerDead", true);
+        }
+    }
+
+    void AttackBase()
+    {
+        timer = 0f;
+
+        if (baseHealth.currentHealth > 0)
+        {
+            baseHealth.TakeDamage(attackDamage);
+            PlayAudioClip(attackSound, baseObj.transform.position, 0.7f);
+            if (Random.value < 0.5f)
+                anim.SetTrigger("attackZero");
+            else
+                anim.SetTrigger("attackOne");
+        }
+    }
 	void Attack()
 	{
 		timer = 0f;
@@ -77,11 +116,13 @@ public class EnemyAttack : MonoBehaviour
 		if (playerHealth.currentHealth > 0)
 		{
 			playerHealth.TakeDamage(attackDamage);
+            PlayAudioClip(attackSound, player.transform.position, 0.7f);
 
-			if (Random.value < 0.5f)
+            if (Random.value < 0.5f)
 				anim.SetTrigger("attackZero");
 			else
 				anim.SetTrigger("attackOne");
 		}
-	}
+
+    }
 }

@@ -26,14 +26,14 @@ public class Upgrader : MonoBehaviour {
 
 	private int points = 10000;
 
-	private int gunDmg = 20;
-	private int gunAmmo = 100;
+    private int gunDmg = 50;
+	private int gunAmmo = 50;
 
-	private int shotgunDmg = 50;
-	private int shotgunAmmo = 40;
+	private int shotgunDmg = 75;
+	private int shotgunAmmo = 30;
 
-	private int knifeDmg = 100;
-	private int crowbarDmg = 75;
+	private int knifeDmg = 50;
+	private int crowbarDmg = 100;
 
 	private string selectedName;
 
@@ -61,35 +61,41 @@ public class Upgrader : MonoBehaviour {
 
 	void Start () 
 	{
-		if(PlayerPrefs.HasKey("score"))
+		if(PlayerPrefs.HasKey("total_points"))
 		{
-			points = PlayerPrefs.GetInt("score");
+			points = PlayerPrefs.GetInt("total_points");
 		}
-		if (PlayerPrefs.HasKey("gunDmg"))
+		if (PlayerPrefs.HasKey("GunDmg"))
 		{
-			gunDmg = PlayerPrefs.GetInt("gunDmg");
+			gunDmg = PlayerPrefs.GetInt("GunDmg");
 		}
-		if (PlayerPrefs.HasKey("gunAmmo"))
+		if (PlayerPrefs.HasKey("GunAmmo"))
 		{
-			gunAmmo = PlayerPrefs.GetInt("gunAmmo");
+			gunAmmo = PlayerPrefs.GetInt("GunAmmo");
 		}
-		if (PlayerPrefs.HasKey("shotgunDmg"))
+		if (PlayerPrefs.HasKey("ShotgunDmg"))
 		{
-			shotgunDmg = PlayerPrefs.GetInt("shotgunDmg");
+			shotgunDmg = PlayerPrefs.GetInt("ShotgunDmg");
 		}
-		if (PlayerPrefs.HasKey("shotgunAmmo"))
+		if (PlayerPrefs.HasKey("ShotgunAmmo"))
 		{
-			shotgunAmmo = PlayerPrefs.GetInt("shotgunAmmo");
+			shotgunAmmo = PlayerPrefs.GetInt("ShotgunAmmo");
 		}
-		if (PlayerPrefs.HasKey("knifeDmg"))
+		if (PlayerPrefs.HasKey("KnifeDmg"))
 		{
-			knifeDmg = PlayerPrefs.GetInt("knifeDmg");
+			knifeDmg = PlayerPrefs.GetInt("KnifeDmg");
 		}
-		if (PlayerPrefs.HasKey("turretDmg"))
+        if (PlayerPrefs.HasKey("CrowbarDmg"))
+        {
+            crowbarDmg = PlayerPrefs.GetInt("CrowbarDmg");
+        }
+        //WE NEED THIS IN THE DB!!!!!
+        if (PlayerPrefs.HasKey("TurretDmg"))
 		{
-			turretDmg = PlayerPrefs.GetInt("turretDmg");
+			turretDmg = PlayerPrefs.GetInt("TurretDmg");
 		}
-		if (PlayerPrefs.HasKey("turretRate"))
+        //WE NEED THIS IN THE DB!!!!!
+        if (PlayerPrefs.HasKey("turretRate"))
 		{
 			turretRate = PlayerPrefs.GetInt("turretRate");
 		} 		

@@ -8,7 +8,7 @@ public class TurretAttack : MonoBehaviour {
 
 	private int m_LastFrameShot = -10;
 
-	public float FIRE_RATE = 0.1f;
+	public float FIRE_RATE = 5.0f;
     public int BASE_DAMAGE = 50;
     public Animator anim;
     public AudioClip fireSound;

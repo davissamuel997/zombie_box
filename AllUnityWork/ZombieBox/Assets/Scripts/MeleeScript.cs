@@ -22,6 +22,14 @@ public class MeleeScript : MonoBehaviour {
 	void Start () {
         player = GameObject.FindWithTag("Player");
         anim = this.transform.GetComponent<Animator>();
+        if (this.transform.name == "knife")
+        {
+            damage = PlayerPrefs.GetInt("KnifeDmg");
+        }
+        else if (this.transform.name == "crowbar")
+        {
+            damage = PlayerPrefs.GetInt("CrowbarDmg");
+        }
         anim.enabled = true;
     }
 	

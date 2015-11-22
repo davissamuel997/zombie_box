@@ -105,21 +105,35 @@ public class WeaponScript : MonoBehaviour {
 	//Switch Weapon Fire Modes
 	private bool canSwicthMode = true;
 
-	// Use this for initialization
-	void Start () {
-		weaponCamera = GameObject.FindWithTag("WeaponCamera");
-		mainCamera = GameObject.FindWithTag("MainCamera");
-		player = GameObject.FindWithTag("Player");
+    // Use this for initialization
+    void Start()
+    {
+        weaponCamera = GameObject.FindWithTag("WeaponCamera");
+        mainCamera = GameObject.FindWithTag("MainCamera");
+        player = GameObject.FindWithTag("Player");
 
-		bulletsLeft = bulletsPerMag;
-		currentMode = firstMode;
-		fireRate = fireRateFirstMode;
-		aiming = false;
-		if (ammoMode == Ammo.Bullets)
-		{
-			magazines = magazines * bulletsPerMag;
-		}
-		//weaponAnim.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+        bulletsLeft = bulletsPerMag;
+        currentMode = firstMode;
+        fireRate = fireRateFirstMode;
+        aiming = false;
+        if (ammoMode == Ammo.Bullets)
+        {
+            magazines = magazines * bulletsPerMag;
+        }
+
+        if (currentMode == fireMode.semi)
+        {
+            damage = PlayerPrefs.GetInt("GunDmg");
+            bulletsLeft = PlayerPrefs.GetInt("GunAmmo");
+        }
+
+        if (currentMode == fireMode.burst)
+        {
+            damage = PlayerPrefs.GetInt("ShotgunDmg");
+            bulletsLeft = PlayerPrefs.GetInt("ShotgunAmmo");
+        }
+    
+   		//weaponAnim.GetComponent<Animation>().wrapMode = WrapMode.Loop;
 		//weaponAnim.GetComponent<Animator>().SetBool("IsWalking", false);
 		//muzzleFlash.enabled = false;
 		//gunLine.enabled = false;

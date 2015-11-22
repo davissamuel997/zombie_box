@@ -8,7 +8,7 @@ public class testWait : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.SetBool("fire", false);
-        Debug.Log("In turret animation callback");
+        //Debug.Log("In turret animation callback");
 
     }
 

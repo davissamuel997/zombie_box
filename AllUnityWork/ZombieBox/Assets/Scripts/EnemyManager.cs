@@ -14,8 +14,9 @@ public class EnemyManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        float delay = roundInfo.ENEMY_SPAWN_DELAY;
         Debug.Log("enemy manager init");
-        InvokeRepeating("Spawn", 5, 5);
+        InvokeRepeating("Spawn", delay, delay);
     }
 
     bool flag = true;
