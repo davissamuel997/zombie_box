@@ -16,12 +16,13 @@ public class MeleeScript : MonoBehaviour {
     private Animator anim;
     bool inAttack = false;
 	public float force = 400;
+	public StatUpdater statUpdater;
     RoundStats stats;
 
 
 	// Use this for initialization
 	void Start () {
-        stats = GameObject.Find("RoundStats").GetComponent<RoundStats>();
+        stats = GameObject.Find("RoundManager").GetComponent<RoundStats>();
         player = GameObject.FindWithTag("Player");
         anim = this.transform.GetComponent<Animator>();
         if (this.transform.name == "knife")
@@ -92,6 +93,8 @@ public class MeleeScript : MonoBehaviour {
 					if(hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact))
                     { 
                         stats.roundPoints += 10;
+						statUpdater.updateScore();
+
                         stats.roundKills += 1;
                         stats.deadEnemies += 1;
                         if (this.transform.name.Contains("knife"))

@@ -1,13 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI;
+//using UnityEngine.UI;
 //using Npgsql;
 public class CharSelect : MonoBehaviour {
 
-	public static GameObject selected;
-	public CanvasGroup canvasGroup;
-
-
+	public GameObject selected;
+	//public CanvasGroup canvasGroup;
 
 	void Update () 
 	{

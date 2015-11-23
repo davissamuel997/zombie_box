@@ -12,7 +12,7 @@ public class TurretManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        Debug.Log("turret manager init");
+        //Debug.Log("turret manager init");
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             Instantiate(turret, spawnPoints[i].position, spawnPoints[i].rotation);

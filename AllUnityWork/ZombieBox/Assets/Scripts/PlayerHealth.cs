@@ -11,7 +11,9 @@ public class PlayerHealth : MonoBehaviour
 	//public AudioClip deathClip;
 	public float flashSpeed = 5f;
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
-    RoundStats stats;
+    public RoundStats stats;
+
+	public Slider healthSlider;
 
 	//Animator anim;
 	AudioSource playerAudio;
@@ -26,7 +28,6 @@ public class PlayerHealth : MonoBehaviour
         //playerAudio = GetComponent<AudioSource>();
         //playerMovement = GetComponent<PlayerMovement>();
         //playerShooting = GetComponentInChildren<PlayerShooting>();
-        stats = GameObject.Find("RoundStats").GetComponent<RoundStats>();
         startingHealth = stats.PLAYER_HEALTH;
         currentHealth = startingHealth;
 	}
@@ -53,7 +54,7 @@ public class PlayerHealth : MonoBehaviour
 
 		currentHealth -= amount;
 
-		//healthSlider.value = currentHealth;
+		healthSlider.value = currentHealth;
 
 		//playerAudio.Play();
 

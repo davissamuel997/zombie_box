@@ -18,12 +18,13 @@ public class TurretAttack : MonoBehaviour {
     public Light muzzleLight;
 	public Renderer muzzleFlash;
     public RoundStats stats;
+	public StatUpdater statUpdater;
     
     // Use this for initialization
     void Start ()
     {
 
-        stats = GameObject.Find("RoundStats").GetComponent<RoundStats>();
+        stats = GameObject.Find("RoundManager").GetComponent<RoundStats>();
         //turret  = this.transform.FindChild("turret");
         InvokeRepeating("Fire", 5, FIRE_RATE);
         //anim = this.GetComponentInChildren<Animator>();
@@ -48,6 +49,7 @@ public class TurretAttack : MonoBehaviour {
                 if(((Transform)targets[0]).GetComponentInParent<EnemyHealth>().TakeDamage(BASE_DAMAGE, ((Transform)targets[0]).position))
                 {
                     stats.roundPoints += 5;
+					statUpdater.updateScore();
                     stats.deadEnemies++;
                 }
                 anim.SetTrigger("fire");

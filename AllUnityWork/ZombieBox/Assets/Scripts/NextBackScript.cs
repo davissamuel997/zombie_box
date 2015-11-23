@@ -8,7 +8,6 @@ public class NextBackScript : MonoBehaviour
 
 	public Camera mainCamera;
 	public CanvasGroup canvasGroup;
-    public colorUpdater colors;
 
 	public float speed = 55.0f;
 	private float rotation = 0.0f;
@@ -18,19 +17,19 @@ public class NextBackScript : MonoBehaviour
 	private bool rotateLeft = false;
 	private int facing = 0;
 
-	private GameObject back;
-	private GameObject next;
-	private GameObject stats;
+	public GameObject back;
+	public GameObject next;
+	public GameObject stats;
     bool data_flag = false;
 
-    private DataManager data;
+	public DataManager data;
+
+	public CharSelect charSelect;
+	public RoundPicker roundPicker;
+	public colorUpdater colors;
 
 	void Start()
 	{
-        colors = GameObject.Find("colorPicker").GetComponent<colorUpdater>();
-		back = GameObject.Find("BackBtn");
-		next = GameObject.Find("NextBtn");
-        data = this.GetComponent<DataManager>();
 		back.SetActive(false);
 	}
 
@@ -50,7 +49,8 @@ public class NextBackScript : MonoBehaviour
 		}
 		if (facing == 3)
 		{
-			PlayerPrefs.SetString("charID", Regex.Replace(CharSelect.selected.name, "[^0-9]", ""));
+			PlayerPrefs.SetString("charID", Regex.Replace(charSelect.selected.name, "[^0-9]", ""));
+			PlayerPrefs.SetInt("round", roundPicker.selectedRound);
             data_flag = true;
             data.savePlayerPrefsMenu(colors.r,colors.g,colors.b);
             postData();
@@ -72,7 +72,8 @@ public class NextBackScript : MonoBehaviour
         StartCoroutine(data.writeWeaponStats(PlayerPrefs.GetInt("CrowbarID"), PlayerPrefs.GetInt("CrowbarDmg"), PlayerPrefs.GetInt("CrowbarAmmo"), PlayerPrefs.GetFloat("CrowbarRate"), PlayerPrefs.GetInt("CrowbarKills")));
 
         StartCoroutine(data.writeWeaponStats(PlayerPrefs.GetInt("TurretID"), PlayerPrefs.GetInt("TurretDmg"), PlayerPrefs.GetInt("TurretAmmo"), PlayerPrefs.GetFloat("TurretRate"), PlayerPrefs.GetInt("TurretKills")));
-        Application.LoadLevel("base");
+		
+		Application.LoadLevel("base");
 
     }
 	public void BackPressed()

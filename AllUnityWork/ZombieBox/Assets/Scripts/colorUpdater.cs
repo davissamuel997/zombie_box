@@ -22,7 +22,17 @@ public class colorUpdater : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		r = PlayerPrefs.GetFloat("BaseRed");
+		g = PlayerPrefs.GetFloat("BaseGreen");
+		b = PlayerPrefs.GetFloat("BaseBlue");
 
+		rSlider.value = r;
+		gSlider.value = g;
+		bSlider.value = b;
+
+		rField.text = "" + floatToInt(r);
+		gField.text = "" + floatToInt(g);
+		bField.text = "" + floatToInt(b);
 	}
 
 	// Update is called once per frame

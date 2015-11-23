@@ -59,8 +59,8 @@ public class WeaponScript : MonoBehaviour {
 	private float triggerTime = 0.05f;
 
 	//Aiming
-	public Vector3 hipPosition;
-	public Vector3 aimPosition;
+	//public Vector3 hipPosition;
+	//public Vector3 aimPosition;
 	private bool aiming;
 	private Vector3 curVect;
 	public float aimSpeed = 0.25f;
@@ -89,27 +89,28 @@ public class WeaponScript : MonoBehaviour {
 	public float burstTime = 0.07f;
 
 	//GUI
-	public GUISkin mySkin;
+	//public GUISkin mySkin;
 
 	//KickBack
-	public Transform kickGO;
-	public float kickUpside = 0.5f;
-	public float kickSideways = 0.5f;
+	//public Transform kickGO;
+	//public float kickUpside = 0.5f;
+	//public float kickSideways = 0.5f;
 
 	//Crosshair Textures
-	public Texture2D crosshairFirstModeHorizontal;
-	public Texture2D crosshairFirstModeVertical;
-	public Texture2D crosshairSecondMode;
-	private float adjustMaxCroshairSize = 6.0f;
+	//public Texture2D crosshairFirstModeHorizontal;
+	//public Texture2D crosshairFirstModeVertical;
+	//public Texture2D crosshairSecondMode;
+	//private float adjustMaxCroshairSize = 6.0f;
 
     //Switch Weapon Fire Modes
+	public StatUpdater statUpdater;
     RoundStats stats;
 	private bool canSwicthMode = true;
 
     // Use this for initialization
     void Start()
     {
-        stats = GameObject.Find("RoundStats").GetComponent<RoundStats>();
+        stats = GameObject.Find("RoundManager").GetComponent<RoundStats>();
         weaponCamera = GameObject.FindWithTag("WeaponCamera");
         mainCamera = GameObject.FindWithTag("MainCamera");
         player = GameObject.FindWithTag("Player");
@@ -135,7 +136,8 @@ public class WeaponScript : MonoBehaviour {
             damage = PlayerPrefs.GetInt("ShotgunDmg");
             bulletsLeft = PlayerPrefs.GetInt("ShotgunAmmo");
         }
-    
+		statUpdater.setAmmo(bulletsLeft);
+
    		//weaponAnim.GetComponent<Animation>().wrapMode = WrapMode.Loop;
 		//weaponAnim.GetComponent<Animator>().SetBool("IsWalking", false);
 		//muzzleFlash.enabled = false;
@@ -164,12 +166,10 @@ public class WeaponScript : MonoBehaviour {
 		{
 			if (CrossPlatformInputManager.GetButtonDown("Shoot"))
 			{
-				Debug.Log("shoot pressed");
 
 				if (currentMode == fireMode.semi)
 				{
 					fireSemi();
-					Debug.Log("semi");
 				}
 
 				if (currentMode == fireMode.burst)
@@ -291,6 +291,7 @@ public class WeaponScript : MonoBehaviour {
 				{
 					fireOneBullet();
                     bulletsLeft--;
+					statUpdater.setAmmo(bulletsLeft);
 				}
 				yield return new WaitForSeconds(burstTime);
 			}
@@ -346,6 +347,8 @@ public class WeaponScript : MonoBehaviour {
                 if (hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact))
                 {
                     stats.roundPoints += 10;
+					statUpdater.updateScore();
+
                     stats.roundKills += 1;
                     stats.deadEnemies += 1;
                     if (currentMode == fireMode.burst)
@@ -379,6 +382,7 @@ public class WeaponScript : MonoBehaviour {
 		//weaponAnim.GetComponent<Animation>().Play("Fire");
 		//KickBack();
 		bulletsLeft--;
+		statUpdater.setAmmo(bulletsLeft);
 	}
 
 	void PlayAudioClip(AudioClip clip, Vector3 position, float volume)
@@ -497,7 +501,7 @@ public class WeaponScript : MonoBehaviour {
 		reloading = false;
 		canSwicthMode = true;
 		selected = true;
-
+		statUpdater.setAmmo(bulletsLeft);
 	}
 
 	void Deselect()
@@ -505,7 +509,8 @@ public class WeaponScript : MonoBehaviour {
 		selected = false;
 		mainCamera.GetComponent<Camera>().fieldOfView = 60;
 		weaponCamera.GetComponent<Camera>().fieldOfView = 50;
-		transform.localPosition = hipPosition;
+		//transform.localPosition = hipPosition;
+		statUpdater.clearAmmo();
 	}
     
 	void FireShotgun()
@@ -532,6 +537,7 @@ public class WeaponScript : MonoBehaviour {
                 pellets++;
             }
             bulletsLeft--;
+			statUpdater.setAmmo(bulletsLeft);
             nextFireTime = Time.time + fireRate;
             //KickBack();
 			PlayAudioClip(soundFire, transform.position, 0.7f);
@@ -569,9 +575,11 @@ public class WeaponScript : MonoBehaviour {
 
 			if (hit.transform.tag == "Enemy")
 			{
-				if(hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact))
+				if(hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage/pelletsPerShot, contact))
                 {
                     stats.roundPoints += 10;
+					statUpdater.updateScore();
+
                     stats.roundKills += 1;
                     stats.deadEnemies += 1;
                     if (currentMode == fireMode.burst)

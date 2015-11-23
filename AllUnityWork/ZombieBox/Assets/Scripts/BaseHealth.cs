@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BaseHealth : MonoBehaviour {
@@ -9,6 +10,7 @@ public class BaseHealth : MonoBehaviour {
     //public AudioClip deathClip;
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+	public Slider healthSlider;
 
     AudioSource playerAudio;
     bool isDead;
@@ -16,7 +18,7 @@ public class BaseHealth : MonoBehaviour {
 
     void Awake()
     {
-        stats = GameObject.Find("RoundStats").GetComponent<RoundStats>();
+        stats = GameObject.Find("RoundManager").GetComponent<RoundStats>();
         startingHealth = stats.BASE_HEALTH;
         currentHealth = startingHealth;
     }
@@ -31,6 +33,8 @@ public class BaseHealth : MonoBehaviour {
     public void TakeDamage(int amount)
     {
         damaged = true;
+
+		healthSlider.value = currentHealth;
 
         currentHealth -= amount;
 

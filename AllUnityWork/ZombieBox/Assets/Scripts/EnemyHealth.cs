@@ -3,7 +3,7 @@
 public class EnemyHealth : MonoBehaviour
 {
 	public int startingHealth = 100;            // The amount of health the enemy starts the game with.
-	public int currentHealth;                   // The current health the enemy has.
+	public int currentHealth = 100;                   // The current health the enemy has.
 	public int healthPercent = 100;
 	public float sinkSpeed = 2.7f;              // The speed at which the enemy sinks through the floor when dead.
 	public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
@@ -28,7 +28,7 @@ public class EnemyHealth : MonoBehaviour
 		capsuleCollider = GetComponent<CapsuleCollider>();
 
         // Setting the current health when the enemy first spawns.
-        stats = GameObject.Find("RoundStats").GetComponent<RoundStats>();
+        stats = GameObject.Find("RoundManager").GetComponent<RoundStats>();
         startingHealth = stats.ENEMY_HEALTH;
         currentHealth = startingHealth;
         

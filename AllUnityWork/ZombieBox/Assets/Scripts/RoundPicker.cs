@@ -13,7 +13,11 @@ public class RoundPicker : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		if (PlayerPrefs.HasKey("highestRound")) ;
+		{
+			highestRound = PlayerPrefs.GetInt("highestRound");
+		}
+		highestText.text = "" + highestRound;
 	}
 	
 	// Update is called once per frame
