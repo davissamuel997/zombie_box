@@ -19,12 +19,16 @@ public class LoginMenu : MonoBehaviour
     const string GET_STATS = "get_user_stats?user_id=";
     const string VERIFY_LOGIN = "verify_user_login?email=";
     const string ROOT_URL = "https://nameless-harbor-4730.herokuapp.com/";
-    const string POST_URL = "update_all_user_details";
+    const string POST_USER_URL = "update_all_user_details";
+    const string POST_WEAPON_URL = "update_weapon_stats";
+    const string POST_SKIN_URL = "update_skin_stats";
     void Start()
     {
+
+        
         usernameInput = GameObject.Find("usernameTxt").GetComponent<InputField>();
         passwordInput = GameObject.Find("password").GetComponent<InputField>();
-        StartCoroutine("writePlayerPrefs");
+
     }
     IEnumerator getLogin()
     {
@@ -51,9 +55,17 @@ public class LoginMenu : MonoBehaviour
 
             int kills = data["user"]["total_kills"].AsInt;
             PlayerPrefs.SetInt("total_kills", kills);
+
+            float r = data["user"]["red"].AsFloat;
+            float g = data["user"]["green"].AsFloat;
+            float b = data["user"]["blue"].AsFloat;
+            PlayerPrefs.SetFloat("BaseRed", r);
+            PlayerPrefs.SetFloat("BaseGreen", g);
+            PlayerPrefs.SetFloat("BaseBlue", b);
+
             Debug.Log("total_kills: ==" + kills);
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 string weapon_name = data["user"]["weapons"][i]["name"];
                 Debug.Log(weapon_name);
@@ -63,56 +75,31 @@ public class LoginMenu : MonoBehaviour
                 Debug.Log(ammo);
                 kills = data["user"]["weapons"][i]["kill_count"].AsInt;
                 Debug.Log(kills);
+                float rate = data["user"]["weapons"][i]["fire_rate"].AsFloat;
+                Debug.Log(rate);
+                int  id = data["user"]["weapons"][i]["weapon_id"].AsInt;
+                Debug.Log(kills);
                 PlayerPrefs.SetInt(weapon_name + "Dmg", damage);
                 PlayerPrefs.SetInt(weapon_name + "Ammo", ammo);
-                PlayerPrefs.SetInt(weapon_name + "Kills", i);
+                PlayerPrefs.SetFloat(weapon_name + "Rate", rate);
+                PlayerPrefs.SetInt(weapon_name + "Kills", kills);
+                PlayerPrefs.SetInt(weapon_name + "ID", id);
+
             }
             for (int i = 0; i <9; i++)
             {
                 string skin_name = data["user"]["skins"][i]["name"];
                 Debug.Log(skin_name);
+                int id = data["user"]["skins"][i]["skin_id"].AsInt;
+                Debug.Log(id);
                 kills = data["user"]["skins"][i]["kill_count"].AsInt;
                 Debug.Log(kills);
-                PlayerPrefs.SetInt(skin_name + "Kills", i);
-     
-
+                PlayerPrefs.SetInt(skin_name + "Kills", kills);
+                PlayerPrefs.SetInt(skin_name + "ID", id);
             }
             Debug.Log("web done");
-
+            
             Application.LoadLevel("mainMenu");
-        }
-    }
-
-    void writePlayerPrefs()
-    {
-        Dictionary<string, string> headers = new Dictionary<string, string>();
-        string str = "{user_id:1,total_points: 1000,total_kills:3000}";
-        headers.Add("Accept", "application/json");
-        headers.Add("Content-Type", "text/json");
-        byte[] data = Encoding.UTF8.GetBytes(str);
-        WWW www = new WWW(ROOT_URL + POST_URL, data);
-
-
-        StartCoroutine(WaitForRequest(www));
-    }
-
-    private IEnumerator WaitForRequest(WWW www)
-    {
-        yield return www;
-
-        // check for errors
-        if (www.error == null)
-        {
-            Debug.Log("WWW Ok!: " + www.text);
-        }
-        else
-        {
-            Debug.Log("WWW NOT OK!: " + www.text);
-            Debug.Log("WWW Error: " + www.error);
-            foreach (KeyValuePair<string, string> headers in www.responseHeaders)
-            {
-                Debug.Log(headers.Key + " " + headers.Value);
-            }
         }
     }
     void Update()

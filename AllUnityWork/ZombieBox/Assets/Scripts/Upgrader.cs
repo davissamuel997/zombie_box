@@ -24,16 +24,16 @@ public class Upgrader : MonoBehaviour {
 
 	public GameObject playerPoints;
 
-	private int points = 10000;
+	public int points = 10000;
 
-    private int gunDmg = 50;
-	private int gunAmmo = 50;
+    public int gunDmg = 50;
+    public int gunAmmo = 50;
 
-	private int shotgunDmg = 75;
-	private int shotgunAmmo = 30;
+    public int shotgunDmg = 75;
+    public int shotgunAmmo = 30;
 
-	private int knifeDmg = 50;
-	private int crowbarDmg = 100;
+    public int knifeDmg = 50;
+    public int crowbarDmg = 100;
 
 	private string selectedName;
 
@@ -52,8 +52,8 @@ public class Upgrader : MonoBehaviour {
 
 	public GameObject turretPlayerPoints;
 
-	private int turretDmg = 1;
-	private float turretRate = 5.0f;
+    public int turretDmg = 1;
+    public float turretRate = 5.0f;
 
 	private bool turretUpdating = false;
 	private bool turretUpgradeDmg = false;
@@ -89,15 +89,15 @@ public class Upgrader : MonoBehaviour {
         {
             crowbarDmg = PlayerPrefs.GetInt("CrowbarDmg");
         }
-        //WE NEED THIS IN THE DB!!!!!
+     
         if (PlayerPrefs.HasKey("TurretDmg"))
 		{
 			turretDmg = PlayerPrefs.GetInt("TurretDmg");
 		}
-        //WE NEED THIS IN THE DB!!!!!
-        if (PlayerPrefs.HasKey("turretRate"))
+        
+        if (PlayerPrefs.HasKey("TurretRate"))
 		{
-			turretRate = PlayerPrefs.GetInt("turretRate");
+			turretRate = PlayerPrefs.GetFloat("TurretRate");
 		} 		
 
 		curAmmo.GetComponent<TextMesh>().text = "--";
@@ -110,8 +110,10 @@ public class Upgrader : MonoBehaviour {
 
 		turretCurDmg.GetComponent<TextMesh>().text = "" + turretDmg;
 		turretCurRate.GetComponent<TextMesh>().text = "" + turretRate;
+        turretCostDmg.GetComponent<TextMesh>().text = "" + 400;
+        turretCostRate.GetComponent<TextMesh>().text = "" + 400;
 
-		playerPoints.GetComponent<TextMesh>().text = "Points Available: " + points;
+        playerPoints.GetComponent<TextMesh>().text = "Points Available: " + points;
 		turretPlayerPoints.GetComponent<TextMesh>().text = "Points Available: " + points;
 
 
@@ -147,7 +149,6 @@ public class Upgrader : MonoBehaviour {
 				}
 				else if ( found.name == "TurretUpgradeDamage")
 				{
-					Debug.Log("fuck");
 
 					turretUpdating = true;
 					turretUpgradeDmg = true;

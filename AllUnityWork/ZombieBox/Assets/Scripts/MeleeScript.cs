@@ -16,10 +16,12 @@ public class MeleeScript : MonoBehaviour {
     private Animator anim;
     bool inAttack = false;
 	public float force = 400;
+    RoundStats stats;
 
 
 	// Use this for initialization
 	void Start () {
+        stats = GameObject.Find("RoundStats").GetComponent<RoundStats>();
         player = GameObject.FindWithTag("Player");
         anim = this.transform.GetComponent<Animator>();
         if (this.transform.name == "knife")
@@ -87,8 +89,21 @@ public class MeleeScript : MonoBehaviour {
 
 				if (hit.transform.tag == "Enemy")
 				{
-					hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact);
-                    PlayAudioClip(meleeHit, hit.transform.position, 0.7f);
+					if(hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact))
+                    { 
+                        stats.roundPoints += 10;
+                        stats.roundKills += 1;
+                        stats.deadEnemies += 1;
+                        if (this.transform.name.Contains("knife"))
+                        {
+                            stats.knife_kills++;
+                        }
+                        else
+                        {
+                            stats.crowbar_kills++;
+                        }
+                    }
+                PlayAudioClip(meleeHit, hit.transform.position, 0.7f);
                     //GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
                     /*if (Physics.Raycast(transform.position, direction, out hit, range, layerMask.value))
 					{

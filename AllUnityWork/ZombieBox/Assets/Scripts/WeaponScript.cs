@@ -102,12 +102,14 @@ public class WeaponScript : MonoBehaviour {
 	public Texture2D crosshairSecondMode;
 	private float adjustMaxCroshairSize = 6.0f;
 
-	//Switch Weapon Fire Modes
+    //Switch Weapon Fire Modes
+    RoundStats stats;
 	private bool canSwicthMode = true;
 
     // Use this for initialization
     void Start()
     {
+        stats = GameObject.Find("RoundStats").GetComponent<RoundStats>();
         weaponCamera = GameObject.FindWithTag("WeaponCamera");
         mainCamera = GameObject.FindWithTag("MainCamera");
         player = GameObject.FindWithTag("Player");
@@ -185,7 +187,6 @@ public class WeaponScript : MonoBehaviour {
 			{
 				if (currentMode == fireMode.auto)
 				{
-					Debug.Log("asdf");
 					fireSemi();
 					if (bulletsLeft > 0)
 						isFiring = true;
@@ -289,6 +290,7 @@ public class WeaponScript : MonoBehaviour {
 				if (bulletsLeft > 0)
 				{
 					fireOneBullet();
+                    bulletsLeft--;
 				}
 				yield return new WaitForSeconds(burstTime);
 			}
@@ -341,7 +343,21 @@ public class WeaponScript : MonoBehaviour {
 
 			if (hit.transform.tag == "Enemy")
 			{
-				hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact);
+                if (hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact))
+                {
+                    stats.roundPoints += 10;
+                    stats.roundKills += 1;
+                    stats.deadEnemies += 1;
+                    if (currentMode == fireMode.burst)
+                    {
+                        stats.shotgun_kills++;
+                    }
+                    else
+                    {
+                        stats.gun_kills++;
+                    }
+
+                }
 				GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
 				if (Physics.Raycast(transform.position, direction, out hit, range, layerMask.value))
 				{
@@ -553,8 +569,22 @@ public class WeaponScript : MonoBehaviour {
 
 			if (hit.transform.tag == "Enemy")
 			{
-				hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact);
-				GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
+				if(hit.transform.GetComponentInParent<EnemyHealth>().TakeDamage(damage, contact))
+                {
+                    stats.roundPoints += 10;
+                    stats.roundKills += 1;
+                    stats.deadEnemies += 1;
+                    if (currentMode == fireMode.burst)
+                    {
+                        stats.shotgun_kills++;
+                    }
+                    else
+                    {
+                        stats.gun_kills++;
+                    }
+
+                }
+                GameObject bloodHole = Instantiate(Blood, contact, rotation) as GameObject;
 				if (Physics.Raycast(transform.position, direction, out hit, range))
 				{
 					if (hit.rigidbody)
@@ -570,7 +600,6 @@ public class WeaponScript : MonoBehaviour {
 		//weaponAnim.GetComponent<Animation>().Rewind("Fire");
 		//weaponAnim.GetComponent<Animation>().Play("Fire");
 		//KickBack();
-		bulletsLeft--;
 	}
 
 }

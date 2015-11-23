@@ -50,12 +50,12 @@ public class EnemyHealth : MonoBehaviour
 	}
 
 
-	public void TakeDamage(int amount, Vector3 hitPoint)
+	public bool TakeDamage(int amount, Vector3 hitPoint)
 	{
 		// If the enemy is dead...
 		if (isDead)
 			// ... no need to take damage so exit the function.
-			return;
+			return false;
 
 		// Play the hurt sound effect.
 		//enemyAudio.Play();
@@ -74,7 +74,9 @@ public class EnemyHealth : MonoBehaviour
 		{
 			// ... the enemy is dead.
 			Death();
+            return true;
 		}
+        return false;
 	}
 
 

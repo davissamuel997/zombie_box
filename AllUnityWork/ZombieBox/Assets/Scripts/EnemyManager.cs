@@ -31,7 +31,7 @@ public class EnemyManager : MonoBehaviour
         if (spawnCount < roundInfo.NUM_ENEMIES) 
         {
 
-            Instantiate(enemy, spawnPoints[spawnSelection].position, new Quaternion(0, 0, 0, 0.0f));
+            Instantiate(enemy, spawnPoints[spawnSelection].position, new Quaternion(0,0,0,0));
             spawnCount++;
         }
     }
