@@ -49,9 +49,9 @@ public class LoginMenu : MonoBehaviour
             Debug.Log("USER ID: ==" + uid);
             PlayerPrefs.SetInt("user_id", uid);
 
-            int points = data["user"]["total_points"].AsInt;
-            PlayerPrefs.SetInt("total_points", points);
-            Debug.Log("total_points: ==" + points);
+            int points = data["user"]["points_available"].AsInt;
+            PlayerPrefs.SetInt("points_available", points);
+            Debug.Log("points_available: ==" + points);
 
             int kills = data["user"]["total_kills"].AsInt;
             PlayerPrefs.SetInt("total_kills", kills);

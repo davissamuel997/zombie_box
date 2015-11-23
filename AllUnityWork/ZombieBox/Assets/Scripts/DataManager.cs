@@ -25,7 +25,7 @@ public class DataManager : MonoBehaviour {
     }
     public void savePlayerPrefsGame(int points,int total_kills, int kills,string skin, int gun_kills, int shotgun_kills, int knife_kills, int crowbar_kills)
     {
-        PlayerPrefs.SetInt("total_points", points);
+        PlayerPrefs.SetInt("points_available", points);
         PlayerPrefs.SetInt("total_kills", total_kills);
         PlayerPrefs.SetInt(skin + "Kills", kills);
 
@@ -76,7 +76,9 @@ public class DataManager : MonoBehaviour {
         users.Add("red", "" + PlayerPrefs.GetFloat("BaseRed"));
         users.Add("green", "" + PlayerPrefs.GetFloat("BaseGreen"));
         users.Add("blue", "" + PlayerPrefs.GetFloat("BaseBlue"));
+        users.Add("highest_round_reached", "" + PlayerPrefs.GetInt("highestRound"));
         root.Add("user_params", users);
+        
 
         Debug.Log(root.ToString());
         byte[] data = Encoding.UTF8.GetBytes(root.ToString());

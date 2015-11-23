@@ -18,6 +18,7 @@ public class StatUpdater : MonoBehaviour {
 
 	void Start()
 	{
+        
 		round.text = "" + roundStats.ROUND_NUMBER;
 		score.text = "" + roundStats.roundPoints;
 	}
@@ -35,5 +36,6 @@ public class StatUpdater : MonoBehaviour {
 	public void updateScore()
 	{
 		score.text = "" + roundStats.roundPoints;
+       
 	}
 }
