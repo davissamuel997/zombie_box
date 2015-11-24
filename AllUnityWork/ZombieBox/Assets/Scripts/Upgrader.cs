@@ -109,14 +109,14 @@ public class Upgrader : MonoBehaviour {
 		costDmg.GetComponent<TextMesh>().text = "--";
 
 		turretCurDmg.GetComponent<TextMesh>().text = "" + turretDmg;
-		turretCurRate.GetComponent<TextMesh>().text = "" + turretRate;
+		turretCurRate.GetComponent<TextMesh>().text = "" + (turretRate).ToString("0.00");
+		turretNextRate.GetComponent<TextMesh>().text = "" + (turretRate * .99).ToString("0.00");
         turretCostDmg.GetComponent<TextMesh>().text = "" + 400;
         turretCostRate.GetComponent<TextMesh>().text = "" + 400;
 
         playerPoints.GetComponent<TextMesh>().text = "Points Available: " + points;
 		turretPlayerPoints.GetComponent<TextMesh>().text = "Points Available: " + points;
-
-
+		
 	}
 	
 	// Update is called once per frame
@@ -261,24 +261,24 @@ public class Upgrader : MonoBehaviour {
 
 		if (turretUpdating)
 		{
-			if (turretUpgradeDmg && points >= 400)
+			if (turretUpgradeDmg && points >= 200)
 			{
 				turretDmg += 1;
-				points -= 400;
+				points -= 200;
 
 				turretCurDmg.GetComponent<TextMesh>().text = "" + turretDmg;
 				turretNextDmg.GetComponent<TextMesh>().text = "" + (turretDmg + 1);
-				turretCostDmg.GetComponent<TextMesh>().text = "" + 400;
+				turretCostDmg.GetComponent<TextMesh>().text = "" + 200;
 
 			}
-			if (turretUpgradeRate && points >= 400)
+			if (turretUpgradeRate && points >= 200)
 			{
 				turretRate = turretRate * 0.99f;
-				points -= 400;
+				points -= 200;
 
 				turretCurRate.GetComponent<TextMesh>().text = "" + turretRate.ToString("0.00");	//TOO EASY
-				turretNextRate.GetComponent<TextMesh>().text = "" + (turretRate * .99).ToString("0.00");
-				turretCostRate.GetComponent<TextMesh>().text = "" + 400;
+				turretNextRate.GetComponent<TextMesh>().text = "" + (turretRate * .95).ToString("0.00");
+				turretCostRate.GetComponent<TextMesh>().text = "" + 200;
 			}
 
 			turretUpdating = false;

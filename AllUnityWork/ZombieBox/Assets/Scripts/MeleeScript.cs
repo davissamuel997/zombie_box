@@ -96,8 +96,8 @@ public class MeleeScript : MonoBehaviour {
 						statUpdater.updateScore();
 
                         stats.roundKills += 1;
-                        stats.deadEnemies += 1;
-                        if (this.transform.name.Contains("knife"))
+
+						if (this.transform.name.Contains("knife"))
                         {
                             stats.knife_kills++;
                         }

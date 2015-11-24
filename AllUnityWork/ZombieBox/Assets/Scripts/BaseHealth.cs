@@ -21,6 +21,8 @@ public class BaseHealth : MonoBehaviour {
         stats = GameObject.Find("RoundManager").GetComponent<RoundStats>();
         startingHealth = stats.BASE_HEALTH;
         currentHealth = startingHealth;
+		healthSlider.maxValue = startingHealth;
+		healthSlider.value = currentHealth;
     }
 
 
@@ -47,7 +49,7 @@ public class BaseHealth : MonoBehaviour {
 
     void Death()
     {
-       
+		stats.baseDied();
     }
 }
 

@@ -28,11 +28,12 @@ public class DataManager : MonoBehaviour {
         PlayerPrefs.SetInt("points_available", points);
         PlayerPrefs.SetInt("total_kills", total_kills);
         PlayerPrefs.SetInt(skin + "Kills", kills);
+		PlayerPrefs.SetInt("total_points", PlayerPrefs.GetInt("total_points") + points);
 
-        PlayerPrefs.SetInt("GunKills", gun_kills);
-        PlayerPrefs.SetInt("ShotgunKills", shotgun_kills);
-        PlayerPrefs.SetInt("KnifeKills", knife_kills);
-        PlayerPrefs.SetInt("CrowbarKills", crowbar_kills);
+        PlayerPrefs.SetInt("GunKills", gun_kills +  PlayerPrefs.GetInt("GunKills"));
+		PlayerPrefs.SetInt("ShotgunKills", shotgun_kills + PlayerPrefs.GetInt("ShotgunKills"));
+		PlayerPrefs.SetInt("KnifeKills", knife_kills + PlayerPrefs.GetInt("KnifeKills"));
+		PlayerPrefs.SetInt("CrowbarKills", crowbar_kills + PlayerPrefs.GetInt("CrowbarKills"));
 
 
     }
@@ -77,6 +78,7 @@ public class DataManager : MonoBehaviour {
         users.Add("green", "" + PlayerPrefs.GetFloat("BaseGreen"));
         users.Add("blue", "" + PlayerPrefs.GetFloat("BaseBlue"));
         users.Add("highest_round_reached", "" + PlayerPrefs.GetInt("highestRound"));
+		users.Add("points_available", "" + PlayerPrefs.GetInt("points_available"));
         root.Add("user_params", users);
         
 

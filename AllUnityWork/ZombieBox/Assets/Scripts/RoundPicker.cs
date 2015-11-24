@@ -18,6 +18,8 @@ public class RoundPicker : MonoBehaviour {
 			highestRound = PlayerPrefs.GetInt("highestRound");
 		}
 		highestText.text = "" + highestRound;
+		roundField.text = "" + highestRound;
+		selectedRound = highestRound;
 	}
 	
 	// Update is called once per frame

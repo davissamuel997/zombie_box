@@ -26,6 +26,8 @@ public class RoundStats : MonoBehaviour {
     public GameObject door;
     public EnemyManager enemyManager;
     public StatUpdater statsGUI;
+	public GameObject roundWon;
+	public GameObject roundLost;
 
     void OnTriggerEnter()
     {
@@ -40,19 +42,19 @@ public class RoundStats : MonoBehaviour {
     {
         ROUND_NUMBER = PlayerPrefs.GetInt("round");
         statsGUI.round.text = "" + ROUND_NUMBER;
-        //data = GetComponent<DataManager>();
+
+		NUM_ENEMIES += 5 * ROUND_NUMBER;
+
         if (ROUND_NUMBER > 1 && ROUND_NUMBER < 10)
         {
-            NUM_ENEMIES += 5;
-            ENEMY_HEALTH += 100;
+            ENEMY_HEALTH += + (10 * ROUND_NUMBER);
         }
-        else if (ROUND_NUMBER > 10)
+        else if (ROUND_NUMBER >= 10)
         {
-            NUM_ENEMIES += 5;
-            ENEMY_HEALTH = ((int)(1.1 * ENEMY_HEALTH));
-            BASE_HEALTH += 10;
+			ENEMY_HEALTH = (int)(1000.0f * (1.0f + ((float)ROUND_NUMBER) / 10.0f));
+            BASE_HEALTH = 100 + 10 * (ROUND_NUMBER - 9);
         }
-        playerPoints = PlayerPrefs.GetInt("total_points");
+        playerPoints = PlayerPrefs.GetInt("points_available");
         total_kills = PlayerPrefs.GetInt("total_kills");
 
     }
@@ -63,26 +65,45 @@ public class RoundStats : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        if (deadEnemies == NUM_ENEMIES)
-        {
-            endRound();
-            if (ROUND_NUMBER + 1 > PlayerPrefs.GetInt("hightestRound"))
-            { 
-                PlayerPrefs.SetInt("highestRound", ROUND_NUMBER + 1);
-            }
-        }
-        if (health.currentHealth <= 0)
-        {
-            
-            endRound();
-        }
 
     }
 
-    void endRound()
+	public void enemyDied()
+	{
+		deadEnemies++;
+		if (deadEnemies == NUM_ENEMIES)
+        {
+			StartCoroutine(endRound(true));
+        }
+	}
+
+	public void playerDied()
+	{
+		StartCoroutine(endRound(false));
+	}
+
+	public void baseDied()
+	{
+		StartCoroutine(endRound(false));
+	}
+
+    IEnumerator endRound(bool win)
     {
         Debug.Log("round over " + roundKills + " " +roundPoints);
-        data.savePlayerPrefsGame(playerPoints + roundPoints,total_kills+ roundKills,roundKills,PlayerPrefs.GetString("charID"),gun_kills,shotgun_kills,knife_kills,crowbar_kills);
+		if (win)
+		{
+			roundWon.SetActive(true);
+			if (ROUND_NUMBER + 1 > PlayerPrefs.GetInt("hightestRound"))
+			{
+				PlayerPrefs.SetInt("highestRound", ROUND_NUMBER + 1);
+			}
+		}
+		else
+		{
+			roundLost.SetActive(true);
+		}
+		
+		data.savePlayerPrefsGame(roundPoints,total_kills+ roundKills,roundKills,PlayerPrefs.GetString("charID"),gun_kills,shotgun_kills,knife_kills,crowbar_kills);
 
         StartCoroutine(data.writePlayerPrefs());
         StartCoroutine(data.writeWeaponStats(PlayerPrefs.GetInt("GunID"), PlayerPrefs.GetInt("GunDmg"), PlayerPrefs.GetInt("GunAmmo"), PlayerPrefs.GetFloat("GunRate"), PlayerPrefs.GetInt("GunKills")));
@@ -90,7 +111,10 @@ public class RoundStats : MonoBehaviour {
         StartCoroutine(data.writeWeaponStats(PlayerPrefs.GetInt("KnifeID"), PlayerPrefs.GetInt("KnifeDmg"), PlayerPrefs.GetInt("KnifeAmmo"), PlayerPrefs.GetFloat("KnifeRate"), PlayerPrefs.GetInt("KnifeKills")));
         StartCoroutine(data.writeWeaponStats(PlayerPrefs.GetInt("CrowbarID"), PlayerPrefs.GetInt("CrowbarDmg"), PlayerPrefs.GetInt("CrowbarAmmo"), PlayerPrefs.GetFloat("CrowbarRate"), PlayerPrefs.GetInt("CrowbarKills")));
         StartCoroutine(data.writeSkinStats(PlayerPrefs.GetInt(PlayerPrefs.GetString("charID") + "ID"), PlayerPrefs.GetInt(PlayerPrefs.GetString("charID") + "Kills")));
+
 		
+
+		yield return new WaitForSeconds(5.0f);
 		Application.LoadLevel("mainMenu");
     }
 }

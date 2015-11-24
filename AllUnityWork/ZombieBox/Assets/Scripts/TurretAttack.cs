@@ -9,7 +9,7 @@ public class TurretAttack : MonoBehaviour {
 	private int m_LastFrameShot = -10;
 
 	public float FIRE_RATE = 5.0f;
-    public int BASE_DAMAGE = 50;
+    public int BASE_DAMAGE = 1;
     public Animator anim;
     public AudioClip fireSound;
     public Transform pipe;
@@ -23,10 +23,9 @@ public class TurretAttack : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-
         stats = GameObject.Find("RoundManager").GetComponent<RoundStats>();
+		statUpdater = GameObject.Find("Stats").GetComponent<StatUpdater>();
         //turret  = this.transform.FindChild("turret");
-        InvokeRepeating("Fire", 5, FIRE_RATE);
         //anim = this.GetComponentInChildren<Animator>();
         //sightLight = transform.GetComponent<LineRenderer>();
 		// pipe = turret.FindChild("Tube02");
@@ -37,6 +36,11 @@ public class TurretAttack : MonoBehaviour {
         //light = turret.FindChild("Box06").GetComponentInChildren<Light>();
         muzzleLight.enabled = false;
 		muzzleFlash.enabled = false;
+
+		FIRE_RATE = PlayerPrefs.GetFloat("TurretRate");
+		BASE_DAMAGE = PlayerPrefs.GetInt("TurretDmg");
+
+        InvokeRepeating("Fire", 5, FIRE_RATE);
 
     }
     void Fire()
@@ -50,7 +54,6 @@ public class TurretAttack : MonoBehaviour {
                 {
                     stats.roundPoints += 5;
 					statUpdater.updateScore();
-                    stats.deadEnemies++;
                 }
                 anim.SetTrigger("fire");
                 PlayAudioClip(fireSound, new Vector3(0,5,0)+transform.position, 0.2f);

@@ -11,8 +11,8 @@ public class LoginMenu : MonoBehaviour
     public CanvasGroup canvasGroup;
     public bool init_flag = true;
     private Button loginButton;
-    private InputField usernameInput;
-    private InputField passwordInput;
+    public InputField usernameInput;
+    public InputField passwordInput;
     private WWW webCall;
     private string user_name;
     private string password;
@@ -22,14 +22,11 @@ public class LoginMenu : MonoBehaviour
     const string POST_USER_URL = "update_all_user_details";
     const string POST_WEAPON_URL = "update_weapon_stats";
     const string POST_SKIN_URL = "update_skin_stats";
+
     void Start()
     {
-
-        
-        usernameInput = GameObject.Find("usernameTxt").GetComponent<InputField>();
-        passwordInput = GameObject.Find("password").GetComponent<InputField>();
-
     }
+
     IEnumerator getLogin()
     {
         webCall = new WWW(ROOT_URL + VERIFY_LOGIN + user_name + "&password=" + password);
@@ -55,6 +52,9 @@ public class LoginMenu : MonoBehaviour
 
             int kills = data["user"]["total_kills"].AsInt;
             PlayerPrefs.SetInt("total_kills", kills);
+
+			int high = data["user"]["highest_round_reached"].AsInt;
+			PlayerPrefs.SetInt("highestRound",high);
 
             float r = data["user"]["red"].AsFloat;
             float g = data["user"]["green"].AsFloat;

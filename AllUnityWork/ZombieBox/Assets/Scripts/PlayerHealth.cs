@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -68,7 +69,8 @@ public class PlayerHealth : MonoBehaviour
 	void Death()
 	{
 		isDead = true;
-
+		stats.playerDied();
+		this.GetComponent<FirstPersonController>().enabled = false;
 		//playerShooting.DisableEffects();
 
 		//anim.SetTrigger("Die");

@@ -350,8 +350,8 @@ public class WeaponScript : MonoBehaviour {
 					statUpdater.updateScore();
 
                     stats.roundKills += 1;
-                    stats.deadEnemies += 1;
-                    if (currentMode == fireMode.burst)
+
+					if (currentMode == fireMode.burst)
                     {
                         stats.shotgun_kills++;
                     }
@@ -581,7 +581,7 @@ public class WeaponScript : MonoBehaviour {
 					statUpdater.updateScore();
 
                     stats.roundKills += 1;
-                    stats.deadEnemies += 1;
+
                     if (currentMode == fireMode.burst)
                     {
                         stats.shotgun_kills++;
